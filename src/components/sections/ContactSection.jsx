@@ -59,10 +59,12 @@ export default function ContactSection() {
 
         <div className="mt-6">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.4879!2d76.3234!3d32.2196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b5fb35d8b0f5d%3A0xcaed4c4a36dae456!2sDharamshala%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1710000000000"
-            className="w-full h-[240px] border-none saturate-[0.6] sepia-[0.1]"
-            allowFullScreen loading="lazy" title="Cold Mountain Studio"
-          />
+  src="https://www.google.com/maps?q=Byool%20Farm%20Uprehr%20Dharamshala&output=embed"
+  className="w-full h-[240px] border-none saturate-[0.6] sepia-[0.1]"
+  allowFullScreen
+  loading="lazy"
+  title="Byool Farm"
+/>
           <a href="https://www.google.com/maps/dir/?api=1&destination=Byool%20Farm%2C%20Uprehr%2C%20VPO%20Ramehr%2C%20Dharamshala%2C%20Himachal%20Pradesh%20176052" target="_blank" rel="noreferrer"
             className="inline-block mt-2.5 text-[0.72rem] tracking-[0.1em] uppercase text-stone no-underline border-b border-black/15 pb-px hover:text-clay hover:border-clay transition-colors"
           >Get Directions →</a>

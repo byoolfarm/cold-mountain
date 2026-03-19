@@ -46,12 +46,12 @@ export default function LandingPage() {
       <Navbar />
       <main>
         <HeroCarousel />
-        <Philosophy />
+        {/* <Philosophy /> */}
         <CoursesSection />
         <StudioSplit />
         <FarmstayStrip />
         <ShopTeaser />
-        <RetreatBanner />
+        {/* <RetreatBanner /> */}
         <BlogPreview />
         <TestimonialsSection />
         <FaqSection />

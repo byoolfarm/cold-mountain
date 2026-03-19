@@ -11,7 +11,7 @@ export const COURSES = [
     desc: "Try pottery without a long commitment — or explore a new craft on a relaxing Himalayan holiday.",
     features: [
       "Intro to hand building & wheel throwing",
-      "Finish a cup / bowl / plate — fired & shipped to you",
+      "Finish a cup / bowl / plate",
       "Daily supervised & unsupervised practice",
     ],
     pricing: [
@@ -26,8 +26,8 @@ export const COURSES = [
     duration: "14 Days · Food & Stay Included · 2 days off",
     desc: "For beginners or potters at any level hoping to work on skills with or without supervision.",
     features: [
-      "Clay types, wheel throwing — centering, coning, pulling",
-      "Throw & trim; hand-building — pinching, coiling, slab",
+      "Wheel throwing — centering, coning, pulling and trimming",
+      "Hand-building — pinching, coiling, slab",
       "Daily supervised & unsupervised practice",
     ],
     pricing: [
@@ -40,7 +40,7 @@ export const COURSES = [
     num: "03", imgKey: "course_monthly",
     name: "Monthly Course", tag: "Residential", tagStyle: "clay",
     duration: "30 Days · Food & Stay Included · 4 days off",
-    desc: "Deepen your practice with project and research work alongside daily studio sessions.",
+    desc: "Deepen your practice with focus on any technique/s or work on a specific  project alongside daily studio sessions.",
     features: [
       "Wheel throwing & hand building",
       "Project and research work",
@@ -55,7 +55,7 @@ export const COURSES = [
   {
     num: "04", imgKey: "course_3months",
     name: "3 Months Residency", tag: "Residential", tagStyle: "clay",
-    duration: "90 Days · Food & Stay (sharing) Included · 12 days off",
+    duration: "90 Days · Food & Stay Included · 12 days off",
     desc: "For aspirants wanting to seriously improve or pursue pottery as a career.",
     features: [
       "Wheel throwing, hand building, sculpture & murals",
@@ -70,28 +70,32 @@ export const COURSES = [
   },
   {
     num: "05", imgKey: "course_advanced",
-    name: "Advanced Pottery", tag: "Specialised", tagStyle: "dark",
+    name: "Advanced Pottery/Intensive", tag: "Specialised and Residential", tagStyle: "dark",
     duration: "2 Weeks · Customisable for Groups",
-    desc: "A focused intensive for potters ready to push further. Curriculum tailored to the group.",
+    desc: "A focused intensive for potters ready to push further. Curriculum can be tailored to the group. Or it can be an intensive focus on a technique you wish to explore more. ",
     features: [
       "Surface decoration & texture work",
       "Building large-scale forms",
-      "Glaze application techniques & Raku firing",
+      "Glaze chemistry and application techniques",
+      "Alternate firing methods (like Raku, Saggar, Pit Firing, etc)"
     ],
-    pricing: [
-      { name: "Per Person", options: [{ label: "", val: "₹84,000" }], note: "Accommodation billed separately · Group rates on request" },
+    // pricing: [
+    //   { name: "", options: [{ label: "", val: "" }], note: "Based on the curriculum finalised. Contact for details. " },
+    // ],
+     pricing: [
+      { name: "Pricing", options: [{ label: "", val: "Based on the curriculum finalised. Contact for details." }] },
     ],
-    hasAccom: false,
+    hasAccom: true,
   },
   {
     num: "06", imgKey: "course_glaze",
-    name: "Glaze Course", tag: "Specialised", tagStyle: "dark",
+    name: "Glaze Course (Watch out for when the Dates are announced)", tag: "Specialised", tagStyle: "dark",
     duration: "10 Days · Residential",
     desc: "Understand the science behind glazes and take full control of your surfaces.",
     features: [
       "Basic glaze chemistry & material science",
       "Formulating & testing your own glazes",
-      "Application methods & firing outcomes",
+      "Oxidation and Reduction firing outcomes",
     ],
     pricing: [
       { name: "Residential", options: [{ label: "Sharing", val: "₹90,000" }, { label: "Single", val: "₹1,10,000" }] },
@@ -102,10 +106,10 @@ export const COURSES = [
     num: "07", imgKey: "course_fire",
     name: "Fire Festival", tag: "Event", tagStyle: "dark",
     duration: "4 Days · Residential (Sharing)",
-    desc: "A communal celebration of fire and clay. Ancient techniques brought alive over four immersive days.",
+    // desc: "A communal celebration of fire and clay. Ancient techniques brought alive over four immersive days.",
+    desc:"This is a collaborative event, not a formal workshop. It’s a space for potters to share their craft and for curious spectators to witness the spectacular transformation of clay. We will together explore alternate low-firing techniques like Raku, Obvara, Pit, and Saggar firing.",
     features: [
-      "Pit firing, Raku & smoke firing",
-      "Communal kiln builds & firings",
+      "Low fire techniques like Pit firing, Raku,  Obvara & Saggar firings ",
       "Residential on sharing basis",
     ],
     pricing: [
@@ -116,23 +120,29 @@ export const COURSES = [
   {
     num: "08", imgKey: "course_nrd",
     name: "Non-Residential Day", tag: "Non-Residential", tagStyle: "earth",
-    duration: "10:30 AM – 5:00 PM · Lunch Included",
-    desc: "A full studio day for those staying off-site. Work at your own pace, guidance throughout.",
+    duration: "11 AM – 5:00 PM · Lunch Included (Full Day)",
+    second_duration :"2PM - 5:00 PM (Half Day) ",
+    desc: "A half or full day at the studio for those staying off-site.",
     features: [
-      "Full day studio access",
-      "Lunch included",
+      "Learn Pottery techniques with our experienced Instructors ",
+      "If you are experienced potter, work at your own pace, with guidance throughout. ",
+      "Lunch included for Full Day students",
       "Prior booking mandatory",
     ],
-    pricing: [
-      { name: "Per Day", options: [{ label: "", val: "Contact us" }] },
+    // pricing: [
+    //   { name: "Per Day", options: [{ label: "", val: "Contact us" }] },
+    // ],
+     pricing: [
+      { name: "Half Day", options: [{ label: "", val: "₹1500/per person" }] },
+      { name: "Full Day", options: [{ label: "", val: "₹3000/per person" }] },
     ],
     hasAccom: false,
   },
   {
     num: "09", imgKey: "course_nrm",
-    name: "Non-Residential Month", tag: "Non-Residential", tagStyle: "earth",
-    duration: "Mon – Fri · 10:30 AM – 5:00 PM",
-    desc: "A full month of studio immersion for those arranging their own accommodation locally.",
+    name: "Non-Residential Monthly", tag: "Non-Residential", tagStyle: "earth",
+    duration: "Mon – Fri · 11 AM – 5:00 PM",
+    desc: "A full month of studio immersion for local residents.",
     features: [
       "Daily studio access Mon–Fri",
       "All studio materials included",

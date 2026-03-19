@@ -35,10 +35,10 @@ export { default as course_retreat }   from "./images/course_retreat.jpg";
 export { default as course_fortnight } from "./images/course_fortnight.jpg";
 export { default as course_monthly }   from "./images/course_monthly.jpg";
 export { default as course_3months }   from "./images/course_3months.jpg";
-export { default as course_advanced }  from "./images/course_advanced.jpg";
-export { default as course_glaze }     from "./images/course_glaze.jpg";
+export { default as course_advanced }  from "./images/course_advanced.jpeg";
+export { default as course_glaze }     from "./images/course_glaze.jpeg";
 export { default as course_fire }      from "./images/course_fire.jpg";
-export { default as course_nrd }       from "./images/course_nrd.jpg";
+export { default as course_nrd }       from "./images/course_nrd.jpeg";
 export { default as course_nrm }       from "./images/course_nrm.jpg";
 
 // ── Accommodation ────────────────────────────────────────────────────────────
@@ -72,3 +72,24 @@ export { default as work_studio_2 } from "./images/work_studio_2.jpg";
 export { default as work_studio_3 } from "./images/work_studio_3.jpg";
 export { default as work_studio_4 } from "./images/work_studio_4.jpg";
 export { default as work_studio_5 } from "./images/work_studio_5.jpg";
+
+// ── Cold Mountain Retreat Stay — ────────────────────────────────────
+export { default as cmr_common_lounge1 } from "./images/cmr_common_lounge1.jpeg";
+export { default as cmr_common_lounge2 } from "./images/cmr_common_lounge2.jpeg";
+export { default as cmr_coomon_lounge3 } from "./images/cmr_coomon_lounge3.jpeg";
+export { default as cmr_single1 } from "./images/cmr_single1.jpeg";
+export { default as cmr_single2 } from "./images/cmr_single2.jpeg";
+export { default as cmr_single3 } from "./images/cmr_single3.jpeg";
+export { default as cmr_view1 } from "./images/cmr_view1.jpeg";
+export { default as cmr_view2 } from "./images/cmr_view2.jpeg";
+
+// Byool Farm Stay
+export { default as byool_stay1 } from "./images/byool_stay1.jpg";
+export { default as byool_stay2 } from "./images/byool_stay2.jpg";
+export { default as byool_stay3 } from "./images/byool_stay3.jpg";
+
+//About 
+export { default as about1 } from "./images/about1.jpg";
+export { default as about2 } from "./images/about2.jpg";
+export { default as about3 } from "./images/about3.jpg";
+export { default as about_wallpaper } from "./images/about_wallpaper.jpg";

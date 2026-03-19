@@ -103,6 +103,7 @@ export default function Navbar() {
             { label: "FAQ",      action: () => goToSection("faq") },
             { label: "Stay",     href: "https://byoolfarmstay.com/" },
             { label: "Contact",  action: () => goToSection("contact") },
+            { label: "About",  to: "/about" }
           ].map(({ label, action, to, href }) => (
             <li key={label}>
               {href  ? <a href={href} target="_blank" rel="noreferrer" className={linkCls}>{label}</a>
@@ -112,7 +113,7 @@ export default function Navbar() {
           ))}
 
           {/* About dropdown */}
-          <li className="relative" ref={aboutRef}>
+          {/* <li className="relative" ref={aboutRef}>
             <button
               onClick={() => setAboutOpen(o => !o)}
               className={`${linkCls} flex items-center gap-1 bg-transparent border-none p-0 font-jost`}
@@ -139,7 +140,7 @@ export default function Navbar() {
                 ))}
               </div>
             )}
-          </li>
+          </li> */}
 
           {/* Pills */}
           <li><Link to="/shop" className={pillCls}>Shop</Link></li>
@@ -191,8 +192,9 @@ export default function Navbar() {
           { label: "Courses",          action: () => goToSection("courses") },
           { label: "Our Work",         to: "/work" },
           { label: "Blog",             to: "/blog" },
-          { label: "About — Lakhan",   to: "/about/lakhan" },
-          { label: "About — Swapna",   to: "/about/swapna" },
+          // { label: "About ",   to: "/about/" },
+          // { label: "About — Lakhan",   to: "/about/lakhan" },
+          // { label: "About — Swapna",   to: "/about/swapna" },
           { label: "FAQ",              action: () => goToSection("faq") },
           { label: "Stay",             href: "https://byoolfarmstay.com/" },
           { label: "Contact",          action: () => goToSection("contact") },

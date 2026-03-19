@@ -13,7 +13,7 @@ const ITEMS = [
 
 export default function ShopTeaser() {
   return (
-    <section className="py-24 px-4 md:px-16 bg-warm-white">
+    <section className="pt-24 pb-6 px-4 md:px-16 bg-warm-white">
       <DividerLine label="From the kiln" />
       <SectionLabel>Shop</SectionLabel>
       <SectionTitle className="mb-10">
@@ -38,7 +38,7 @@ export default function ShopTeaser() {
 
       <div className="mt-10 text-center">
         <Link to="/shop">
-          <BtnPrimary>Browse All Works</BtnPrimary>
+          <BtnPrimary>Shop Now</BtnPrimary>
         </Link>
       </div>
     </section>

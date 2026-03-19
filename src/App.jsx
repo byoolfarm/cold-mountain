@@ -22,19 +22,29 @@ import BlogPage     from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import LakhanPage   from "./pages/about/LakhanPage";
 import SwapnaPage   from "./pages/about/SwapnaPage";
-
+import ColdMountainStay from "./pages/stay"
+import AboutStudioPage from "./pages/About";
+import ScrollToTop from "./components/ScrollToTop";
 export default function App() {
   return (
+    <>
+    <ScrollToTop/>
     <Routes>
+      
       <Route path="/"               element={<LandingPage />} />
       <Route path="/shop"           element={<ShopPage />} />
       <Route path="/work"           element={<WorkPage />} />
+      <Route path="/about"           element={<AboutStudioPage />} />
+      <Route path="/stay/cold-mountain-retreat"   element={<ColdMountainStay/>} />
       <Route path="/blog"           element={<BlogPage />} />
       <Route path="/blog/:slug"     element={<BlogPostPage />} />
       <Route path="/about"          element={<Navigate to="/about/lakhan" replace />} />
       <Route path="/about/lakhan"   element={<LakhanPage />} />
       <Route path="/about/swapna"   element={<SwapnaPage />} />
       <Route path="*"               element={<Navigate to="/" replace />} />
+
     </Routes>
+  </>
+
   );
 }
