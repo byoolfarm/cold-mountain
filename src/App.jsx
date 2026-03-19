@@ -22,7 +22,7 @@ import BlogPage     from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import LakhanPage   from "./pages/about/LakhanPage";
 import SwapnaPage   from "./pages/about/SwapnaPage";
-import ColdMountainStay from "./pages/stay"
+import ColdMountainStay from "./pages/Stay"
 import AboutStudioPage from "./pages/About";
 import ScrollToTop from "./components/ScrollToTop";
 export default function App() {
