@@ -5,10 +5,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* Fix 1: bump root font size by ~2-3px. Browser default is 16px.
-       Setting to 18px means all rem-based sizes scale up proportionally. */
     font-size: 18px;
   }
+  @media (max-width: 400px) {
+  html {
+    font-size: 16px;
+  }
+}
   body {
     @apply font-jost font-light text-charcoal bg-warm-white overflow-x-hidden;
   }
@@ -16,6 +19,9 @@
   input, textarea, select { font-family: inherit; }
 }
 
+html, body {
+  overflow-x: hidden;
+}
 @layer utilities {
   .text-balance { text-wrap: balance; }
   .font-display-italic {

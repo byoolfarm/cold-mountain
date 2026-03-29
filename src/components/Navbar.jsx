@@ -79,7 +79,7 @@ export default function Navbar() {
     <>
       {/* ── Desktop / top nav ────────────────────────────────────────────── */}
       <nav className={[
-        "fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 py-4",
+        "fixed top-0 left-0 right-0 z-50 flex justify-between items-center w-[100vw] px-4 sm:px-6 md:px-12 py-4",
         "transition-all duration-300",
         isLight ? "bg-warm-white/97 backdrop-blur-md shadow-[0_1px_0_rgba(90,70,55,0.15)]" : "",
       ].join(" ")}>
@@ -177,7 +177,7 @@ export default function Navbar() {
       <div
         className={[
           "fixed inset-0 bg-charcoal z-[60] flex flex-col justify-center items-center gap-6",
-          "transition-all duration-300",
+          "transition-all duration-300 max-w-[100vw] max-h-[100vh]",
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
         ].join(" ")}
         aria-hidden={!menuOpen}

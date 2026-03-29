@@ -5,56 +5,76 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const POSTS = [
-  {
-    slug: "pottery-in-the-meme-age-psychology-survival-and-the-daily-plot-twist",
-    imgKey: "blog1",
-    category: "Psychology",
-    title: "Pottery in the Meme Age: Psychology, Survival, and the Daily Plot Twist",
-    date: "March 19, 2026",
-    readTime: "5 min read",
-    excerpt:
-      "You don't need me to tell you about algorithm drama. If you're a potter in 2025, your wheel probably shakes more from phone pings than foot pedals. The studio smells like clay — with a hefty aftertaste of \"What's trending?\"",
-    author: "Dr Rohita Sateesh (Counselling Psychologist)",
-    body: `You don't need me to tell you about algorithm drama. If you're a potter in 2025, your wheel probably shakes more from phone pings than foot pedals. The studio smells like clay — with a hefty aftertaste of "What's trending?"
+ {
+  slug: "the-clay-that-refuses-to-center",
+  imgKey: "blog2",
+  category: "Psychology",
+  title: "The Clay That Refuses to Center: Breaking Patterns, Finding Growth",
+  date: "March 22, 2026",
+  readTime: "6 min read",
+  excerpt:
+    "There's a universal moment in every studio: clay on the wheel, hands poised, and—without warning—everything goes sideways. But what if those stubborn throws have more to reveal than a technical hiccup?",
+  author: "Dr Rohita Sateesh (Counselling Psychologist)",
+  body: `There's a universal moment in every studio: clay on the wheel, hands poised, and—without warning—everything goes sideways. The lump won't center. Frustration creeps in. You try again. You wonder if it's the clay, or if it's you. You hope nobody is watching too closely.
 
-**The Real Showdown: Pottery vs. Performance Art**
+But what if those stubborn throws have more to reveal than a technical hiccup? What if they're invitations to dig deeper—into ourselves, our habits, and the culture we shape as makers?
 
-Hands up if your ugliest piece flopped in silence but your "eh, whatever" mug went viral. Ever spiral after a thumb scroll, convinced everyone else has a hotline to the digital gods?
+**The Studio Script: What Potters Actually Do**
 
-It's not you, it's neuroscience. Brains run on dopamine (hello likes, goodbye self-worth) and stress, with a dash of "Am I making this, or is my phone?" Thanks, evolution.
+Most days, when clay resists, we fall into quiet choreography:
 
-*Curiosity bite:* If the whole pottery world could only see one thing you made — what would, and wouldn't, you pick?
+- Blame the batch or the material ("too dry," "overworked," "bad luck")
+- Swallow frustration. Hide the mess. Power through, hoping for private resolution.
+- Trade nervous glances, half-smiles, or distracted jokes.
+- Rarely admit—out loud—that struggle is familiar, even collective.
 
-**Burnout: Because Your Clay Isn't the Only Thing Getting Overfired**
+It's not weakness; it's routine. Studios breed silent rules about shielding setbacks.
 
-Burnout doesn't clock out at 5pm or after a batch of sales. It creeps in around your second espresso and your fourth round of "refresh." If you're playing "like roulette," congratulations — you're human.
+**Underneath Technique: The Psychological Game**
 
-Let's drop the shame: Feel numb? Cynical? POST-joy instead of pre-joy? Welcome to the club. The price of visibility isn't just battery life — it bakes directly into your bones.
+Look closer and it's not just hands at play. What you feel at the wheel—tension, shame, relief, envy, camaraderie—are patterns born from psychology, not just craft.
 
-*Curiosity break:* If you could only make one "just for me" piece a month — no audience, no "story," no approval — what would it be? Would you even remember?
+Each time your throw collapses, the mind races ahead: "Not again." "I'll never get this right." There's comfort when others stumble—proof you're not alone. There's pressure to perform, especially when surrounded by more practiced potters.
 
-**The Envy Olympics (No Medals Awarded)**
+The wheel acts as a mirror. It reflects old stories of needing to "prove" yourself, habits of dodging vulnerability, the subtle craving to belong.
 
-Let's get weirdly honest — envy is the default setting. Every one of us has zoomed in on a viral feed and muttered, "How?!" The trick isn't independence (total fiction), it's using envy as a map:
+**Why Studios Shape the Struggle**
 
-- "I want that joy."
-- "That risk. That freedom."
-- Or just: "Why do they always get that blue so right?!"
+Individual moods ripple outward. Attitude—yours, mine, ours—sets the emotional climate. A studio that laughs together endures more risk. A studio that stays silent breeds private tension.
 
-**Agency is Your Sneakiest Art Form**
+Unspoken codes decide if disaster is a chance for advice, or something to quietly hide. When honest talk is rare, the cycle repeats: success gets celebrated, failure stays tucked away.
 
-Algorithms don't love you back. People barely do. But your own weird rituals? That's where the magic sneaks back in. Make a space no phone sees. Trade war stories about failed glazes. Take a digital day off — not as punishment, but as creative rebellion.
+**Flipping the Routine: How Potters Can Shift**
 
-Remember, agency doesn't mean "winning" — it means you get to keep something for yourself. Even if it's just the mug nobody else will ever hold.
+The turning point comes when you refuse to treat resistance as a personal shame or a technical footnote.
 
-*Curiosity spark:* What's your studio's guilty pleasure? Glaze combos banished from the grid? Experimental forms living rent-free in a back shelf? Would you ever bring them to the light, trend be damned?
+- Pause when clay fights back. Don't rush to fix—let the frustration breathe.
+- Speak up: "This lump won't center no matter what I do."
+- Invite stories—real ones—about what goes wrong (not just what finally worked).
+- Try new rhythms: off-center shapes, deliberate "disaster throws," public showcases of failed pots.
+- Watch how tension and relief move through the room when honesty replaces secrecy.
 
-**No Wrap-Up, Just a Punchline**
+When potters risk being seen—struggle and all—the whole studio grows braver, more inventive, more alive.
 
-Look, if you're reading this instead of scrolling, you've already earned a mental gold star. Pottery is still weird, and you're still stubborn — and there's no meme for that (yet).
+**A Studio Built on Curiosity and Courage**
 
-Drop a confession. Or a sneaky trick. Ask a question you don't want answered. Because in a world built for copy/paste, your quirks are currency. Let's see where curiosity — and a little gallows humour — can take us.`,
-  },
+Imagine a space where imperfection isn't hidden, but held up as proof of effort and as a source of learning. Walls echo with not just tips, but true stories. Every potter, from newcomer to old hand, brings messiness to the conversation. Studio culture shifts from silent competition to honest collaboration.
+
+This is not therapy—it's evolution. It's seeing resistance not as the enemy, but as a teacher.
+
+**Reflect With These Hard-Hitting Questions**
+
+- What story do you tell yourself when clay resists—about your talent, your luck, your place in the studio?
+- Who benefits when mistakes stay private?
+- What rituals or habits in your studio protect you—or stop you—from trying something risky and new?
+- How might things change if you invited curiosity to lead, instead of perfection?
+
+**The Invitation: Break the Silence**
+
+Next time the clay refuses to center, let the struggle show. Share your toughest day, your ugliest pot, your most honest question. Challenge the old studio script. Notice who else is ready for change.
+
+Stay messy, stay curious, stay bold. You're not just making pots—you're building a new way to learn, connect, and grow. That's where real craft begins.`,
+},
   {
     slug: "at-cold-mountain-studio-learning-as-presence",
     imgKey: "blog2",

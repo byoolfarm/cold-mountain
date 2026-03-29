@@ -116,3 +116,13 @@ export { default as smp_16 } from "./images/smp-16.JPG";
 
 export { default as lakhan_portrait } from "./images/smp-16.JPG";
 export { default as swapna_portrait } from "./images/smp-16.JPG";
+
+export { default as lakhan_work2 } from "./images/lakhan_work2.jpg";
+export { default as lakhan_work3 } from "./images/lakhan_work3.jpg";
+export { default as lakhan_work4 } from "./images/lakhan_work4.jpg";
+export { default as lakhan_work5 } from "./images/lakhan_work5.jpg";
+export { default as lakhan_work6 } from "./images/lakhan_work6.jpg";
+export { default as lakhan_work7 } from "./images/lakhan_work7.jpg";
+export { default as lakhan_work8 } from "./images/lakhan_work8.jpg";
+export { default as lakhan_work9 } from "./images/lakhan_work9.jpg";
+export { default as lakhan_work10 } from "./images/lakhan_work10.jpg";

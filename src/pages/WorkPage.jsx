@@ -121,10 +121,10 @@ export default function WorkPage() {
           )}
 
           {/* Count */}
-          <p className="text-center text-[0.72rem] tracking-[0.14em] uppercase text-stone mt-10 font-jost">
+          {/* <p className="text-center text-[0.72rem] tracking-[0.14em] uppercase text-stone mt-10 font-jost">
             {filtered.length} {filtered.length === 1 ? "piece" : "pieces"}
             {activeCategory !== "all" && ` in ${WORK_CATEGORIES.find(c => c.id === activeCategory)?.label}`}
-          </p>
+          </p> */}
         </div>
 
         {/* Commission CTA */}

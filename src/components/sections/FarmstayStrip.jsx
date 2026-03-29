@@ -5,7 +5,7 @@ import { SectionLabel, SectionTitle, BtnOutlineWhite } from "../ui";
 
 export default function FarmstayStrip() {
   return (
-    <section className="bg-charcoal py-20 px-4 md:px-16">
+    <section className="bg-charcoal py-8 md:py-20 px-4 md:px-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-8">
         <div>
           {/* <SectionLabel light>Where You'll Stay</SectionLabel> */}
@@ -15,7 +15,7 @@ export default function FarmstayStrip() {
           <p className="text-[0.8rem] leading-[1.9] text-white/65 mb-6 max-w-[440px]">
             Our sister property sits right on the farm where the studio stands. Earthy rooms built with natural materials, farm-fresh meals, and the sound of the mountains — all steps away from the studio.
           </p>
-          <BtnOutlineWhite href="https://byoolfarmstay.com/">
+          <BtnOutlineWhite className="text-[14px] md:text-[16px]" href="https://byoolfarmstay.com/">
             Visit byoolfarmstay.com →
           </BtnOutlineWhite>
         </div>
