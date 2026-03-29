@@ -12,8 +12,8 @@ import work4  from "../../assets/images/lakhan_work4.jpg";
 import work5  from "../../assets/images/lakhan_work5.jpg";
 import work6  from "../../assets/images/lakhan_work6.jpg";
 import work7  from "../../assets/images/lakhan_work7.jpg";
-import work8  from "../../assets/images/lakhan_work8.jpg";
-import work9  from "../../assets/images/lakhan_work9.jpg";
+import work8  from "../../assets/images/lakhan_work8.JPG";
+import work9  from "../../assets/images/lakhan_work9.JPG";
 import work10 from "../../assets/images/lakhan_work10.jpg";
 
 const WORKS = [
