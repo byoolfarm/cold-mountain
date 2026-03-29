@@ -123,6 +123,6 @@ export { default as lakhan_work4 } from "./images/lakhan_work4.jpg";
 export { default as lakhan_work5 } from "./images/lakhan_work5.jpg";
 export { default as lakhan_work6 } from "./images/lakhan_work6.jpg";
 export { default as lakhan_work7 } from "./images/lakhan_work7.jpg";
-export { default as lakhan_work8 } from "./images/lakhan_work8.jpg";
-export { default as lakhan_work9 } from "./images/lakhan_work9.jpg";
+export { default as lakhan_work8 } from "./images/lakhan_work8.JPG";
+export { default as lakhan_work9 } from "./images/lakhan_work9.JPG";
 export { default as lakhan_work10 } from "./images/lakhan_work10.jpg";
