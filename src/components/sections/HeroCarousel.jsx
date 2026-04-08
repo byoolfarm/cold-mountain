@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { slide_farm, slide_wheel, slide_students, slide_studio } from "../../assets/images";
+import { slide_farm, slide_wheel, slide_students, slide_studio1 } from "../../assets/images";
 import { Link } from "react-router-dom";
 const SLIDES = [
   {
@@ -21,10 +21,11 @@ const SLIDES = [
     sub: "Beginners and seekers welcome. Food, stay, and studio time — all included.",
   },
   {
-    img: slide_studio,
+    img: slide_studio1,
     eyebrow: "Custom Productions",
     title: <>Every piece<br /><em className="italic text-clay-light">a small prayer</em></>,
-    sub: "Not objects to admire — ware to be used, touched, and loved daily.",
+    // sub: "Not objects to admire — ware to be used, touched, and loved daily.",
+    sub:"Every Piece a small prayer , Browse our selection of pottery and find your next favourite piece."
   },
 ];
 

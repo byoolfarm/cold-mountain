@@ -92,8 +92,8 @@ export default function WorkPage() {
 
       <main className="min-h-screen bg-warm-white">
         {/* Page header */}
-        <div className="pt-36 pb-14 px-4 md:px-16 bg-charcoal text-center">
-          <SectionLabel light className="justify-center">From the kiln</SectionLabel>
+        <div className="pt-20 pb-8 px-4 md:px-16 bg-charcoal text-center">
+          {/* <SectionLabel light className="justify-center">From the kiln</SectionLabel> */}
           <h1 className="font-cormorant text-[clamp(2.2rem,4vw,3.4rem)] font-light text-cream leading-tight">
             Our <em className="italic text-clay-light">Work</em>
           </h1>

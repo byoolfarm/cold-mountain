@@ -43,9 +43,9 @@ export default function FaqSection() {
   return (
     <section id="faq" className="py-24 px-4 md:px-16 bg-charcoal">
       <DividerLine label="Courses · Studio · Orders · Logistics" light />
-      <SectionLabel light>FAQs</SectionLabel>
+      <SectionLabel light>FAQ's</SectionLabel>
       <SectionTitle light className="mb-12">
-        Common<br /><em className="italic text-clay-light">questions</em>
+        Common <em className="italic text-clay-light">questions</em>
       </SectionTitle>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
@@ -60,7 +60,7 @@ export default function FaqSection() {
             </li>
             <li className={bulletLi}>
               <span className={bulletDot} />
-              <span><span className={bulletLabel}>Beginner's Course (2 Weeks)</span><span className={bulletDesc}> — A foundational intensive designed to introduce you to the world of clay.</span></span>
+              <span><span className={bulletLabel}>Beginner's Course (2 Weeks)</span><span className={bulletDesc}> — A foundational intensive course designed to introduce you to the world of clay.</span></span>
             </li>
             <li className={bulletLi}>
               <span className={bulletDot} />
@@ -83,13 +83,13 @@ export default function FaqSection() {
               <span><span className={bulletLabel}>Fire Festival</span><span className={bulletDesc}> — A weekend event where the pottery community comes together for an elemental celebration of Raku, Obvara, Pit, and Saggar firing.</span></span>
             </li>
           </ul>
-          <p className="mt-3">
+          {/* <p className="mt-3">
             Check our{" "}
             <a href="https://www.thecoldmountainstudio.com/courses" target="_blank" rel="noreferrer" className={link}>
               Upcoming Classes
             </a>
             {" "}page for any newly announced courses or events.
-          </p>
+          </p> */}
         </FaqItem>
 
         {/* ── 2 ───────────────────────────────────────────────────────────── */}
@@ -125,14 +125,13 @@ export default function FaqSection() {
         <FaqItem question="How do I book a spot?">
           <p className="text-white/55">
             Slots are available on a first-come, first-served basis. Since we keep class sizes small to ensure personal attention, they fill up quickly. Check upcoming dates on our{" "}
-            <a href="https://www.thecoldmountainstudio.com/courses" target="_blank" rel="noreferrer" className={link}>
+            {/* <a href="https://www.thecoldmountainstudio.com/courses" target="_blank" rel="noreferrer" className={link}>
               Upcoming Classes
+            </a> */}
+            {" "} Instagram page <a href="https://www.instagram.com/thecoldmountainstudio/" target="_blank" rel="noreferrer" className={link}>
+                @thecoldmountainstudio
             </a>
-            {" "}page or follow{" "}
-            <a href="https://www.instagram.com/thecoldmountainstudio/" target="_blank" rel="noreferrer" className={link}>
-              @thecoldmountainstudio
-            </a>
-            {" "}on Instagram where we announce new dates first.
+            {" "}on where we announce new dates first.
           </p>
         </FaqItem>
 

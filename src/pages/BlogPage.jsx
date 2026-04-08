@@ -52,15 +52,15 @@ export default function BlogPage() {
       <main className="min-h-screen bg-warm-white mt-[4.5rem]">
         {/* Header */}
         <div style={{
-    backgroundImage: `url(${IMGS.blog_background})`,
+    // backgroundImage: `url(${IMGS.blog_background})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-  }} className="pt-36 pb-12 px-4 md:px-16 bg-charcoal text-center">
+  }} className="py-6 px-4 md:px-16 bg-charcoal text-center">
           <SectionLabel light className="justify-center">From the Studio</SectionLabel>
           <h1 className="font-cormorant text-[clamp(2rem,4vw,3.2rem)] font-light text-cream leading-tight mb-3">
             The <em className="italic text-clay-light">Journal</em>
           </h1>
-          <p className="text-base text-white/60 max-w-[420px] mx-auto leading-[1.9]">
+          <p className="text-base text-white/60 max-w-[420px] md:max-w-[600px] mx-auto leading-[1.9]">
             Stories, reflections, and craft notes from the kiln at Dharamshala.
           </p>
         </div>

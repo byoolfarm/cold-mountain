@@ -22,7 +22,7 @@ export const WORK_CATEGORIES = [
   { id: "all",        label: "All" },
   { id: "dinner", label: "Dinnerware" },
   { id: "drink", label: "Drinkware" },
-  { id: "serve",    label: "Serverware" },
+  { id: "serve",    label: "Servware" },
   { id: "home",     label: "Home Decor" },
 ];
 

@@ -1,16 +1,57 @@
 // src/pages/about/SwapnaPage.jsx  —  route: /about/swapna
+import { useEffect, useRef } from "react";
 import SEO    from "../../components/SEO";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { swapna_portrait } from "../../assets/images"; // swap to your actual image import
+import { swapna_portrait } from "../../assets/images";
 
-const FACTS = [
-  ["From",             "Corporate world → Dharamshala, HP"],
-  ["Moved to mountains", "2014"],
-  ["Background",       "Journalist · Corporate career · 20+ countries"],
-  ["Studio practice",  "Hand-building · Wheel throwing · Storytelling"],
-  ["Also offers",      "The Listening Ear — judgment-free reflection"],
+// Work images
+import work1  from "../../assets/images/smp-1.JPG";
+import work2  from "../../assets/images/smp-2.jpg";
+import work3  from "../../assets/images/smp-3.jpg";
+import work4  from "../../assets/images/smp-4.JPG";
+import work5  from "../../assets/images/smp-5.jpg";
+import work6  from "../../assets/images/smp-6.jpg";
+import work7  from "../../assets/images/smp-7.jpg";
+import work8  from "../../assets/images/smp-8.jpg";
+import work9  from "../../assets/images/smp-9.JPG";
+
+const WORKS = [
+  { src: work1,  label: "Hand-built Vessel" },
+  { src: work2,  label: "Stoneware Bowl" },
+  { src: work3,  label: "Textured Platter" },
+  { src: work4,  label: "Studio Process" },
+  { src: work5,  label: "Organic Form" },
+  { src: work6,  label: "Sculptural Piece" },
+  { src: work7,  label: "Earth & Ash" },
+  { src: work8,  label: "Narrative Series" },
+  { src: work9,  label: "Wheel-thrown Set" },
 ];
+
+// Fade-in on scroll hook
+function useFadeIn() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) el.classList.add("fi-vis"); },
+      { threshold: 0.06 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  return ref;
+}
+
+function FadeIn({ children, className = "" }) {
+  const ref = useFadeIn();
+  return (
+    <div ref={ref} className={`fi-wrap ${className}`}>
+      {children}
+    </div>
+  );
+}
 
 export default function SwapnaPage() {
   return (
@@ -22,127 +63,238 @@ export default function SwapnaPage() {
       />
       <Navbar />
 
-      <main className="min-h-screen bg-warm-white">
-        <div className="max-w-[680px] mx-auto px-6 md:px-8 py-16 md:py-24">
+      <style>{`
+        .fi-wrap {
+          opacity: 0;
+          transform: translateY(18px);
+          transition: opacity 0.75s ease, transform 0.75s ease;
+        }
+        .fi-vis {
+          opacity: 1 !important;
+          transform: translateY(0) !important;
+        }
+        .work-img {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: saturate(0.8);
+          transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+        }
+        .work-item:hover .work-img {
+          transform: scale(1.06);
+          filter: saturate(1.1);
+        }
+        .work-caption {
+          position: absolute;
+          inset: 0;
+          background: rgba(28, 26, 23, 0);
+          display: flex;
+          align-items: flex-end;
+          padding: 1rem;
+          transition: background 0.4s;
+        }
+        .work-item:hover .work-caption {
+          background: rgba(28, 26, 23, 0.5);
+        }
+        .work-caption span {
+          font-size: 0.6rem;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: rgba(245, 242, 238, 0);
+          transition: color 0.3s 0.05s;
+        }
+        .work-item:hover .work-caption span {
+          color: rgba(245, 242, 238, 0.9);
+        }
+        .portrait-sticky {
+          position: sticky;
+          top: 3rem;
+        }
+        @media (max-width: 768px) {
+          .portrait-sticky { position: static; }
+        }
+      `}</style>
 
-          {/* ── Header: portrait + name inline ── */}
-          <header className="flex items-center gap-5 mb-14">
-            <div className="w-16 h-16 rounded-sm overflow-hidden flex-shrink-0 border border-black/10">
-              <img
-                src={swapna_portrait}
-                alt="Swapna P"
-                className="w-full h-full object-cover saturate-[0.8]"
-              />
-            </div>
-            <div>
-              <span className="block text-[0.68rem] tracking-[0.28em] uppercase text-stone mb-1">
-                Co-founder · The Cold Mountain Studio
-              </span>
-              <h1 className="font-cormorant text-[clamp(1.7rem,3.5vw,2.4rem)] font-light leading-tight text-charcoal">
-                Swapna P
+      <main className="min-h-screen bg-warm-white">
+
+        {/* ── Text-only page header — no images ── */}
+        <FadeIn>
+          <header className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24 pt-16 md:pt-20">
+            <div className="border-b border-black/8 pb-2 md:pb-2 pt-4">
+              <h1 className="font-cormorant text-[clamp(2rem,4vw,4rem)] font-light leading-[0.95] text-charcoal mb-4">
+                Swapna <em className="italic text-clay not-italic" style={{ fontStyle: "italic" }}>P</em>
               </h1>
-              <p className="text-[0.78rem] text-stone mt-0.5 font-jost">
-                Potter · Storyteller · Teacher
-              </p>
+              <span className="block text-[0.65rem] tracking-[0.3em] uppercase text-clay mb-4 font-jost">
+                Co-founder · The Cold Mountain Studio · Est. 2017
+              </span>
             </div>
           </header>
+        </FadeIn>
 
-          {/* ── Pull quote ── */}
-          <div className="bg-clay/[0.06] border-l-2 border-clay px-6 py-5 mb-14 rounded-sm">
-            <p className="font-cormorant text-[1.15rem] italic leading-relaxed text-charcoal">
-              "Pottery is the unlearning of a structured, corporate-trained mind — each piece
-              a sanctuary where the structure of the past meets the fluid freedom of the present."
-            </p>
-          </div>
-
-          {/* ── Section 1: The detour ── */}
-          <section className="mb-14">
-            <span className="block text-[0.68rem] tracking-[0.28em] uppercase text-clay mb-4 font-jost">
-              The detour
-            </span>
-            <p className="text-[0.95rem] leading-[1.9] text-earth-light mb-4">
-              Swapna's path to the wheel wasn't a straight line — it was a conscious detour.
-              After twenty years of navigating a successful corporate career across various
-              countries, she moved to the mountains of Dharamshala in 2014, choosing to trade
-              a comfortable paycheck for a life of intentionality.
-            </p>
-            <p className="text-[0.95rem] leading-[1.9] text-earth-light">
-              At the studio, she continues her lifelong relationship with storytelling — now
-              translating the narratives once captured in words as a journalist into the tactile
-              language of earth and fire.
-            </p>
-          </section>
-
-          {/* ── Fact grid ── */}
-          <div className="grid grid-cols-2 gap-px border border-black/8 mb-14 rounded-sm overflow-hidden">
-            {FACTS.map(([label, val]) => (
-              <div key={label} className="bg-warm-white px-4 py-3.5 border-b border-black/8 last:col-span-2">
-                <span className="block text-[0.68rem] tracking-[0.2em] uppercase text-stone mb-0.5 font-jost">
-                  {label}
-                </span>
-                <span className="text-[0.82rem] text-earth">{val}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* ── Section 2: The practice ── */}
-          <section className="mb-14">
-            <span className="block text-[0.68rem] tracking-[0.28em] uppercase text-clay mb-4 font-jost">
-              The practice
-            </span>
-            <p className="text-[0.95rem] leading-[1.9] text-earth-light mb-4">
-              While she values the discipline of the wheel, Swapna finds her truest expression
-              in hand-building techniques. She embraces the organic imperfections and the
-              distinctively handmade look and feel these methods allow — treating each piece as
-              a sanctuary for exploration.
-            </p>
-            <p className="text-[0.95rem] leading-[1.9] text-earth-light">
-              Her work is a testament to the beauty of a second chapter. Each piece she creates
-              is part of an ongoing exploration of slow living — a journey that isn't about
-              reaching a destination, but about embracing the rhythmic, messy, and beautiful
-              process of starting over.
-            </p>
-          </section>
-
-          {/* ── Breakout quote ── */}
-          <div className="border-t border-b border-black/10 py-8 mb-14 text-center">
-            <p className="font-cormorant text-[1.35rem] font-light italic leading-relaxed text-clay-dark">
-              A journey that isn't about reaching<br />
-              a destination — but about embracing<br />
-              the beauty of starting over.
-            </p>
-          </div>
-
-          {/* ── Section 3: The listening ear ── */}
-          <section className="mb-14">
-            <span className="block text-[0.68rem] tracking-[0.28em] uppercase text-clay mb-4 font-jost">
-              The listening ear
-            </span>
-            <p className="text-[0.95rem] leading-[1.9] text-earth-light mb-4">
-              Outside of her studio practice, Swapna offers The Listening Ear — a space for
-              judgment-free reflection. Much like working with clay, this process is about
-              untangling complex thoughts and finding fresh perspectives.
-            </p>
-            <p className="text-[0.95rem] leading-[1.9] text-earth-light">
-              It isn't about providing fixes, but about enabling others to break through thinking
-              loops and find their own path forward. The same patience she brings to a piece of
-              clay, she brings to a conversation.
-            </p>
-          </section>
-
-          {/* ── Footer links ── */}
-          <div className="pt-8 border-t border-black/10 flex gap-5 flex-wrap">
-            <a
-              href="https://www.instagram.com/thecoldmountainstudio/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-[0.68rem] tracking-[0.12em] uppercase text-earth border-b border-black/15 pb-px hover:text-clay hover:border-clay transition-colors no-underline font-jost"
+        {/* ── Intro: portrait + bio ── */}
+        <FadeIn>
+          <div className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24">
+            <div
+              className="border-b border-black/8 pt-6 pb-14 md:pt-6 md:pb-14"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1.75fr",
+                gap: "clamp(3rem, 5vw, 6rem)",
+                alignItems: "start",
+              }}
             >
-              Follow on Instagram →
-            </a>
-          </div>
+              {/* Portrait */}
+              <div className="portrait-sticky flex flex-col gap-6">
+                {swapna_portrait ? (
+                  <img
+                    src={swapna_portrait}
+                    alt="Swapna P"
+                    className="w-full object-cover object-top"
+                    style={{ aspectRatio: "3/4", filter: "saturate(0.85) sepia(0.05)" }}
+                  />
+                ) : (
+                  <div
+                    className="w-full flex flex-col items-center justify-center gap-4"
+                    style={{
+                      aspectRatio: "3/4",
+                      background: "linear-gradient(145deg, #cfc8be, #968d84)",
+                      color: "rgba(255,255,255,0.55)",
+                    }}
+                  >
+                    <svg width="56" height="56" viewBox="0 0 64 64" fill="none" style={{ opacity: 0.5 }}>
+                      <circle cx="32" cy="22" r="12" fill="white" fillOpacity="0.5" />
+                      <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" fill="white" fillOpacity="0.4" />
+                    </svg>
+                    <span className="text-[0.6rem] tracking-[0.22em] uppercase" style={{ opacity: 0.75 }}>
+                      Artist portrait
+                    </span>
+                  </div>
+                )}
+                <div>
+                  <p className="font-cormorant text-[1.1rem] text-charcoal">Swapna P</p>
+                  <p className="text-[0.62rem] tracking-[0.22em] uppercase text-stone mt-1 font-jost">
+                    Potter · Storyteller · Teacher
+                  </p>
+                </div>
+              </div>
 
-        </div>
+              {/* Text */}
+              <div className="flex flex-col gap-8 pt-2">
+                {/* Pull quote */}
+                <div className="border-l-2 border-clay pl-6">
+                  <p className="font-cormorant text-[clamp(1.1rem,1.8vw,1.35rem)] italic font-light leading-[1.75] text-charcoal">
+                    "Pottery is the unlearning of a structured, corporate-trained mind — each piece
+                    a sanctuary where the structure of the past meets the fluid freedom of the present."
+                  </p>
+                  <cite className="block mt-4 text-[0.62rem] tracking-[0.22em] uppercase text-clay not-italic font-jost">
+                    — Swapna P
+                  </cite>
+                </div>
+
+                {/* Bio paragraphs */}
+                <div className="flex flex-col gap-5">
+                  <p className="text-[0.95rem] leading-[1.9] text-earth-light">
+                    Swapna's path to the wheel wasn't a straight line — it was a conscious detour.
+                    After twenty years of navigating a successful corporate career across various
+                    countries, she moved to the mountains of Dharamshala in 2014, choosing to trade
+                    a comfortable paycheck for a life of intentionality.
+                  </p>
+                  <p className="text-[0.95rem] leading-[1.9] text-earth-light">
+                    At the studio, she continues her lifelong relationship with storytelling — now
+                    translating the narratives once captured in words as a journalist into the tactile
+                    language of earth and fire.
+                  </p>
+                  <p className="text-[0.95rem] leading-[1.9] text-earth-light">
+                    While she values the discipline of the wheel, Swapna finds her truest expression
+                    in hand-building techniques. She embraces the organic imperfections and the
+                    distinctively handmade look and feel these methods allow — treating each piece as
+                    a sanctuary for exploration.
+                  </p>
+                  <p className="text-[0.95rem] leading-[1.9] text-earth-light">
+                    Her work is a testament to the beauty of a second chapter. Each piece she creates
+                    is part of an ongoing exploration of slow living — a journey that isn't about
+                    reaching a destination, but about embracing the rhythmic, messy, and beautiful
+                    process of starting over.
+                  </p>
+                  <p className="text-[0.95rem] leading-[1.9] text-earth-light">
+                    Outside of her studio practice, Swapna offers The Listening Ear — a space for
+                    judgment-free reflection. Much like working with clay, this process is about
+                    untangling complex thoughts and finding fresh perspectives. It isn't about
+                    providing fixes, but about enabling others to break through thinking loops and
+                    find their own path forward.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* ── Breakout quote ── */}
+        <FadeIn>
+          <div className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24">
+            <div className="text-center py-16 md:py-20 border-b border-black/8">
+              <p className="font-cormorant text-[clamp(1.4rem,3vw,2.1rem)] font-light italic leading-[1.5] text-clay-dark">
+                A journey that isn't about reaching<br />
+                a destination — but about embracing<br />
+                the beauty of starting over.
+              </p>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* ── Selected Works grid ── */}
+        <FadeIn>
+          <div className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24 py-14 md:py-20">
+            <div className="flex items-baseline justify-between mb-8 pb-4 border-b border-black/8">
+              <span className="font-cormorant text-[clamp(1.1rem,2vw,1.5rem)] font-light text-charcoal">
+                Selected Works
+              </span>
+              <span className="text-[0.62rem] tracking-[0.22em] uppercase text-stone font-jost">
+                {WORKS.length} pieces
+              </span>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "3px",
+              }}
+            >
+              {WORKS.map(({ src, label }) => (
+                <div
+                  key={label}
+                  className="work-item"
+                  style={{ position: "relative", overflow: "hidden", aspectRatio: "1/1", background: "#1c1a17" }}
+                >
+                  <img src={src} alt={label} className="work-img" />
+                  <div className="work-caption">
+                    <span className="font-jost">{label}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* ── Footer links ── */}
+        <FadeIn>
+          <div className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24 pb-16 md:pb-24">
+            <div className="pt-8 border-t border-black/8 flex gap-5 flex-wrap">
+              <a
+                href="https://www.instagram.com/thecoldmountainstudio/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[0.68rem] tracking-[0.12em] uppercase text-earth border-b border-black/15 pb-px hover:text-clay hover:border-clay transition-colors no-underline font-jost"
+              >
+                Follow on Instagram →
+              </a>
+            </div>
+          </div>
+        </FadeIn>
+
       </main>
 
       <Footer />

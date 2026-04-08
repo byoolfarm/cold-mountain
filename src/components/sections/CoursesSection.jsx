@@ -787,7 +787,7 @@ const CARDS = [
     desc: "Understand the science behind glazes and take full control of your surfaces.",
     features: ["Basic glaze chemistry & material science", "Formulating & testing your own glazes", "Oxidation and reduction firing outcomes"],
     pricing: { layout: "single", blocks: [
-      { name: "Byool Farm BnB — Residential", opts: [{ label: "Sharing", val: "₹90,000" }, { label: "Single", val: "₹1,10,000" }] },
+      { name: "Residential", opts: [{ label: "Sharing", val: "₹90,000" }, { label: "Single", val: "₹1,10,000" }] },
     ]},
     showAccom: true, imgSrc: IMGS["course_glaze"], imgFallback: "#405060",
   },

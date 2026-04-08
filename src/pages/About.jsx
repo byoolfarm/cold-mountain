@@ -109,7 +109,13 @@ export default function AboutStudioPage() {
           label="About Us"
           heading="An immersive"
           accentWord="experience."
-          body="Our effort at the Cold Mountain Studio is to invoke — in the artist and everyone connected: patrons, students, supporters — a truly immersive experience. We believe that deepest intimacy with the world and the Self can be attained by the recognition of beauty and the practice of aesthetics."
+body="At The Cold Mountain Studio , we believe in slowing down — in letting our hands and hearts move with the quiet rhythm of clay. Inspired by the spirit of Hanshan, the 9th-century hermit poet who carved his reflections on stones and trees, we seek beauty not for display, but for discovery.
+
+Each piece we make is a small prayer — not for asking, but for appreciating. It’s a meditation on simplicity, imperfection, and the joy of working with the earth itself.
+
+In a world that rewards speed and scale, we choose depth and presence. Our studio is a space for reconnecting — to nature, to creativity, and to one’s own voice. Here, students, artists, and visitors explore clay as both craft and contemplation.
+"
+          // body="Our effort at the Cold Mountain Studio is to invoke — in the artist and everyone connected: patrons, students, supporters — a truly immersive experience. We believe that deepest intimacy with the world and the Self can be attained by the recognition of beauty and the practice of aesthetics."
           img={IMGS.about1}
           alt="Students at The Cold Mountain Studio"
         />
@@ -133,7 +139,16 @@ export default function AboutStudioPage() {
           label="Our Aim"
           heading="Every piece,"
           accentWord="a prayer."
-          body="Our aim is that every piece that comes from our studio would be like a prayer — not a prayer in the service of asking for something, but rather a prayer of appreciation, a prayer of delight for the beauty and simplicity of natural things. The quiet spirit of the unrefined and the unsophisticated, the art of creating peace."
+          body="Founded in 2017 in the hills of Himachal Pradesh, Cold Mountain Studio began as a shared dream: to create a sanctuary where making becomes a form of being.
+
+ Lakhan Kaushik , our chief innovator and glaze master, continues to explore new forms and finishes — each bowl, cup, or vessel a reflection of his curious dialogue with the wheel.
+
+*Nalin Chandra* , our co-founder and steady compass, grounds the studio with his vision and support, allowing creativity to flow freely without compromise.
+
+Swapna P , hand-building storyteller, traded a global corporate career for Dharamshala's mountains—shaping organic, imperfect forms that blend discipline with slow living's freedom. 
+
+We invite you to slow down with us — to shape, to breathe, and to rediscover peace in the art of creation."
+          // body="Our aim is that every piece that comes from our studio would be like a prayer — not a prayer in the service of asking for something, but rather a prayer of appreciation, a prayer of delight for the beauty and simplicity of natural things. The quiet spirit of the unrefined and the unsophisticated, the art of creating peace."
           img={IMGS?.about3}
           alt="Pottery at Cold Mountain Studio"
         />

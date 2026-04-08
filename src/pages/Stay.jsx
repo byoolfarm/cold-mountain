@@ -2,6 +2,7 @@
 // Stack: Tailwind CSS + Lucide React
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   MapPin, Clock, Utensils, Wifi, Coffee, Mountain, Flame,
   Waves, Sun, TreePine, BedDouble, Users, ChevronDown, MessageCircle
@@ -71,6 +72,7 @@ function EnquireForm() {
 }
 
 export default function RetreatPage() {
+  const navigate = useNavigate();
 
   return (
     <>
@@ -92,7 +94,7 @@ export default function RetreatPage() {
           <p className="text-sm text-white/65 leading-relaxed mb-8 max-w-md">
            Simple rooms, spacious verandah with sweeping mountain views          </p>
           <div className="flex flex-wrap gap-3">
-            <button onClick={() => document.getElementById("enquire")?.scrollIntoView({ behavior: "smooth" })}
+            <button onClick={() => navigate("/#contact")}
               className="border border-white text-white text-xs tracking-widest uppercase px-6 py-3 hover:bg-white hover:text-black transition-all duration-300">
               Enquire Now
             </button>

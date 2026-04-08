@@ -64,9 +64,7 @@ function ComingSoon() {
 
       {/* Body copy */}
       <p className="relative z-10 text-[0.93rem] text-earth-light leading-relaxed text-center max-w-[460px] mb-10">
-        Our next collection is taking shape on the wheel in Dharamshala.
-        Each piece is handmade, so good things take time — we're aiming to
-        open the shop in&nbsp;<span className="text-charcoal font-medium">April 2026</span>.
+       The shop is currently closed as we refine our next collection. We release new pottery only a few times a year to ensure every piece receives the attention it deserves.
       </p>
 
       {/* Clock divider */}
@@ -87,8 +85,7 @@ function ComingSoon() {
           In the meantime
         </p>
         <p className="text-[0.9rem] text-earth-light leading-relaxed mb-6">
-          Follow along on Instagram for new pieces, kiln-opening moments,
-          and studio life from the mountains.
+          Join us on Instagram for a glimpse into studio life, kiln openings, and the stories behind the clay.
         </p>
         <a
           href="https://www.instagram.com/thecoldmountainstudio/"

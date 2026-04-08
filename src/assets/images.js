@@ -28,7 +28,7 @@ export { default as logo }          from "./images/logo.png";
 export { default as slide_farm }     from "./images/slide_farm.jpg";
 export { default as slide_wheel }    from "./images/slide_wheel.jpg";
 export { default as slide_students } from "./images/slide_students.jpg";
-export { default as slide_studio }   from "./images/slide_studio.jpg";
+export { default as slide_studio1 }   from "./images/slide_studio1.jpg";
 
 // ── Course cards ─────────────────────────────────────────────────────────────
 export { default as course_retreat }   from "./images/course_retreat.jpg";
