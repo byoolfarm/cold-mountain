@@ -43,9 +43,11 @@ function StudioSection({ id, label, heading, accentWord, body, img, alt, reverse
             )}
           </h2>
           <Rule light={light} />
-          <p className={`text-[1rem] leading-[2] ${bodyCol} max-w-[480px]`}>
-            {body}
-          </p>
+          {body.split("\n").filter(s => s.trim()).map((para, i) => (
+            <p key={i} className={`text-[1rem] leading-[2] ${bodyCol} max-w-[480px] ${i > 0 ? "mt-4" : ""}`}>
+              {para.trim()}
+            </p>
+          ))}
         </div>
 
         {/* Image column */}
@@ -76,7 +78,7 @@ export default function AboutStudioPage() {
       <main className="bg-warm-white min-h-screen">
 
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
-        <div className="relative h-[80vh] min-h-[440px] flex items-end overflow-hidden">
+        <div className="relative h-[20vh] min-h-[440px] flex items-end overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center mt-[4.5rem]"
             style={{ backgroundImage: `url(${IMGS.about_wallpaper})` }}
@@ -138,13 +140,13 @@ In a world that rewards speed and scale, we choose depth and presence. Our studi
         <StudioSection
           id="our-aim"
           label="Our Aim"
-          heading="Every piece,"
-          accentWord="a prayer."
+          heading="Every piece, a prayer"
+          // accentWord="a prayer."
           body="Founded in 2017 in the hills of Himachal Pradesh, Cold Mountain Studio began as a shared dream: to create a sanctuary where making becomes a form of being.
 
  Lakhan Kaushik , our chief innovator and glaze master, continues to explore new forms and finishes — each bowl, cup, or vessel a reflection of his curious dialogue with the wheel.
 
-*Nalin Chandra* , our co-founder and steady compass, grounds the studio with his vision and support, allowing creativity to flow freely without compromise.
+Nalin Chandra , our co-founder and steady compass, grounds the studio with his vision and support, allowing creativity to flow freely without compromise.
 
 Swapna P , hand-building storyteller, traded a global corporate career for Dharamshala's mountains—shaping organic, imperfect forms that blend discipline with slow living's freedom. 
 

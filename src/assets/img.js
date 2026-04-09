@@ -77,6 +77,9 @@ export const blog_background = "/images/blog_background.webp";
 export const blog1 = "/images/blog1.webp";
 export const blog2 = "/images/blog2.webp";
 export const blog3 = "/images/blog3.webp";
+export const blog4 = "/images/blog4.webp";
+export const blog5 = "/images/blog5.webp";
+export const blog6 = "/images/blog6.webp";
 
 // ── Work / SMP ───────────────────────────────────────────────────────────────
 export const smp_1  = "/images/smp-1.webp";
@@ -98,7 +101,15 @@ export const smp_16 = "/images/smp-16.webp";
 
 // ── Portraits ────────────────────────────────────────────────────────────────
 export const lakhan_portrait = "/images/smp-16.webp";
-export const swapna_portrait = "/images/smp-16.webp";
+export const swapna_portrait = "/images/swapna_portrait.webp";
+export const swapna_1 = "/images/swapna_1.webp";
+export const swapna_2 = "/images/swapna_2.webp";
+export const swapna_3 = "/images/swapna_3.webp";
+export const swapna_4 = "/images/swapna_4.webp";
+export const swapna_5 = "/images/swapna_5.webp";
+export const swapna_6 = "/images/swapna_6.webp";
+export const swapna_7 = "/images/swapna_7.webp";
+export const swapna_8 = "/images/swapna_8.webp";
 
 // ── Lakhan Work ──────────────────────────────────────────────────────────────
 export const lakhan_work2  = "/images/lakhan_work2.webp";

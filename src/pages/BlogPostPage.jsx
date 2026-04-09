@@ -28,12 +28,12 @@ export default function BlogPostPage() {
       const parts = para.split(/(\*\*[^*]+\*\*)/g);
       const rendered = parts.map((part, j) => {
         if (part.startsWith("**") && part.endsWith("**")) {
-          return <strong key={j} className="font-medium text-charcoal">{part.slice(2, -2)}</strong>;
+          return <strong key={j} className="font-medium text-charcoal-dark">{part.slice(2, -2)}</strong>;
         }
         return part;
       });
       return (
-        <p key={i} className="text-[0.88rem] leading-[1.9] text-earth-light mb-5">
+        <p key={i} className="text-[1.05rem] md:text-[1.12rem] leading-[1.8] text-earth-light/95 mb-8 font-light tracking-wide">
           {rendered}
         </p>
       );
@@ -43,33 +43,48 @@ export default function BlogPostPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-warm-white mt-[4.5rem]">
-        {/* Hero image */}
-        <div className="w-full h-[100vh] aspect-[21/9] overflow-hidden">
-          <img src={img} alt={post.title} className="w-full h-full object-cover brightness-[0.75]" />
+      <main className="min-h-screen bg-warm-white pb-20 pt-[4.5rem]">
+        <div className="w-full h-[30vh] md:h-[40vh] overflow-hidden">
+          <img 
+            src={img} 
+            alt={post.title} 
+            className="w-full h-full object-cover brightness-[0.9]"
+            style={{ objectPosition: post.imgPos || "center" }}
+          />
         </div>
 
-        {/* Article */}
-        <article className="max-w-[720px] mx-auto px-6 py-16">
-          {/* Meta */}
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-[0.6rem] tracking-[0.2em] uppercase text-clay font-jost">{post.category}</span>
-            <span className="text-stone">·</span>
-            <span className="text-[0.9rem] text-stone font-jost">{post.date}</span>
-            <span className="text-stone">·</span>
-            <span className="text-[0.9rem] text-stone font-jost">{post.readTime}</span>
+        {/* Header Block */}
+        <header className="max-w-[1100px] mx-auto px-6 pt-12 pb-8 text-center">
+          {/* Meta Info */}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="text-[0.65rem] tracking-[0.25em] uppercase text-clay font-jost font-medium">
+              {post.category}
+            </span>
+            <span className="w-1 h-1 rounded-full bg-stone/30" />
+            <span className="text-[0.8rem] tracking-wide text-stone font-jost">{post.date}</span>
+            <span className="w-1 h-1 rounded-full bg-stone/30" />
+            <span className="text-[0.8rem] tracking-wide text-stone font-jost">{post.readTime}</span>
           </div>
 
           {/* Title */}
-          <h1 className="font-cormorant text-[clamp(1.8rem,3.5vw,2.8rem)] font-light text-charcoal leading-tight mb-8">
+          <h1 className="font-cormorant text-[clamp(2.2rem,5vw,3.5rem)] font-light text-charcoal leading-[1.1] mb-8 max-w-[900px] mx-auto">
             {post.title}
           </h1>
 
-          {/* Divider */}
-          <div className="w-12 h-px bg-clay mb-8" />
+          {/* Author if exists */}
+          {post.author && (
+            <div className="flex flex-col items-center gap-1 mt-6">
+              <span className="text-[0.6rem] tracking-[0.15em] uppercase text-stone/60 font-jost">Written by</span>
+              <span className="font-cormorant italic text-[1.1rem] text-charcoal">{post.author}</span>
+            </div>
+          )}
+        </header>
 
-          {/* Body */}
-          <div>{renderBody(post.body)}</div>
+        {/* Article content */}
+        <article className="max-w-[760px] mx-auto px-6 py-16 md:py-24">
+          <div className="prose-custom">
+            {renderBody(post.body)}
+          </div>
 
           {/* Back link */}
           <div className="mt-12 pt-8 border-t border-black/10">

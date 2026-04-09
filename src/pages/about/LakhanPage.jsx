@@ -112,8 +112,25 @@ export default function LakhanPage() {
           position: sticky;
           top: 3rem;
         }
+        .portrait-img {
+          width: 100%;
+          aspect-ratio: 3/4;
+          object-fit: cover;
+          object-position: top;
+        }
         @media (max-width: 768px) {
-          .portrait-sticky { position: static; }
+          .portrait-sticky { 
+            position: static; 
+            max-height: 60vh; 
+            display: flex; 
+            flex-direction: column;
+            gap: 1.5rem;
+          }
+          .portrait-img { 
+            flex: 1; 
+            min-height: 0; 
+            aspect-ratio: auto;
+          }
         }
       `}</style>
 
@@ -138,13 +155,7 @@ export default function LakhanPage() {
         <FadeIn>
           <div className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24">
             <div
-              className="border-b border-black/8 pt-6 pb-14 md:pt-6 md:pb-14"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1.75fr",
-                gap: "clamp(3rem, 5vw, 6rem)",
-                alignItems: "start",
-              }}
+              className="border-b border-black/8 pt-6 pb-14 md:pt-6 md:pb-14 grid grid-cols-1 md:grid-cols-[1fr_1.75fr] gap-[clamp(3rem,5vw,6rem)] items-start"
             >
               {/* Portrait */}
               <div className="portrait-sticky flex flex-col gap-6">
@@ -152,8 +163,8 @@ export default function LakhanPage() {
                   <img
                     src={lakhan_portrait}
                     alt="Lakhan Kaushik"
-                    className="w-full object-cover object-top"
-                    style={{ aspectRatio: "3/4", filter: "saturate(0.85) sepia(0.05)" }}
+                    className="w-full object-cover object-top portrait-img"
+                    style={{ filter: "saturate(0.85) sepia(0.05)" }}
                   />
                 ) : (
                   <div
@@ -254,9 +265,9 @@ export default function LakhanPage() {
               <span className="font-cormorant text-[clamp(1.1rem,2vw,1.5rem)] font-light text-charcoal">
                 Selected Works
               </span>
-              <span className="text-[0.62rem] tracking-[0.22em] uppercase text-stone font-jost">
+              {/* <span className="text-[0.62rem] tracking-[0.22em] uppercase text-stone font-jost">
                 {WORKS.length} pieces
-              </span>
+              </span> */}
             </div>
 
             <div
@@ -273,9 +284,9 @@ export default function LakhanPage() {
                   style={{ position: "relative", overflow: "hidden", aspectRatio: "1/1", background: "#1c1a17" }}
                 >
                   <img src={src} alt={label} className="work-img" loading="lazy" />
-                  <div className="work-caption">
+                  {/* <div className="work-caption">
                     <span className="font-jost">{label}</span>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>

@@ -15,7 +15,7 @@ export default function FarmstayStrip() {
           <p className="text-[0.8rem] leading-[1.9] text-white/65 mb-6 max-w-[440px]">
             Our sister property sits right on the farm where the studio stands. Earthy rooms built with natural materials, farm-fresh meals, and the sound of the mountains — all steps away from the studio.
           </p>
-          <BtnOutlineWhite className="text-[14px] md:text-[16px]" href="https://byoolfarmstay.com/">
+          <BtnOutlineWhite className=" text-[10px] md:text-[14px]" href="https://byoolfarmstay.com/">
             Visit byoolfarmstay.com →
           </BtnOutlineWhite>
         </div>

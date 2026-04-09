@@ -10,6 +10,7 @@ export const POSTS = [
   imgKey: "blog2",
   category: "Psychology",
   title: "The Clay That Refuses to Center: Breaking Patterns, Finding Growth",
+  imgPos: "center",
   date: "March 22, 2026",
   readTime: "6 min read",
   excerpt:
@@ -77,7 +78,7 @@ Stay messy, stay curious, stay bold. You're not just making pots—you're buildi
 },
   {
     slug: "at-cold-mountain-studio-learning-as-presence",
-    imgKey: "blog2",
+    imgKey: "blog4",
     category: "Philosophy",
     title: "At Cold Mountain Studio: Learning as Presence",
     date: "October 16, 2025",
@@ -88,10 +89,10 @@ Stay messy, stay curious, stay bold. You're not just making pots—you're buildi
 
 Our guiding verse rests on an old mountain hermit's words, reshaped to echo our present:
 
-*I reached Cold Mountain and all cares stopped.*
-*No idle thoughts remained in my head.*
-*Nothing to do, I make mud into pots,*
-*And trust the current like an unmoored boat.*
+"I reached Cold Mountain and all cares stopped.
+No idle thoughts remained in my head.
+Nothing to do, I make mud into pots,
+And trust the current like an unmoored boat"
 
 This verse, adapted from the Tang-dynasty poet Hanshan, is more than a slogan — it is our way of seeing. In Han-Shan's "Cold Mountain," the mountain, the self, and the act of making are one. His journey was not an escape from the world, but a return to the truth of being. That insight forms the spirit of our studio.
 
@@ -148,9 +149,10 @@ If you have been feeling the pull towards something slower, something real — t
   },
   {
     slug: "the-clay-circle-where-community-meets-clay",
-    imgKey: "blog2",
+    imgKey: "blog5",
     category: "Community",
     title: "The Clay Circle — Where Community Meets Clay",
+    imgPos: "center",
     date: "February 14, 2025",
     readTime: "4 min read",
     excerpt:
@@ -172,7 +174,8 @@ If you are looking for a reason to join us, let this be it: not the pottery, but
     imgKey: "blog1",
     category: "Student Stories",
     title: "What Did Our Beginner Course Students Say About Their Experience?",
-    date: "January 20, 2025",
+    imgPos: "top",
+   date: "January 20, 2025",
     readTime: "6 min read",
     excerpt:
       "Clay from earth to hands — the journey, flow state, non-attachment. This haiku summarises one student's relationship with pottery. Here are the unfiltered stories from our beginner course participants.",
@@ -199,7 +202,7 @@ If you'd like to be the next voice in this circle, our beginner courses are open
   },
   {
     slug: "the-art-of-glazing-surface-as-storytelling",
-    imgKey: "blog3",
+    imgKey: "blog6",
     category: "Craft",
     title: "The Art of Glazing — Surface as Storytelling",
     date: "December 5, 2024",
