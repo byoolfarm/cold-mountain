@@ -4,6 +4,7 @@
 // To add a bullet point: copy any <li> block inside an answer.
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { MapPin } from "lucide-react";
 import { SectionLabel, SectionTitle, DividerLine, BtnOutlineWhite } from "../ui";
 
 // Shared class strings used across answers
@@ -30,8 +31,8 @@ function FaqItem({ question, children }) {
           +
         </span>
       </div>
-      <div className={`overflow-hidden transition-all duration-[400ms] ${open ? "max-h-[700px] pt-3" : "max-h-0"}`}>
-        <div className={answerText} onClick={e => e.stopPropagation()}>
+      <div className={`overflow-hidden transition-all duration-[400ms] ease-in-out ${open ? "max-h-[1200px] opacity-100 pt-3 pb-5" : "max-h-0 opacity-0"}`}>
+        <div className={`${answerText} pb-1`} onClick={e => e.stopPropagation()}>
           {children}
         </div>
       </div>
@@ -68,11 +69,11 @@ export default function FaqSection() {
             </li>
             <li className={bulletLi}>
               <span className={bulletDot} />
-              <span><span className={bulletLabel}>Three-Month Intensive</span><span className={bulletDesc}> — Our most comprehensive program for students who want to immerse themselves fully in the life of a potter.</span></span>
+              <span><span className={bulletLabel}>Three-Month Program</span><span className={bulletDesc}> — Our most comprehensive program for students who want to immerse themselves fully in the life of a potter.</span></span>
             </li>
             <li className={bulletLi}>
               <span className={bulletDot} />
-              <span><span className={bulletLabel}>Advanced Pottery Course</span><span className={bulletDesc}> — Tailored for potters who have mastered the basics and want to push their boundaries.</span></span>
+              <span><span className={bulletLabel}>Advanced Pottery Course/Pottery Intensive</span><span className={bulletDesc}> — Tailored for potters who have mastered the basics and want to push their boundaries.</span></span>
             </li>
             <li className={bulletLi}>
               <span className={bulletDot} />
@@ -105,11 +106,11 @@ export default function FaqSection() {
           <ul className="mt-2 space-y-1.5 list-none text-white/55">
             <li className={bulletLi}>
               <span className={bulletDot} />
-              <span>Expert instruction and full studio access</span>
+              <span>Expert instruction and studio access</span>
             </li>
             <li className={bulletLi}>
               <span className={bulletDot} />
-              <span>All materials — clay and glazes</span>
+              <span>All materials</span>
             </li>
             <li className={bulletLi}>
               <span className={bulletDot} />
@@ -124,40 +125,126 @@ export default function FaqSection() {
         {/* ── 4 ───────────────────────────────────────────────────────────── */}
         <FaqItem question="How do I book a spot?">
           <p className="text-white/55">
-            Slots are available on a first-come, first-served basis. Since we keep class sizes small to ensure personal attention, they fill up quickly. Check upcoming dates on our{" "}
-            {/* <a href="https://www.thecoldmountainstudio.com/courses" target="_blank" rel="noreferrer" className={link}>
-              Upcoming Classes
-            </a> */}
-            {" "} Instagram page <a href="https://www.instagram.com/thecoldmountainstudio/" target="_blank" rel="noreferrer" className={link}>
-                @thecoldmountainstudio
-            </a>
-            {" "}on where we announce new dates first.
-          </p>
+  Our courses run year-round, with spots offered on a first-come, first-served basis. 
+  For our regular programs, please reach out to check availability—our small class sizes 
+  are designed to provide personalized attention and tend to fill up quickly. 
+  
+  Stay updated on upcoming sessions through our Instagram page{" "}
+  <a 
+    href="https://www.instagram.com/thecoldmountainstudio/" 
+    target="_blank" 
+    rel="noreferrer" 
+    className={link}
+  >
+    @thecoldmountainstudio
+  </a>
+  {" "}where we regularly share new dates for specialized courses and events.
+</p>
         </FaqItem>
 
         {/* ── 5 ───────────────────────────────────────────────────────────── */}
         <FaqItem question="Where is the studio located?">
           <p className="text-white/55">
-            The Cold Mountain Studio is nestled in the quiet hill town of Dharamshala, on the beautiful Byool Farm. Our studio is built by hand from earth-bags, rising directly from the land to reflect our connection with nature.
-          </p>
+  The Cold Mountain Studio is nestled in Lower Dharamshala, set within the peaceful surroundings of Byool Farm. Located in a serene rural setting, the studio is not far from the city, offering the perfect balance of accessibility and quiet retreat. 
+  Built by hand using earth-bag construction, the studio rises directly from the land, reflecting a deep connection with nature. Surrounded by the farm, it enjoys stunning views of the Dhauladhar range, creating an inspiring and tranquil environment.
+         </p>
         </FaqItem>
 
         {/* ── 6 ───────────────────────────────────────────────────────────── */}
         <FaqItem question="Can I visit the studio without taking a course?">
           <p className="text-white/55">
-            Yes — you can sign up for our half-day or full-day workshops if you just want to try your hand at pottery or spend meaningful time while in Dharamshala. You can also visit <span className="text-clay-light">The Dining Room at Byool Farm</span>, our on-site café.
+  Yes, you can visit the studio with a prior appointment if you’d simply like to explore the space, as we’re often engaged with ongoing classes/farm related activities. Alternatively, you can sign up for our half-day or full-day workshops to get a hands-on taste of the experience. 
+
+  You can also visit{" "}
+  <a 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    href="https://www.byoolfarmstay.com/dining" 
+    className="text-clay-light"
+  >
+    The Dining Room at Byool Farm
+  </a>, 
+  our on-site café, where you can purchase our pottery or enjoy a delicious meal.
           </p>
         </FaqItem>
 
         {/* ── 7 ───────────────────────────────────────────────────────────── */}
         <FaqItem question="Do you sell the pottery made at the studio?">
-          <p className="text-white/55">
-            Yes! Visit our{" "}
-            <Link to="/shop" className={link}>
-              Shop
-            </Link>
-            {" "}for functional ceramic ware — each piece is a balance between efficient production and our own spiritual and aesthetic goals.
-          </p>
+         <p className="text-white/55">
+  Yes! Visit our{" "}
+  <Link to="/shop" className={link}>
+    online shop
+  </Link>
+  {" "}for functional ceramic ware — 
+
+  {" "}If you’re in Dharamshala, you can also explore our work in person at  <a 
+    href="https://www.byoolfarmstay.com/dining" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className={link}
+  >
+    The Dining Room at Byool Farm
+  </a>, our in-house gallery space. 
+
+  {" "}You can also find our pieces at{" "}
+  <a 
+    href="https://www.instagram.com/the.other.space/" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className={link}
+  >
+    The Other Space
+  </a>
+  {" "}(
+  <a 
+    href="https://www.google.com/maps/place/The+Other+Space/@32.2313517,76.3242313,17z/data=!3m1!4b1!4m6!3m5!1s0x391b51c61885b575:0xaf3633962d61ac65!8m2!3d32.2313517!4d76.3268062!16s%2Fg%2F11fmg9rsbr?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="inline-flex items-center text-clay-light hover:text-clay transition-colors"
+    title="View on Google Maps"
+  >
+    <MapPin size={14} className="" />
+  </a>
+  ),{" "}
+  <a 
+    href="https://www.instagram.com/myearthstore/" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className={link}
+  >
+    My Earth Store
+  </a>
+  {" "}(
+  <a 
+    href="https://www.google.com/maps/place/My+Earth+Store/@32.1850753,76.3650475,17z/data=!3m1!4b1!4m6!3m5!1s0x391b5226c5cea7db:0x22771438a17c76d1!8m2!3d32.1850753!4d76.3676224!16s%2Fg%2F11b7l7b02k?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="inline-flex items-center text-clay-light hover:text-clay transition-colors"
+    title="View on Google Maps"
+  >
+    <MapPin size={14} className="" />
+  </a>
+  ), and{" "}
+  <a 
+    href="https://www.instagram.com/chura.cafe/" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className={link}
+  >
+    Chura Cafe
+  </a>
+  {" "}(
+  <a 
+    href="https://www.google.com/maps/place/Chura/@32.2389313,76.3224585,17z/data=!3m1!4b1!4m6!3m5!1s0x391b51f64e539581:0x134b8892053a623d!8m2!3d32.2389313!4d76.3250334!16s%2Fg%2F11ycb7t8n9?entry=ttu&g_ep=EgoyMDI2MDQwNi.0IKXMDSoASAFQAw%3D%3D" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="inline-flex items-center text-clay-light hover:text-clay transition-colors"
+    title="View on Google Maps"
+  >
+    <MapPin size={14} className="" />
+  </a>
+  ).
+</p>
         </FaqItem>
 
         {/* ── 8 ───────────────────────────────────────────────────────────── */}
