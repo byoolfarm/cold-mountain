@@ -3,18 +3,18 @@ import { useEffect, useRef } from "react";
 import SEO    from "../../components/SEO";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { lakhan_portrait } from "../../assets/images";
+import { lakhan_portrait } from "../../assets/img";
 
-// Work images — add these to your assets/images index
-import work2  from "../../assets/images/lakhan_work2.jpg";
-import work3  from "../../assets/images/lakhan_work3.jpg";
-import work4  from "../../assets/images/lakhan_work4.jpg";
-import work5  from "../../assets/images/lakhan_work5.jpg";
-import work6  from "../../assets/images/lakhan_work6.jpg";
-import work7  from "../../assets/images/lakhan_work7.jpg";
-import work8  from "../../assets/images/lakhan_work8.JPG";
-import work9  from "../../assets/images/lakhan_work9.JPG";
-import work10 from "../../assets/images/lakhan_work10.jpg";
+// Work images — string paths to public/images/ (WebP)
+const work2  = "/images/lakhan_work2.webp";
+const work3  = "/images/lakhan_work3.webp";
+const work4  = "/images/lakhan_work4.webp";
+const work5  = "/images/lakhan_work5.webp";
+const work6  = "/images/lakhan_work6.webp";
+const work7  = "/images/lakhan_work7.webp";
+const work8  = "/images/lakhan_work8.webp";
+const work9  = "/images/lakhan_work9.webp";
+const work10 = "/images/lakhan_work10.webp";
 
 const WORKS = [
   { src: work5,  label: "Gallery Installation" },
@@ -272,7 +272,7 @@ export default function LakhanPage() {
                   className="work-item"
                   style={{ position: "relative", overflow: "hidden", aspectRatio: "1/1", background: "#1c1a17" }}
                 >
-                  <img src={src} alt={label} className="work-img" />
+                  <img src={src} alt={label} className="work-img" loading="lazy" />
                   <div className="work-caption">
                     <span className="font-jost">{label}</span>
                   </div>

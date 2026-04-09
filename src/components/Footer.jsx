@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { logo, footer_bg } from "../assets/images";
+import { logo, footer_bg } from "../assets/img";
 
 export default function Footer() {
   const navigate  = useNavigate();
@@ -22,7 +22,7 @@ export default function Footer() {
     <footer className="relative overflow-hidden text-cream px-16 py-14 flex flex-col md:flex-row justify-between items-end md:items-center gap-6 min-h-[180px]">
       {/* BG image */}
       <div className="absolute inset-0 -z-0">
-        <img src={footer_bg} alt="" className="w-full h-full object-cover brightness-[0.15] saturate-[0.4] block" />
+        <img src={footer_bg} alt="" className="w-full h-full object-cover brightness-[0.15] saturate-[0.4] block" loading="lazy" />
       </div>
 
       {/* Logo + tagline */}

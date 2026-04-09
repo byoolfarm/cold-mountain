@@ -1,5 +1,5 @@
 // src/components/sections/RetreatBanner.jsx
-import { retreat_wide } from "../../assets/images";
+import { retreat_wide } from "../../assets/img";
 import { BtnOutlineWhite } from "../ui";
 
 export default function RetreatBanner() {

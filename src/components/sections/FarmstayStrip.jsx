@@ -1,6 +1,6 @@
 // src/components/sections/FarmstayStrip.jsx
-import { room_1, room_2, retreat_wide } from "../../assets/images";
-import * as IMGS from "../../assets/images"
+import { room_1, room_2, retreat_wide } from "../../assets/img";
+import * as IMGS from "../../assets/img"
 import { SectionLabel, SectionTitle, BtnOutlineWhite } from "../ui";
 
 export default function FarmstayStrip() {
@@ -20,10 +20,11 @@ export default function FarmstayStrip() {
           </BtnOutlineWhite>
         </div>
         <div className="grid grid-cols-2 gap-2">
-          <img src={IMGS?.byool_stay2} alt="Byool Farm" className="w-full aspect-[4/3] object-cover block" />
-          <img src={IMGS?.byool_stay3} alt="Byool Farm" className="w-full aspect-[4/3] object-cover block" />
+          <img src={IMGS?.byool_stay2} alt="Byool Farm" className="w-full aspect-[4/3] object-cover block" loading="lazy" />
+          <img src={IMGS?.byool_stay3} alt="Byool Farm" className="w-full aspect-[4/3] object-cover block" loading="lazy" />
           <img src={IMGS?.byool_stay1} alt="Byool Farm"
             className="col-span-2 w-full aspect-[16/9] object-cover block brightness-[0.8] saturate-[0.7]"
+            loading="lazy"
           />
         </div>
       </div>

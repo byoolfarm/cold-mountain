@@ -9,7 +9,7 @@
 // Each accommodation option is its own independent toggle.
 // ─────────────────────────────────────────────────────────────────────────────
 // import { useState } from "react";
-import * as IMGS from "../../assets/images";
+import * as IMGS from "../../assets/img";
 import {SectionLabel,SectionTitle} from "../ui"
 import { Link } from "react-router-dom";
 // import { room_1, room_2 } from "../../assets/images";
@@ -935,6 +935,7 @@ function CourseCard({ card, onScrollTo }) {
           src={card.imgSrc}
           alt={card.name}
           className="w-full h-full object-cover block [filter:saturate(0.82)] transition-[transform,filter] duration-[600ms] ease-in-out group-hover:scale-[1.04] group-hover:[filter:saturate(1)]"
+          loading="lazy"
           onError={(e) => { e.currentTarget.parentElement.style.cssText = `background:${card.imgFallback};aspect-ratio:4/3`; }}
         />
       </div>

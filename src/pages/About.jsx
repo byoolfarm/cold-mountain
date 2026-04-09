@@ -12,8 +12,8 @@ import Footer from "../components/Footer";
 import { SectionLabel } from "../components/ui";
 import {
   slide_wheel, 
-} from "../assets/images";
-import * as IMGS from "../assets/images"
+} from "../assets/img";
+import * as IMGS from "../assets/img"
 
 // ── Thin ornamental rule ──────────────────────────────────────────────────────
 const Rule = ({ light = false }) => (
@@ -54,6 +54,7 @@ function StudioSection({ id, label, heading, accentWord, body, img, alt, reverse
             src={img}
             alt={alt}
             className="w-full aspect-[4/5] object-cover saturate-75 hover:saturate-100 transition-all duration-700 block"
+            loading="lazy"
           />
         </div>
       </div>

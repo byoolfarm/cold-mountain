@@ -1,5 +1,5 @@
 // src/components/sections/StudioSplit.jsx
-import { studio_split } from "../../assets/images";
+import { studio_split } from "../../assets/img";
 import { useEffect, useRef, useState } from "react";
 import { SectionLabel, SectionTitle } from "../ui";
 

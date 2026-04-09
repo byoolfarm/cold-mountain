@@ -11,7 +11,7 @@ import Footer                from "../components/Footer";
 import SEO                   from "../components/SEO";
 import { SectionLabel }      from "../components/ui";
 import { SHOP_CATEGORIES, PRODUCTS } from "../data/shop";
-import * as IMGS             from "../assets/images";
+import * as IMGS             from "../assets/img";
 import { Instagram, ArrowRight, Flame, Clock } from "lucide-react";
 
 // ── 🔑 TOGGLE THIS to open / close the shop ──────────────────────────────────
@@ -147,6 +147,7 @@ function ProductCard({ product }) {
           src={img}
           alt={product.name}
           className="w-full h-full object-cover saturate-75 group-hover:scale-[1.04] group-hover:saturate-100 transition-all duration-500 block"
+          loading="lazy"
         />
       </div>
       <p className="font-cormorant text-[1.1rem] text-charcoal mb-0.5">{product.name}</p>

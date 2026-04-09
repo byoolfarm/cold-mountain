@@ -4,7 +4,7 @@ import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { POSTS } from "../data/blog";
-import * as IMGS from "../assets/images";
+import * as IMGS from "../assets/img";
 import { SectionLabel } from "../components/ui";
 
 export default function BlogPostPage() {

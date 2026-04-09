@@ -2,7 +2,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { POSTS } from "../../data/blog";
-import * as IMGS from "../../assets/images";
+import * as IMGS from "../../assets/img";
 import { SectionLabel, SectionTitle, DividerLine } from "../ui";
 
 // ─── NUDGE ANIMATION ─────────────────────────────────────────────────────────
@@ -124,6 +124,7 @@ function BlogCard({ post }) {
         <img
           src={img} alt={post.title}
           className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
+          loading="lazy"
         />
       </div>
       <div className="p-6 flex flex-col flex-1">

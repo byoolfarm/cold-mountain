@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { slide_farm, slide_wheel, slide_students, slide_studio1 } from "../../assets/images";
+import { slide_farm, slide_wheel, slide_students, slide_studio1 } from "../../assets/img";
 import { Link } from "react-router-dom";
 const SLIDES = [
   {

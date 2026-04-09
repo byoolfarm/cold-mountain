@@ -3,18 +3,18 @@ import { useEffect, useRef } from "react";
 import SEO    from "../../components/SEO";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { swapna_portrait } from "../../assets/images";
+import { swapna_portrait } from "../../assets/img";
 
-// Work images
-import work1  from "../../assets/images/smp-1.JPG";
-import work2  from "../../assets/images/smp-2.jpg";
-import work3  from "../../assets/images/smp-3.jpg";
-import work4  from "../../assets/images/smp-4.JPG";
-import work5  from "../../assets/images/smp-5.jpg";
-import work6  from "../../assets/images/smp-6.jpg";
-import work7  from "../../assets/images/smp-7.jpg";
-import work8  from "../../assets/images/smp-8.jpg";
-import work9  from "../../assets/images/smp-9.JPG";
+// Work images — string paths to public/images/ (WebP)
+const work1  = "/images/smp-1.webp";
+const work2  = "/images/smp-2.webp";
+const work3  = "/images/smp-3.webp";
+const work4  = "/images/smp-4.webp";
+const work5  = "/images/smp-5.webp";
+const work6  = "/images/smp-6.webp";
+const work7  = "/images/smp-7.webp";
+const work8  = "/images/smp-8.webp";
+const work9  = "/images/smp-9.webp";
 
 const WORKS = [
   { src: work1,  label: "Hand-built Vessel" },
@@ -269,7 +269,7 @@ export default function SwapnaPage() {
                   className="work-item"
                   style={{ position: "relative", overflow: "hidden", aspectRatio: "1/1", background: "#1c1a17" }}
                 >
-                  <img src={src} alt={label} className="work-img" />
+                  <img src={src} alt={label} className="work-img" loading="lazy" />
                   <div className="work-caption">
                     <span className="font-jost">{label}</span>
                   </div>

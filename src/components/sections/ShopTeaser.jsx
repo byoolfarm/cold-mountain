@@ -1,13 +1,13 @@
 // src/components/sections/ShopTeaser.jsx
 import { useState, useRef, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { about_wallpaper, shop_dinnerware, shop_drinkware, shop_serverware } from "../../assets/images";
+import { about_wallpaper, shop_dinnerware, shop_drinkware, shop_serverware } from "../../assets/img";
 import { SectionLabel, SectionTitle, DividerLine, BtnPrimary } from "../ui";
 
 const ITEMS = [
   { img: shop_dinnerware, name: "Dinnerware",  type: "" },
   { img: shop_drinkware,  name: "DrinkWare",   type: "" },
-  { img: shop_serverware, name: "Serverware",  type: "" },
+  { img: shop_serverware, name: "Serveware",  type: "" },
   { img: about_wallpaper, name: "Home Decor",  type: "" },
 ];
 
@@ -142,6 +142,7 @@ export default function ShopTeaser() {
               <img
                 src={item.img} alt={item.name}
                 className="w-full h-full object-cover saturate-75 group-hover:scale-[1.05] group-hover:saturate-100 transition-all duration-500 block"
+                loading="lazy"
               />
             </div>
             <p className="font-cormorant text-base text-charcoal mb-0.5">{item.name}</p>

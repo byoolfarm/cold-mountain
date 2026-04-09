@@ -10,7 +10,7 @@ import Navbar              from "../components/Navbar";
 import Footer              from "../components/Footer";
 import SEO                 from "../components/SEO";
 import { WORK_ITEMS, WORK_CATEGORIES } from "../data/work";
-import * as IMGS           from "../assets/images";
+import * as IMGS           from "../assets/img";
 import { SectionLabel }    from "../components/ui";
 
 // ── Filter tab bar ────────────────────────────────────────────────────────────
@@ -49,6 +49,7 @@ function WorkCard({ item }) {
           src={img}
           alt={item.title}
           className={`w-full h-full object-cover transition-all duration-700 ${hovered ? "scale-105 saturate-100" : "scale-100 saturate-75"}`}
+          loading="lazy"
         />
       </div>
 
