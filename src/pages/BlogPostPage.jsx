@@ -54,7 +54,7 @@ export default function BlogPostPage() {
         </div>
 
         {/* Header Block */}
-        <header className="max-w-[1100px] mx-auto px-6 pt-12 pb-8 text-center">
+        <header className="max-w-[1100px] mx-auto px-6 pt-12 pb-4 text-center">
           {/* Meta Info */}
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="text-[0.65rem] tracking-[0.25em] uppercase text-clay font-jost font-medium">
@@ -67,7 +67,7 @@ export default function BlogPostPage() {
           </div>
 
           {/* Title */}
-          <h1 className="font-cormorant text-[clamp(2.2rem,5vw,3.5rem)] font-light text-charcoal leading-[1.1] mb-8 max-w-[900px] mx-auto">
+          <h1 className="font-cormorant text-[clamp(2.2rem,5vw,3.5rem)] font-light text-charcoal leading-[1.1] mb-4 max-w-[900px] mx-auto">
             {post.title}
           </h1>
 
@@ -81,7 +81,7 @@ export default function BlogPostPage() {
         </header>
 
         {/* Article content */}
-        <article className="max-w-[760px] mx-auto px-6 py-16 md:py-24">
+        <article className="max-w-[760px] mx-auto px-6 pb-16 md:pb-24">
           <div className="prose-custom">
             {renderBody(post.body)}
           </div>

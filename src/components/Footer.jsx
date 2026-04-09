@@ -43,7 +43,7 @@ export default function Footer() {
         <li><a href="https://www.instagram.com/thecoldmountainstudio/" target="_blank" rel="noreferrer" className={linkCls}>Instagram</a></li>
       </ul>
 
-      <p className="relative text-[0.75rem] text-white/30">©2025 The Cold Mountain Studio · Dharamshala</p>
+      <p className="relative text-[0.75rem] text-white/30">©2026 The Cold Mountain Studio · Dharamshala</p>
     </footer>
   );
 }
