@@ -100,7 +100,7 @@ export const smp_15 = "/images/smp-15.webp";
 export const smp_16 = "/images/smp-16.webp";
 
 // ── Portraits ────────────────────────────────────────────────────────────────
-export const lakhan_portrait = "/images/smp-16.webp";
+export const lakhan_portrait = "/images/lakhan_portrait.webp";
 export const swapna_portrait = "/images/swapna_portrait.webp";
 export const swapna_1 = "/images/swapna_1.webp";
 export const swapna_2 = "/images/swapna_2.webp";

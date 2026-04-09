@@ -1,9 +1,10 @@
 // src/pages/about/LakhanPage.jsx  —  route: /about/lakhan
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import SEO    from "../../components/SEO";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { lakhan_portrait } from "../../assets/img";
+import ImageViewer from "../../components/ImageViewer";
 
 // Work images — string paths to public/images/ (WebP)
 const work2  = "/images/lakhan_work2.webp";
@@ -54,6 +55,7 @@ function FadeIn({ children, className = "" }) {
 }
 
 export default function LakhanPage() {
+  const [selectedImg, setSelectedImg] = useState(null);
   return (
     <>
       <SEO
@@ -81,6 +83,9 @@ export default function LakhanPage() {
           object-fit: cover;
           filter: saturate(0.8);
           transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+        }
+        .work-item {
+          cursor: pointer;
         }
         .work-item:hover .work-img {
           transform: scale(1.06);
@@ -282,6 +287,7 @@ export default function LakhanPage() {
                   key={label}
                   className="work-item"
                   style={{ position: "relative", overflow: "hidden", aspectRatio: "1/1", background: "#1c1a17" }}
+                  onClick={() => setSelectedImg({ src, label })}
                 >
                   <img src={src} alt={label} className="work-img" loading="lazy" />
                   {/* <div className="work-caption">
@@ -310,6 +316,14 @@ export default function LakhanPage() {
         </FadeIn>
 
       </main>
+
+      {selectedImg && (
+        <ImageViewer 
+          src={selectedImg.src} 
+          alt={selectedImg.label} 
+          onClose={() => setSelectedImg(null)} 
+        />
+      )}
 
       <Footer />
     </>

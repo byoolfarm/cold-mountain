@@ -12,6 +12,7 @@ import SEO                 from "../components/SEO";
 import { WORK_ITEMS, WORK_CATEGORIES } from "../data/work";
 import * as IMGS           from "../assets/img";
 import { SectionLabel }    from "../components/ui";
+import ImageViewer         from "../components/ImageViewer";
 
 // ── Filter tab bar ────────────────────────────────────────────────────────────
 function FilterBar({ active, onChange }) {
@@ -34,15 +35,16 @@ function FilterBar({ active, onChange }) {
 }
 
 // ── Single work item card ─────────────────────────────────────────────────────
-function WorkCard({ item }) {
+function WorkCard({ item, onClick }) {
   const [hovered, setHovered] = useState(false);
   const img = IMGS[item.imgKey];
 
   return (
     <div
-      className="relative overflow-hidden cursor-default group h-full"
+      className="relative overflow-hidden cursor-pointer group h-full"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => onClick(img, item.title)}
     >
       <div className=" h-full overflow-hidden bg-cream">
         <img
@@ -52,24 +54,6 @@ function WorkCard({ item }) {
           loading="lazy"
         />
       </div>
-
-      {/* Hover overlay with title + medium */}
-      {/* <div className={`absolute inset-0 bg-charcoal/70 flex flex-col justify-end p-4 transition-opacity duration-300 ${hovered ? "opacity-100" : "opacity-0"}`}>
-        <p className="font-cormorant text-cream text-lg font-light leading-snug">{item.title}</p>
-        {item.medium && (
-          <p className="text-[0.76rem] tracking-[0.12em] uppercase text-clay-light mt-1 font-jost">{item.medium}</p>
-        )}
-        {item.year && (
-          <p className="text-[0.74rem] text-white/50 mt-0.5 font-jost">{item.year}</p>
-        )}
-      </div> */}
-
-      {/* Featured badge */}
-      {/* {item.featured && (
-        <span className="absolute top-3 left-3 text-[0.6rem] tracking-[0.14em] uppercase bg-clay text-white px-2 py-0.5 font-jost">
-          Featured
-        </span>
-      )} */}
     </div>
   );
 }
@@ -77,6 +61,7 @@ function WorkCard({ item }) {
 // ── Page ──────────────────────────────────────────────────────────────────────
 export default function WorkPage() {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [selectedImg, setSelectedImg] = useState(null);
 
   const filtered = activeCategory === "all"
     ? WORK_ITEMS
@@ -94,7 +79,6 @@ export default function WorkPage() {
       <main className="min-h-screen bg-warm-white">
         {/* Page header */}
         <div className="pt-20 pb-8 px-4 md:px-16 bg-charcoal text-center">
-          {/* <SectionLabel light className="justify-center">From the kiln</SectionLabel> */}
           <h1 className="font-cormorant text-[clamp(2.2rem,4vw,3.4rem)] font-light text-cream leading-tight">
             Our <em className="italic text-clay-light">Work</em>
           </h1>
@@ -116,16 +100,14 @@ export default function WorkPage() {
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 items-stretch">
               {filtered.map(item => (
-                <WorkCard key={item.id} item={item} />
+                <WorkCard 
+                  key={item.id} 
+                  item={item} 
+                  onClick={(src, title) => setSelectedImg({ src, title })} 
+                />
               ))}
             </div>
           )}
-
-          {/* Count */}
-          {/* <p className="text-center text-[0.72rem] tracking-[0.14em] uppercase text-stone mt-10 font-jost">
-            {filtered.length} {filtered.length === 1 ? "piece" : "pieces"}
-            {activeCategory !== "all" && ` in ${WORK_CATEGORIES.find(c => c.id === activeCategory)?.label}`}
-          </p> */}
         </div>
 
         {/* Commission CTA */}
@@ -155,6 +137,14 @@ export default function WorkPage() {
           </a>
         </div>
       </main>
+
+      {selectedImg && (
+        <ImageViewer 
+          src={selectedImg.src} 
+          alt={selectedImg.title} 
+          onClose={() => setSelectedImg(null)} 
+        />
+      )}
 
       <Footer />
     </>
