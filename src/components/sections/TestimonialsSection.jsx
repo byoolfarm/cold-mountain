@@ -29,6 +29,37 @@ function Avatar({ name, initials, color }) {
   );
 }
 
+// ── Helper to format time ago dynamically ──────────────────────────────────────
+function getTimeAgo(dateString) {
+  if (!dateString) return "";
+  const past = new Date(dateString);
+  const now = new Date();
+  const diffDays = Math.floor((now - past) / (1000 * 60 * 60 * 24));
+  
+  if (diffDays < 7) {
+    if (diffDays <= 1) return "a day ago";
+    return `${diffDays} days ago`;
+  }
+  
+  if (diffDays < 30) {
+    const diffWeeks = Math.floor(diffDays / 7);
+    if (diffWeeks === 1) return "a week ago";
+    return `${diffWeeks} weeks ago`;
+  }
+  
+  if (diffDays < 365) {
+    const diffMonths = Math.floor(diffDays / 30);
+    // Safety check just in case diffDays < 30 rule caught it, but floor(diffDays/30) could be 0 if diffDays is somehow messed up.
+    // However, since it's >= 30, diffMonths will be at least 1.
+    if (diffMonths <= 1) return "a month ago";
+    return `${diffMonths} months ago`;
+  }
+  
+  const diffYears = Math.floor(diffDays / 365);
+  if (diffYears === 1) return "a year ago";
+  return `${diffYears} years ago`;
+}
+
 // ── Single review card ────────────────────────────────────────────────────────
 function ReviewCard({ review }) {
   const [expanded, setExpanded] = useState(false);
@@ -36,14 +67,19 @@ function ReviewCard({ review }) {
   const displayed = !expanded && isLong ? review.text.slice(0, 160) + "…" : review.text;
 
   return (
-    <div className="flex-shrink-0 w-[280px] bg-white rounded-sm shadow-sm border border-black/6 p-5 flex flex-col gap-3">
+    <a 
+      href={review.url} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="flex-shrink-0 w-[280px] bg-white rounded-sm shadow-sm border border-black/6 p-5 flex flex-col gap-3 group cursor-pointer hover:shadow-md transition-shadow no-underline"
+    >
       {/* Header */}
       <div className="flex items-start justify-between gap-2">
         <div className="flex items-center gap-2.5">
           <Avatar name={review.name} initials={review.initials} color={review.color} />
           <div>
             <p className="text-base font-medium text-charcoal leading-tight">{review.name}</p>
-            <p className="text-[0.9rem] text-stone">{review.date}</p>
+            <p className="text-[0.9rem] text-stone">{getTimeAgo(review.timestamp)}</p>
           </div>
         </div>
         <GoogleIcon size={18} />
@@ -57,14 +93,18 @@ function ReviewCard({ review }) {
         {displayed}
         {isLong && (
           <button
-            onClick={() => setExpanded(e => !e)}
+            onClick={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+              setExpanded(e => !e);
+            }}
             className="ml-1 text-clay text-[0.72rem] bg-transparent border-none cursor-pointer font-jost underline hover:text-clay-dark transition-colors"
           >
             {expanded ? "show less" : "read more"}
           </button>
         )}
       </p>
-    </div>
+    </a>
   );
 }
 

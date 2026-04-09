@@ -168,7 +168,7 @@ export default function LakhanPage() {
                   <img
                     src={lakhan_portrait}
                     alt="Lakhan Kaushik"
-                    className="w-full object-cover object-top portrait-img"
+                    className="w-full object-cover object-center md:object-top portrait-img"
                     style={{ filter: "saturate(0.85) sepia(0.05)" }}
                   />
                 ) : (

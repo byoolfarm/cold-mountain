@@ -735,7 +735,7 @@ const CARDS = [
     desc: "Try pottery without a long commitment — or explore a new craft on a relaxing Himalayan holiday.",
     features: ["Intro to hand building & wheel throwing", "Finish a cup / bowl / plate", "Daily supervised & unsupervised practice"],
     pricing: { layout: "double", blocks: [
-      { name: "Cold Mountain",   opts: [{ label: "Single", val: "₹6,500"  }, { label: "Sharing", val: "₹4,500" }], note: "per person per day" },
+      { name: "Cold Mountain Retreat",   opts: [{ label: "Single", val: "₹6,500"  }, { label: "Sharing", val: "₹4,500" }], note: "per person per day" },
       { name: "Byool Farm BnB", opts: [{ label: "Single", val: "₹8,100"  }, { label: "Sharing", val: "₹6,600" }], note: "per person per day" },
     ]},
     showAccom: true, imgSrc: IMGS["course_retreat"], imgFallback: "#7a5240",
@@ -746,7 +746,7 @@ const CARDS = [
     desc: "For beginners or potters at any level hoping to work on skills with or without supervision.",
     features: ["Wheel throwing — centering, coning, pulling and trimming", "Hand-building — pinching, coiling, slab", "Daily supervised & unsupervised practice"],
     pricing: { layout: "double", blocks: [
-      { name: "Cold Mountain",   opts: [{ label: "Single", val: "₹72,800" }, { label: "Sharing", val: "₹63,000" }] },
+      { name: "Cold Mountain Retreat",   opts: [{ label: "Single", val: "₹72,800" }, { label: "Sharing", val: "₹63,000" }] },
       { name: "Byool Farm BnB", opts: [{ label: "Single", val: "₹96,600" }, { label: "Sharing", val: "₹70,000" }] },
     ]},
     showAccom: true, imgSrc: IMGS["course_fortnight"], imgFallback: "#5a4830",
@@ -757,7 +757,7 @@ const CARDS = [
     desc: "Deepen your practice with focus on any technique/s or work on a specific project alongside daily studio sessions.",
     features: ["Wheel throwing & hand building", "Project and research work", "Glaze & firing access for qualifying pieces"],
     pricing: { layout: "double", blocks: [
-      { name: "Cold Mountain",   opts: [{ label: "Single", val: "₹1,36,500" }, { label: "Sharing", val: "₹96,000"   }] },
+      { name: "Cold Mountain Retreat",   opts: [{ label: "Single", val: "₹1,36,500" }, { label: "Sharing", val: "₹96,000"   }] },
       { name: "Byool Farm BnB", opts: [{ label: "Single", val: "₹1,80,000" }, { label: "Sharing", val: "₹1,35,000" }] },
     ]},
     showAccom: true, imgSrc: IMGS["course_monthly"], imgFallback: "#6a5060",
@@ -768,7 +768,7 @@ const CARDS = [
     desc: "For aspirants wanting to seriously improve or pursue pottery as a career.",
     features: ["Wheel throwing, hand building, sculpture & murals", "Glazes, clay body, different firing styles", "Project, research work & teacher training"],
     pricing: { layout: "double", blocks: [
-      { name: "Cold Mountain",   opts: [{ label: "Single", val: "₹3,75,500" }, { label: "Sharing", val: "₹2,25,000" }] },
+      { name: "Cold Mountain Retreat",   opts: [{ label: "Single", val: "₹3,75,500" }, { label: "Sharing", val: "₹2,25,000" }] },
       { name: "Byool Farm BnB", contact: "Contact us for details." },
     ]},
     showAccom: true, imgSrc: IMGS["course_3months"], imgFallback: "#3a5040",

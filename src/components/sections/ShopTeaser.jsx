@@ -145,8 +145,13 @@ export default function ShopTeaser() {
                 loading="lazy"
               />
             </div>
-            <p className="font-cormorant text-base text-charcoal mb-0.5">{item.name}</p>
-            <p className="text-[0.72rem] tracking-[0.1em] uppercase text-stone">{item.type}</p>
+            <div className="text-center">
+              <p className="font-cormorant text-[1.25rem] text-earth-dark mb-1 relative inline-block transition-colors duration-500 group-hover:text-clay-dark">
+                {item.name}
+                <span className="absolute -bottom-0.5 left-1/2 w-0 h-[1px] bg-clay-dark transition-all duration-500 ease-in-out group-hover:w-full group-hover:left-0"></span>
+              </p>
+              <p className="text-[0.68rem] tracking-[0.15em] uppercase text-stone">{item.type}</p>
+            </div>
           </Link>
         ))}
       </div>
@@ -176,8 +181,13 @@ export default function ShopTeaser() {
                     className="w-full h-full object-cover saturate-75 group-hover:scale-[1.05] group-hover:saturate-100 transition-all duration-500 block"
                   />
                 </div>
-                <p className="font-cormorant text-base text-charcoal mb-0.5">{item.name}</p>
-                <p className="text-[0.72rem] tracking-[0.1em] uppercase text-stone">{item.type}</p>
+                <div className="text-center">
+                  <p className="font-cormorant text-[1.25rem] text-earth-dark mb-1 relative inline-block transition-colors duration-500 group-hover:text-clay-dark">
+                    {item.name}
+                    <span className="absolute -bottom-0.5 left-1/2 w-0 h-[1px] bg-clay-dark transition-all duration-500 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                  </p>
+                  <p className="text-[0.68rem] tracking-[0.15em] uppercase text-stone">{item.type}</p>
+                </div>
               </Link>
             ))}
           </div>

@@ -5,6 +5,64 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const POSTS = [
+  {
+    slug: "pottery-in-the-meme-age",
+    imgKey: "blog2",
+    category: "Culture",
+    title: "Pottery in the Meme Age: Psychology, Survival, and the Daily Plot Twist",
+    imgPos: "center",
+    date: "April 9, 2026",
+    readTime: "4 min read",
+    excerpt: "You don't need me to tell you about algorithm drama. If you're a potter in 2025, your wheel probably shakes more from phone pings than foot pedals.",
+    author: "Cold Mountain Studio",
+    body: `You don't need me to tell you about algorithm drama. If you're a potter in 2025, your wheel probably shakes more from phone pings than foot pedals.
+The studio smells like clay—with a hefty aftertaste of "What's trending?"
+
+**THE REAL SHOWDOWN: POTTERY VS. PERFORMANCE ART**
+
+Hands up if your ugliest piece flopped in silence but your "eh, whatever" mug went viral.
+Ever spiral after a thumb scroll, convinced everyone else has a hotline to the digital gods?
+It's not you, it's neuroscience. Brains run on dopamine (hello likes, goodbye self-worth) and stress, with a dash of "Am I making this, or is my phone?" Thanks, evolution.
+
+*Curiosity bite:* If the whole pottery world could only see one thing you made-what would, and wouldn't, you pick?
+
+**BURNOUT: BECAUSE YOUR CLAY ISN'T THE ONLY THING GETTING OVERFIRED**
+
+Burnout doesn't clock out at 5pm or after a batch of sales. It creeps in around your second espresso and your fourth round of "refresh." If you're playing "like roulette," congratulations—you're human.
+
+Let's drop the shame: Feel numb? Cynical? POST-joy instead of pre-joy?
+Welcome to the club. The price of visibility isn't just battery life-it bakes directly into your bones.
+
+*Curiosity break:* If you could only make one "just for me" piece a month—no audience, no "story," no approval-what would it be? Would you even remember?
+
+**THE ENVY OLYMPICS (NO MEDALS AWARDED)**
+
+Let's get weirdly honest-envy is the default setting. Every one of us has zoomed in on a viral feed and muttered, "How?!"
+The trick isn't independence (total fiction), it's using envy as a map:
+- "I want that joy."
+- "That risk. That freedom."
+Or just: "Why do they always get that blue so right?!"
+
+**AGENCY IS YOUR SNEAKIEST ART FORM**
+
+Algorithms don't love you back. People barely do.
+But your own weird rituals? That's where the magic sneaks back in:
+- Make a space no phone sees.
+- Trade war stories about failed glazes.
+- Take a digital day off, not as punishment, but as creative rebellion.
+
+Remember, agency doesn't mean "winning"-it means you get to keep something for yourself. Even if it's just the mug nobody else will ever hold.
+
+*Curiosity spark:* What's your studios guilty pleasure? (Glaze combos banished from the grid? Experimental forms living rent-free in a back shelf?) Would you ever bring them to the light, trend be damned?
+
+**NO WRAP-UP, JUST A PUNCHLINE**
+
+Look, if you're reading this instead of scrolling, you've already earned a mental gold star. Pottery is still weird, and you're still stubborn-and there's no meme for that (yet).
+Drop a confession. Or a sneaky trick. Ask a question you don't want answered.
+
+Because in a world built for copy/paste, your quirks are currency.
+Let's see where curiosity-and a little gallows humour—can take us.`,
+  },
  {
   slug: "the-clay-that-refuses-to-center",
   imgKey: "blog2",

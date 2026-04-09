@@ -25,7 +25,7 @@ const SLIDES = [
     eyebrow: "Custom Productions",
     title: <>Every piece<br /><em className="italic text-clay-light">a small prayer</em></>,
     // sub: "Not objects to admire — ware to be used, touched, and loved daily.",
-    sub:"Every Piece a small prayer , Browse our selection of pottery and find your next favourite piece."
+    sub:"Browse our selection of pottery and find your next favourite piece."
   },
 ];
 
@@ -56,7 +56,7 @@ export default function HeroCarousel() {
       
       {/* Track */}
       <div
-        className="flex h-full transition-transform duration-[900ms] ease-[cubic-bezier(.77,0,.18,1)]"
+        className="flex h-full transition-transform duration-[1500ms] ease-[cubic-bezier(.77,0,.18,1)]"
         style={{ transform: `translateX(-${cur * 100}%)` }}
         onTouchStart={(e) => {
           touchX.current = e.touches[0].clientX;
