@@ -6,7 +6,7 @@ import { SectionLabel, SectionTitle, DividerLine, BtnPrimary } from "../ui";
 
 const ITEMS = [
   { img: shop_dinnerware, name: "Dinnerware",  type: "" },
-  { img: shop_drinkware,  name: "DrinkWare",   type: "" },
+  { img: shop_drinkware,  name: "Drinkware",   type: "" },
   { img: shop_serverware, name: "Serveware",  type: "" },
   { img: about_wallpaper, name: "Home Decor",  type: "" },
 ];

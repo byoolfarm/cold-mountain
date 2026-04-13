@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { slide_farm, slide_wheel, slide_students, slide_studio1 } from "../../assets/img";
+import { slide_farm, slide_wheel, slide_students, slide_studio1, slide_studio1_mobile } from "../../assets/img";
 import { Link } from "react-router-dom";
 const SLIDES = [
   {
@@ -22,8 +22,9 @@ const SLIDES = [
   },
   {
     img: slide_studio1,
+    mobileImg: slide_studio1_mobile,
     eyebrow: "Custom Productions",
-    title: <>Every piece<br /><em className="italic text-clay-light">a small prayer</em></>,
+    title: <>Handmade,<br /><em className="italic text-clay-light">Honest . Yours</em></>,
     // sub: "Not objects to admire — ware to be used, touched, and loved daily.",
     sub:"Browse our selection of pottery and find your next favourite piece."
   },
@@ -75,11 +76,16 @@ export default function HeroCarousel() {
             className="relative w-full flex-shrink-0 h-full overflow-hidden"
           >
             {/* Image */}
-            <img
-              src={s.img}
-              alt={`slide-${i}`}
-              className="w-full h-full object-cover brightness-[0.65] saturate-80"
-            />
+            <picture className="block w-full h-full">
+              {s.mobileImg && (
+                <source media="(max-width: 768px)" srcSet={s.mobileImg} />
+              )}
+              <img
+                src={s.img}
+                alt={`slide-${i}`}
+                className="w-full h-full object-cover brightness-[0.65] saturate-80"
+              />
+            </picture>
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-[rgba(18,10,6,0.72)] via-[rgba(18,10,6,0.2)] to-transparent pointer-events-none" />

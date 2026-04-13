@@ -13,6 +13,7 @@ export const slide_farm     = "/images/slide_farm.webp";
 export const slide_wheel    = "/images/slide_wheel.webp";
 export const slide_students = "/images/slide_students.webp";
 export const slide_studio1  = "/images/slide_studio1.webp";
+export const slide_studio1_mobile = "/images/slide_studio1_mobile.jpg";
 
 // ── Course cards ─────────────────────────────────────────────────────────────
 export const course_retreat   = "/images/course_retreat.webp";
