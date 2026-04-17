@@ -52,14 +52,14 @@ const Rule = ({ light = false }) => (
 );
 
 // ── Section: text left / image right (or reversed) ───────────────────────────
-function FarmSection({ id, label, heading, accentWord, body, listItems = [], img, alt, reverse = false, light = false }) {
+function FarmSection({ id, label, heading, accentWord, body, listItems = [], img, alt, reverse = false, light = false, pyClass = "py-16 md:py-20" }) {
   const bg = light ? "bg-[#1c1a17]" : "bg-warm-white";
   const textCol = light ? "text-cream" : "text-charcoal";
   const bodyCol = light ? "text-white/60" : "text-earth-light";
   const labelColor = light ? "text-clay-light" : undefined;
 
   return (
-    <section id={id} className={`${bg} py-20 px-6 md:px-16`}>
+    <section id={id} className={`${bg} ${pyClass} px-6 md:px-16`}>
       <div className={`max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
         
         {/* Text column */}
@@ -151,14 +151,14 @@ export default function DayAtFarmPage() {
       <main className="min-h-screen bg-warm-white">
 
         <FadeIn>
-          <header className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24 pt-36 pb-12">
-             <div className="border-b border-black/8 pb-8 pt-4 text-center">
-              <span className="block text-[0.7rem] tracking-[0.3em] uppercase text-clay mb-5 font-jost">
+          <header className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24 pt-28 pb-4">
+             <div className="border-b border-black/8 pb-6 pt-0 text-center">
+              <span className="block text-[0.7rem] tracking-[0.3em] uppercase text-clay mb-3 font-jost">
                 Rediscover a slower pace of life
               </span>
-              <h1 className="font-cormorant text-[clamp(2.5rem,5vw,4.5rem)] font-light leading-[1.05] text-charcoal mb-6">
+              <h1 className="font-cormorant text-[clamp(2.5rem,5vw,4.5rem)] font-light leading-[1.05] text-charcoal mb-4">
                 A Day at Byool Farm <br />
-                <em className="italic text-clay not-italic" style={{ fontStyle: "italic" }}>Farm, Feast, &amp; Play with Clay</em>
+                <span className="text-[clamp(1.6rem,3vw,2.8rem)] italic text-clay">Farm, Feast, &amp; Play with Clay</span>
               </h1>
               <p className="max-w-[650px] mx-auto text-[1.05rem] leading-[1.8] text-earth-light">
                 Whether you are a local seeking a weekend reset or a traveller looking for an “off-beat experience” join us for a day where the earth meets art.
@@ -170,6 +170,7 @@ export default function DayAtFarmPage() {
         {/* Sections */}
         <FarmSection
           id="farm-tour"
+          pyClass="py-8 md:py-12"
           label="1. Rooted in Nature"
           heading="The Guided"
           accentWord="Farm Tour"
