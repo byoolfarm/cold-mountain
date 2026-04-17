@@ -27,6 +27,7 @@ export default function Navbar() {
     || location.pathname === "/shop"
     || location.pathname === "/work"
     || location.pathname.startsWith("/blog")
+    || location.pathname.startsWith("/day")
     || location.pathname.startsWith("/about");
 
   // ── Side-effects ────────────────────────────────────────────────────────────

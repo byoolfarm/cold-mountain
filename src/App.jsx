@@ -29,6 +29,7 @@ const LakhanPage       = lazy(() => import("./pages/about/LakhanPage"));
 const SwapnaPage       = lazy(() => import("./pages/about/SwapnaPage"));
 const ColdMountainStay = lazy(() => import("./pages/Stay"));
 const AboutStudioPage  = lazy(() => import("./pages/About"));
+const DayAtFarmPage    = lazy(() => import("./pages/DayAtFarmPage"));
 
 // Minimal loading indicator while a page chunk is fetched
 function PageLoader() {
@@ -68,6 +69,7 @@ export default function App() {
           <Route path="/blog/:slug"                element={<BlogPostPage />} />
           <Route path="/about/lakhan"              element={<LakhanPage />} />
           <Route path="/about/swapna"              element={<SwapnaPage />} />
+          <Route path="/day-at-byool-farm"         element={<DayAtFarmPage />} />
           <Route path="*"                          element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

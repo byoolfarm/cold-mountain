@@ -9,10 +9,12 @@ const SLIDES = [
     sub: "Nestled at the foot of the Dhauladhars — a studio, a school, and a slow way of being.",
   },
   {
-    img: slide_wheel,
-    eyebrow: "The Studio",
-    title: <>Hands in mud,<br /><em className="italic text-clay-light">mind at rest</em></>,
-    sub: "Watch pots take shape. See how a lump of earth becomes something you hold every morning.",
+    img: "/images/day_at_farm_6.webp",
+    eyebrow: "A Day at Byool Farm",
+    title: <>Farm, Feast,<br /><em className="italic text-clay-light">&amp; Play with Clay</em></>,
+    sub: "Rediscover a slower pace of life with our 11 am – 5 pm mountain immersion.",
+    link: "/day-at-byool-farm",
+    linkText: "View Details",
   },
   {
     img: slide_students,
@@ -109,13 +111,23 @@ export default function HeroCarousel() {
 
               {/* 🔥 NEW CTA SECTION */}
               <div className="flex flex-wrap gap-3">
-                <a
-                  href="#courses"
-                  className="px-5 py-2.5 text-[0.7rem] tracking-[0.15em] uppercase bg-[#a0644a] text-white 
-                  hover:bg-[#7d4e38] transition-all duration-300 shadow-md hover:shadow-lg"
-                >
-                  Explore Courses
-                </a>
+                {s.link ? (
+                  <Link
+                    to={s.link}
+                    className="px-5 py-2.5 text-[0.7rem] tracking-[0.15em] uppercase bg-[#a0644a] text-white 
+                    hover:bg-[#7d4e38] transition-all duration-300 shadow-md hover:shadow-lg"
+                  >
+                    {s.linkText}
+                  </Link>
+                ) : (
+                  <a
+                    href="#courses"
+                    className="px-5 py-2.5 text-[0.7rem] tracking-[0.15em] uppercase bg-[#a0644a] text-white 
+                    hover:bg-[#7d4e38] transition-all duration-300 shadow-md hover:shadow-lg"
+                  >
+                    Explore Courses
+                  </a>
+                )}
 
                <Link to="/shop" className="px-5 py-2.5 text-[0.7rem] tracking-[0.15em] uppercase border border-white/40 text-white
                   hover:border-clay-light hover:text-clay-light hover:bg-white/5 transition-all duration-300"
