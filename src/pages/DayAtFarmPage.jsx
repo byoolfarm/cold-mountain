@@ -7,18 +7,19 @@ import ImageViewer from "../components/ImageViewer";
 import { SectionLabel } from "../components/ui";
 
 const img1 = "/images/day_at_farm_1.webp"; // cow
-const img2 = "/images/day_at_farm_8.webp"; // clay table (children)
-const img3 = "/images/day_at_farm_7.webp"; // feast (dining table)
-const img4 = "/images/day_at_farm_9.webp"; // farm tour (hibiscus)
+const img2 = "/images/day_at_farm_8.webp"; // clay table (children) - reused in body
+const img3 = "/images/day_at_farm_7.webp"; // feast (dining table) - reused in body
+const img4 = "/images/day_at_farm_9.webp"; // farm tour (hibiscus) - reused in body
 const img5 = "/images/day_at_farm_5.webp"; // goat
 const img6 = "/images/day_at_farm_6.webp"; // boy feeding cow
 const img10 = "/images/day_at_farm_10.webp"; // children drawing
+const img11 = "/images/day_at_farm_2.webp"; // farm landscape / activity
 
 const WORKS = [
   { src: img6, label: "Feeding the Cow" },
-  { src: img4, label: "Guided Farm Tour" },
-  { src: img3, label: "Farm Fresh Feast" },
-  { src: img2, label: "Pottery Session" },
+  { src: img5, label: "Meet the Goats" },
+  { src: img1, label: "Gauri the Cow" },
+  { src: img11, label: "Farm Life" },
   { src: img10, label: "Children Drawing" },
 ];
 
@@ -236,7 +237,7 @@ export default function DayAtFarmPage() {
               </div>
               <div>
                 <span className="block text-[0.7rem] tracking-[0.15em] uppercase text-clay mb-2 font-jost">Price</span>
-                <strong className="text-charcoal font-normal text-lg font-cormorant">₹3,000 per person</strong>
+                <strong className="text-charcoal font-normal text-lg font-cormorant">₹2,500 per person</strong>
               </div>
               <div>
                 <span className="block text-[0.7rem] tracking-[0.15em] uppercase text-clay mb-2 font-jost">Firing (Optional)</span>
@@ -273,17 +274,23 @@ export default function DayAtFarmPage() {
       {/* Image Grid Gallery (Smaller section at bottom) */}
       <div className="bg-[#181512] py-4">
         <div className="max-w-[1400px] mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
-            {WORKS.map(({ src, label }) => (
-              <div
-                key={label}
-                className="work-item"
-                style={{ position: "relative", overflow: "hidden", aspectRatio: "1/1", background: "#1c1a17" }}
-                onClick={() => setSelectedImg({ src, label })}
-              >
-                <img src={src} alt={label} className="work-img opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+            {WORKS.map(({ src, label }) => {
+              let visibilityClass = "";
+              if (src === img6) visibilityClass = "block md:hidden"; // hide on desktop
+              if (src === img5) visibilityClass = "hidden md:block"; // hide on mobile
+
+              return (
+                <div
+                  key={label}
+                  className={`work-item ${visibilityClass}`}
+                  style={{ position: "relative", overflow: "hidden", aspectRatio: "1/1", background: "#1c1a17" }}
+                  onClick={() => setSelectedImg({ src, label })}
+                >
+                  <img src={src} alt={label} className="work-img opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

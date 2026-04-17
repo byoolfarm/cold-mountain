@@ -10,6 +10,7 @@ const SLIDES = [
   },
   {
     img: "/images/day_at_farm_6.webp",
+    mobileImg: "/images/day_at_farm_5.webp",
     eyebrow: "A Day at Byool Farm",
     title: <>Farm, Feast,<br /><em className="italic text-clay-light">&amp; Play with Clay</em></>,
     sub: "Rediscover a slower pace of life with our 11 am – 5 pm mountain immersion.",
