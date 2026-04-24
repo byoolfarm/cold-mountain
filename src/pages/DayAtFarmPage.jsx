@@ -233,7 +233,7 @@ export default function DayAtFarmPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-14 text-left border border-black/5 bg-white shadow-sm rounded-md p-8">
               <div>
                 <span className="block text-[0.7rem] tracking-[0.15em] uppercase text-clay mb-2 font-jost">Timings</span>
-                <strong className="text-charcoal font-normal text-lg font-cormorant">11:00 am – 5:00 pm</strong>
+                <strong className="text-charcoal font-normal text-lg font-cormorant">11:00 am – 4:00 pm</strong>
               </div>
               <div>
                 <span className="block text-[0.7rem] tracking-[0.15em] uppercase text-clay mb-2 font-jost">Price</span>

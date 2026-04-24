@@ -65,7 +65,7 @@ Let's see where curiosity-and a little gallows humour—can take us.`,
   },
  {
   slug: "the-clay-that-refuses-to-center",
-  imgKey: "blog2",
+  imgKey: "blog11",
   category: "Psychology",
   title: "The Clay That Refuses to Center: Breaking Patterns, Finding Growth",
   imgPos: "center",

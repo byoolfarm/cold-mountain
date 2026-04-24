@@ -16,6 +16,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { lazy, Suspense } from "react";
+import { Analytics } from "@vercel/analytics/react"
 import { Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -59,6 +60,7 @@ export default function App() {
     <>
       <ScrollToTop />
       <Suspense fallback={<PageLoader />}>
+      <Analytics/>
         <Routes>
           <Route path="/"                          element={<LandingPage />} />
           <Route path="/shop"                      element={<ShopPage />} />

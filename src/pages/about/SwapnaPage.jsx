@@ -298,7 +298,7 @@ export default function SwapnaPage() {
           <div className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24 pb-16 md:pb-24">
             <div className="pt-8 border-t border-black/8 flex gap-5 flex-wrap">
               <a
-                href="https://www.instagram.com/thecoldmountainstudio/"
+                href="https://www.instagram.com/lonedreamr/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-[0.68rem] tracking-[0.12em] uppercase text-earth border-b border-black/15 pb-px hover:text-clay hover:border-clay transition-colors no-underline font-jost"
