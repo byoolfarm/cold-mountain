@@ -13,7 +13,8 @@ export const slide_farm     = "/images/slide_farm.webp";
 export const slide_wheel    = "/images/slide_wheel.webp";
 export const slide_students = "/images/slide_students.webp";
 export const slide_studio1  = "/images/slide_studio1.webp";
-export const slide_studio1_mobile = "/images/slide_studio1_mobile.jpg";
+export const slide_studio1_mobile = "/images/slide_studio1_mobile.webp";
+export const residency_hero = "/images/residency_hero.webp";
 
 // ── Course cards ─────────────────────────────────────────────────────────────
 export const course_retreat   = "/images/course_retreat.webp";
@@ -78,9 +79,10 @@ export const blog_background = "/images/blog_background.webp";
 export const blog1 = "/images/blog1.webp";
 export const blog2 = "/images/blog2.webp";
 export const blog3 = "/images/blog3.webp";
-export const blog4 = "/images/blog4.webp";
+export const blog4 = "/images/blog4_v2.webp";
 export const blog5 = "/images/blog5.webp";
 export const blog6 = "/images/blog6.webp";
+
 export const blog11 = "/images/day_at_farm_11.webp";
 
 // ── Work / SMP ───────────────────────────────────────────────────────────────

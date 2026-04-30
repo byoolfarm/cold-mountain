@@ -172,7 +172,7 @@ export default function DayAtFarmPage() {
         <FarmSection
           id="farm-tour"
           pyClass="py-8 md:py-12"
-          label="1. Rooted in Nature"
+          label="Rooted in Nature"
           heading="The Guided"
           accentWord="Farm Tour"
           body="Begin with a sensory delight at Byool Farm. This isn't just a walk; it’s a discovery of our no-chemical, natural farming world."
@@ -188,7 +188,7 @@ export default function DayAtFarmPage() {
 
         <FarmSection
           id="farm-feast"
-          label="2. From Soil to Plate"
+          label="From Soil to Plate"
           heading="The Farm-Fresh"
           accentWord="Feast"
           body="After your walk, gather at The Dining Room to indulge in a delicious, freshly prepared meal."
@@ -204,15 +204,15 @@ export default function DayAtFarmPage() {
 
         <FarmSection
           id="pottery-session"
-          label="3. Meditative Creation"
+          label="Meditative Creation"
           heading="The Pottery"
           accentWord="Session"
           body="Transition to the quiet hum of The Cold Mountain Studio. No experience is needed—just a willingness to get your hands messy."
           listItems={[
-            { title: "The Materials", text: "Get to know different kinds of clay and how their textures and properties shape the final piece." },
-            { title: "The Craft", text: "Explore wheel-throwing or hand-building under expert guidance." },
-            { title: "The Feeling", text: "Find your flow as you shape raw clay into a unique piece of art." },
-            { title: "Take it Home", text: "We provide all materials, tools, and an apron (plus tea and coffee!). You can choose to have your piece fired and shipped to you later." }
+            { title: "The Clay", text: "We'll explore different types of clay and see how their textures and personalities change the way you shape them." },
+            { title: "The Making", text: "Whether you want to try your hand at the wheel or prefer the tactile rhythm of hand-building, we're here to guide you through the basics." },
+            { title: "The Materials", text: "We'll set you up with all the tools, materials, and aprons you need for the day (and keep the tea and coffee flowing!)." },
+            { title: "The Keepsake", text: "If you'd like to keep what you've made, you can choose to have your favourite piece fired and shipped to your doorstep later." },
           ]}
           img={img2}
           alt="The Pottery Session"

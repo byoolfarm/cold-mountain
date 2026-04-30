@@ -6,6 +6,111 @@
 
 export const POSTS = [
   {
+    slug: "the-bubble-didnt-kill-your-piece",
+    imgKey: "blog4",
+    category: "Psychology",
+    title: "The Bubble Didn't Kill Your Piece. You Did. Twice.",
+    imgPos: "center",
+    date: "April 30, 2026",
+    readTime: "8 min read",
+    excerpt: "Air bubbles have terrible PR. They get blamed for kiln explosions, cracked seams, collapsed walls. But here's the thing nobody's said yet — the bubble rarely kills your piece. You do. And you do it in two completely different ways.",
+    author: "Dr. Rohita Sateesh",
+    body: `Air bubbles have terrible PR.
+They get blamed for kiln explosions, cracked seams, collapsed walls, entire shelves of rubble. Potters talk about them like weather — unpredictable, inevitable, occasionally catastrophic. You wedge to prevent them. You score and slip to avoid them. You say a small prayer to whoever manages ceramic outcomes and load the kiln anyway.
+
+But here's the thing nobody's said yet.
+
+The bubble rarely kills your piece. You do. And the truly maddening part? You do it in two completely different ways depending on whether you're at the wheel or the slab table — using two completely different psychological mechanisms — and both feel entirely reasonable in the moment.
+
+Let's get into it.
+
+**At The Wheel: The Ritual That Taught Your Brain To Look Away**
+
+You wedge before you throw. Of course you do. You're not a savage.
+
+And when you finish — when the clay is smooth and the wedging is done and your hands have that warm, worked feeling — there's a specific satisfaction that settles in. The feeling of having been responsible. Thorough. A good potter.
+
+That feeling? That's the problem.
+
+In psychology, completing a protective action — any protective action — triggers something called *threat closure*. The brain registers the ritual as having neutralised the threat. Not reduced it. Neutralised it. The entire risk category gets filed under handled and the nervous system quietly exhales.
+
+Which means you sit down at the wheel in a state of lowered threat monitoring. Not carelessness. Not distraction. Neurological exhale.
+
+Now. Mid-pull. The wall is rising. Everything is going well. And for half a second, something feels fractionally wrong — a bump, a resistance, a tiny break in the rhythm that your fingertips (running 2,500 nerve endings per square centimeter, since we're being specific) clocked before your brain had language for it.
+
+Your brain received the signal. Filed it under probably nothing. Kept pulling.
+
+Because the threat was already handled. The ritual said so. The bump couldn't be a bubble — you wedged.
+
+Except you did wedge. And the bubble survived anyway. And now it's sealed into the wall and going to the kiln and you have absolutely no idea.
+
+Here's what makes this genuinely fascinating rather than just depressing: the more experienced you are, the cleaner this mechanism runs.
+
+Beginners feel everything. Their hands are new at this, so every sensation is live data, nothing yet sorted into signal versus noise. An irregularity mid-pull gets flagged simply because the beginner doesn't have the pattern library to dismiss it.
+
+Experts have spent years building exactly the library that makes them fluid and efficient. The throw is largely automated. Which is what mastery feels like — and also, precisely, why the bubble's signal gets routed into the noise category so smoothly.
+
+You didn't miss the bump because you weren't paying attention. You missed it because you're very, very good at this.
+
+**At The Slab Table: The Join You Looked At And Kept Going**
+
+Now walk over to the slab table. Different technique. Different trap.
+
+The join you didn't finish — you know the one. You pressed it, felt a faint give where there should have been resistance, pressed it once more, decided it was probably fine, and moved on.
+
+This one's interesting because unlike the wheel situation, you had all the information. The join was visible. Accessible. You could feel it. You could go back. You didn't.
+
+And this is where a different psychological mechanism entirely takes over, one that's somehow more uncomfortable than the first: *temporal discounting*. The brain's deeply consistent tendency to undervalue future consequences relative to present cost. Fixing the join properly costs effort right now, in this session, in this moment. The consequence of not fixing it arrives two weeks later, in a kiln, in a piece you'll have half-forgotten making.
+
+Human brains are structurally bad at weighting those two things equally. Not some human brains. All of them. Yours, mine, the most disciplined potter in the room. The future consequence feels smaller than the present effort, so the join stays as it is.
+
+And then there's the second mechanism that piles on: *optimism bias*. You've fired hundreds of pieces. Most of them survived. Experience has given you genuine evidence that things usually work out, so the brain extrapolates. This join is probably fine. Not based on what your fingers felt. Based on your overall track record of things being fine.
+
+The piece was good. It was going well. The form was working. The clay didn't care about any of that.
+
+**Two techniques. Two completely different psychological failures. One kiln shelf.**
+
+At the wheel you were blindsided by your own preparation — the ritual that was supposed to protect you quietly switched off the very vigilance you needed mid-throw.
+
+At the slab table you weren't blindsided at all — you had the information, felt the doubt, and your brain generated a smooth, convincing case for why you didn't need to act on it.
+
+One is a trap you didn't see. The other is a door you walked through anyway.
+
+Both feel fine at the time. Both are doing something very specific and very human. And both are worth knowing about, because knowing what mechanism you're inside is the first step to not being entirely at its mercy.
+
+**What To Actually Do (That You Haven't Heard Before)**
+
+Not "wedge more carefully." Not "always go back to the join." You know those things.
+
+*At the wheel:* The research on expert performance in high-stakes fields points to something called a mid-task re-alert — a deliberate moment of reactivated attention designed not at the beginning of a task but inside it, after the ritual's exhale has settled. Not a second ritual. A conscious pause mid-pull where you briefly step out of the automation and ask your hands what they're feeling right now, fresh, without the filter.
+
+First pull. Halfway up. Two seconds. Ask the hands like you've never thrown before.
+
+Not because the wedging failed. Because the brain needs a second ignition after the first one switches off. Nobody built this into the throwing sequence. Now you can.
+
+*At the slab table:* Before you walk away from any join, try this — a technique borrowed from pre-mortem thinking used in medicine and strategic decision-making. Assume the piece has already failed. Not might fail. Already failed. Now work backward: if this piece cracks, where does it crack?
+
+If your eyes go straight to that join, you have your answer.
+
+This isn't pessimism. It's a structured way of bypassing optimism bias — forcing the brain to generate the failure scenario it's currently suppressing. Takes ten seconds. Costs nothing. And it's startling how often the pre-mortem locates exactly the join your fingers already told you about and your brain quietly overruled.
+
+**The Thing Worth Thinking About**
+
+Here's what both of these situations have in common, underneath the technique.
+
+We trust our preparation more than our perception.
+
+At the wheel, we trust the wedging over the bump our hands felt mid-pull. At the slab table, we trust our track record over the doubt our fingers reported in the moment. In both cases, a real-time signal from the body arrives — specific, accurate, happening right now — and gets overruled by something the brain already decided earlier.
+
+We are, when it comes to air bubbles, more loyal to our past decisions than to our present information.
+
+The clay is always in the present. It doesn't know what you decided earlier. It only knows what's happening in the wall, at the join, right now, under your hands.
+
+The bubble isn't the problem. The gap between what your hands know and what your brain is willing to hear — that's the problem.
+
+It was always the problem. The kiln just has excellent timing.`,
+  },
+  {
     slug: "pottery-in-the-meme-age",
     imgKey: "blog2",
     category: "Culture",

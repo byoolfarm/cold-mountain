@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { slide_farm, slide_wheel, slide_students, slide_studio1, slide_studio1_mobile } from "../../assets/img";
+import { slide_farm, slide_wheel, slide_students, slide_studio1, slide_studio1_mobile, residency_hero } from "../../assets/img";
 import { Link } from "react-router-dom";
 const SLIDES = [
   {
@@ -30,6 +30,14 @@ const SLIDES = [
     title: <>Handmade,<br /><em className="italic text-clay-light">Honest . Yours</em></>,
     // sub: "Not objects to admire — ware to be used, touched, and loved daily.",
     sub:"Browse our selection of pottery and find your next favourite piece."
+  },
+  {
+    img: residency_hero,
+    eyebrow: "Cold Mountain Residency Program · 2026",
+    title: <>Reignite<br /><em className="italic text-clay-light">Your Practice</em></>,
+    sub: "Applications open for the 2026 Residency. Six weeks in the Dhauladhars.",
+    link: "/residency",
+    linkText: "Apply Now",
   },
 ];
 

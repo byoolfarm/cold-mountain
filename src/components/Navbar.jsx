@@ -98,8 +98,8 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-6 list-none items-center">
           {/* Standard links */}
           {[
-            { label: "Courses",  action: () => goToSection("courses") },
-            { label: "Our Work", to: "/work" },
+            { label: "Courses",   action: () => goToSection("courses") },
+            { label: "Our Work",  to: "/work" },
             { label: "Blog",     to: "/blog" },
             { label: "FAQ",      action: () => goToSection("faq") },
             { label: "Stay",     href: "https://byoolfarmstay.com/" },
