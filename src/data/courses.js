@@ -133,7 +133,7 @@ export const COURSES = [
     //   { name: "Per Day", options: [{ label: "", val: "Contact us" }] },
     // ],
      pricing: [
-      { name: "Half Day", options: [{ label: "", val: "₹1500/per person" }] },
+      { name: "Half Day", options: [{ label: "", val: "₹1800/per person" }] },
       { name: "Full Day", options: [{ label: "", val: "₹3000/per person" }] },
     ],
     hasAccom: false,
