@@ -805,7 +805,7 @@ const CARDS = [
     desc: "A half or full day at the studio for those staying off-site.",
     features: ["Learn pottery techniques with our experienced instructors", "Lunch included for Full Day students", "If you are an experienced potter, work at your own pace with guidance throughout", "Prior booking mandatory"],
     pricing: { layout: "double", blocks: [
-      { name: "Half Day", opts: [{ val: "₹1,500" }], note: "per person" },
+      { name: "Half Day", opts: [{ val: "₹1,800" }], note: "per person" },
       { name: "Full Day", opts: [{ val: "₹3,000" }], note: "per person" },
     ]},
     showAccom: false, imgSrc: IMGS["course_nrd"], imgFallback: "#284840",
