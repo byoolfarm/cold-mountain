@@ -280,25 +280,6 @@ export const COURSES = [
     hasAccom: true,
   },
   {
-<<<<<<< HEAD
-    num: "08", imgKey: "course_nrd",
-    name: "Non-Residential Day", tag: "Non-Residential", tagStyle: "earth",
-    duration: "11 AM – 5:00 PM · Lunch Included (Full Day)",
-    second_duration :"2PM - 5:00 PM (Half Day) ",
-    desc: "A half or full day at the studio for those staying off-site.",
-    features: [
-      "Learn Pottery techniques with our experienced Instructors ",
-      "If you are experienced potter, work at your own pace, with guidance throughout. ",
-      "Lunch included for Full Day students",
-      "Prior booking mandatory",
-    ],
-    // pricing: [
-    //   { name: "Per Day", options: [{ label: "", val: "Contact us" }] },
-    // ],
-     pricing: [
-      { name: "Half Day", options: [{ label: "", val: "₹1800/per person" }] },
-      { name: "Full Day", options: [{ label: "", val: "₹3000/per person" }] },
-=======
     num: "08", 
     slug: "day-sessions",
     imgKey: "course_nrd",
@@ -312,7 +293,6 @@ export const COURSES = [
       "Structural hand-building art",
       "Professional finishing service",
       "Includes wholesome studio lunch"
->>>>>>> 08aa5cc (individual course page)
     ],
     fullContent: {
       overview: "Whether you’re a local resident or just passing through, our studio doors are open for a day of tactile creativity. Spend your day shaping clay in a serene, professional environment.",
