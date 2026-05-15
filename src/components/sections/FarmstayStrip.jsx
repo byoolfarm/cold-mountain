@@ -20,9 +20,11 @@ export default function FarmstayStrip() {
           </BtnOutlineWhite>
         </div>
         <div className="grid grid-cols-2 gap-2">
-          <img src={IMGS?.byool_stay2} alt="Byool Farm" className="w-full aspect-[4/3] object-cover block" loading="lazy" />
-          <img src={IMGS?.byool_stay3} alt="Byool Farm" className="w-full aspect-[4/3] object-cover block" loading="lazy" />
+          <img src={IMGS?.byool_stay2} alt="Byool Farm" width="400" height="300" className="w-full aspect-[4/3] object-cover block" loading="lazy" />
+          <img src={IMGS?.byool_stay3} alt="Byool Farm" width="400" height="300" className="w-full aspect-[4/3] object-cover block" loading="lazy" />
           <img src={IMGS?.byool_stay1} alt="Byool Farm"
+            width="800"
+            height="450"
             className="col-span-2 w-full aspect-[16/9] object-cover block brightness-[0.8] saturate-[0.7]"
             loading="lazy"
           />

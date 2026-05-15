@@ -13,15 +13,24 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { logo } from "../assets/img";
+import { useSelector } from "react-redux";
+import { ShoppingBag } from "lucide-react";
+import { IS_SHOP_ENABLED } from "../config";
+import CartDrawer from "./shop/CartDrawer";
+
 
 export default function Navbar() {
   const [scrolled,  setScrolled]  = useState(false);
   const [menuOpen,  setMenuOpen]  = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [cartOpen, setCartOpen]   = useState(false);
   const aboutRef = useRef(null);
 
   const navigate = useNavigate();
   const location = useLocation();
+
+  const isShopPath = location.pathname.startsWith("/shop") || location.pathname === "/checkout" || location.pathname.startsWith("/product"); 
+  const cartItemsCount = useSelector(state => state.cart.items.reduce((acc, item) => acc + item.quantity, 0));
   const isHome   = location.pathname === "/";
   const isLight  = scrolled
     || location.pathname === "/shop"
@@ -98,7 +107,7 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-6 list-none items-center">
           {/* Standard links */}
           {[
-            { label: "Courses",   action: () => goToSection("courses") },
+            { label: "Courses",   to: "/courses" },
             { label: "Our Work",  to: "/work" },
             { label: "Blog",     to: "/blog" },
             { label: "FAQ",      action: () => goToSection("faq") },
@@ -146,7 +155,23 @@ export default function Navbar() {
           </li>
 
           {/* Pills */}
-          <li><Link to="/shop" className={pillCls}>Shop</Link></li>
+          <li><Link to="/shop" className={pillCls}>{IS_SHOP_ENABLED ? "Shop" : "Shop"}</Link></li>
+          {IS_SHOP_ENABLED && isShopPath && (
+            <li className="relative">
+              <button 
+                onClick={() => setCartOpen(true)}
+
+                className={`${isLight ? 'text-clay' : 'text-white'} hover:opacity-50 transition-all p-2 relative`}
+              >
+                <ShoppingBag size={20} strokeWidth={1.5} />
+                {cartItemsCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-stone-900 text-white text-[0.5rem] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                    {cartItemsCount}
+                  </span>
+                )}
+              </button>
+            </li>
+          )}
           <li>
             <a href="https://www.instagram.com/thecoldmountainstudio/" target="_blank" rel="noreferrer" className={pillCls}>
               Instagram
@@ -155,20 +180,34 @@ export default function Navbar() {
         </ul>
 
         {/* Hamburger — only rendered when mobile menu is CLOSED */}
-        {!menuOpen && (
-          <button
-            className="md:hidden flex flex-col gap-[5px] p-2 bg-transparent border-none cursor-pointer"
-            onClick={() => setMenuOpen(true)}
-            aria-label="Open navigation menu"
-          >
-            {[0, 1, 2].map(i => (
-              <span
-                key={i}
-                className={`block w-[22px] h-[1.5px] rounded-full transition-colors duration-300 ${isLight ? "bg-earth" : "bg-white/90"}`}
-              />
-            ))}
-          </button>
-        )}
+          <div className="md:hidden flex items-center gap-4">
+            {IS_SHOP_ENABLED && isShopPath && (
+              <button 
+                onClick={() => setCartOpen(true)}
+
+                className={`${isLight ? 'text-clay' : 'text-white'} p-2 relative`}
+              >
+                <ShoppingBag size={20} strokeWidth={1.5} />
+                {cartItemsCount > 0 && (
+                  <span className="absolute -top-0 -right-0 bg-stone-900 text-white text-[0.5rem] w-3.5 h-3.5 rounded-full flex items-center justify-center font-bold">
+                    {cartItemsCount}
+                  </span>
+                )}
+              </button>
+            )}
+            <button
+              className="flex flex-col gap-[5px] p-2 bg-transparent border-none cursor-pointer"
+              onClick={() => setMenuOpen(true)}
+              aria-label="Open navigation menu"
+            >
+              {[0, 1, 2].map(i => (
+                <span
+                  key={i}
+                  className={`block w-[22px] h-[1.5px] rounded-full transition-colors duration-300 ${isLight ? "bg-earth" : "bg-white/90"}`}
+                />
+              ))}
+            </button>
+          </div>
 
         {/* Width-matching spacer so logo stays left when hamburger is hidden */}
         {menuOpen && <div className="w-[38px] md:hidden flex-shrink-0" aria-hidden />}
@@ -192,7 +231,7 @@ export default function Navbar() {
 
         {/* Nav items */}
         {[
-          { label: "Courses",          action: () => goToSection("courses") },
+          { label: "Courses",          to: "/courses" },
           { label: "Our Work",         to: "/work" },
           { label: "Blog",             to: "/blog" },
           // { label: "About ",   to: "/about/" },
@@ -204,8 +243,9 @@ export default function Navbar() {
           { label: "Lakhan", to: "/about/lakhan" },  
           { label: "Swapna", to: "/about/swapna" },  
           { label: "Contact",          action: () => goToSection("contact") },
-          { label: "Shop",             to: "/shop" },
+          { label: IS_SHOP_ENABLED ? "Shop" : "Shop Collection", to: "/shop" },
           { label: "Instagram",        href: "https://www.instagram.com/thecoldmountainstudio/" },
+
         ].map(({ label, action, to, href }) => {
           const cls = "font-cormorant text-cream text-2xl tracking-[0.12em] uppercase no-underline hover:text-clay-light transition-colors cursor-pointer";
           return href
@@ -215,6 +255,8 @@ export default function Navbar() {
             : <span key={label} className={cls} onClick={action}>{label}</span>;
         })}
       </div>
+
+      <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />
     </>
   );
 }

@@ -87,7 +87,10 @@
     }
     </script>
 
-  <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+
+  <!-- ── Performance ──────────────────────────────────────────────────── -->
+  <link rel="preload" href="/images/slide_farm.webp" as="image" type="image/webp" />
+
   <!-- ── Favicon set ───────────────────────────────────────────────────── -->
   <!-- Place these files in /public/: favicon.ico, favicon-16x16.png,      -->
   <!-- favicon-32x32.png, apple-touch-icon.png, site.webmanifest            -->
@@ -103,7 +106,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'" />
 </head>
 
 <body>

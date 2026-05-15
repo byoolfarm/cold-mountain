@@ -13,7 +13,7 @@
   }
 }
   body {
-    @apply font-jost font-light text-charcoal bg-warm-white overflow-x-hidden;
+    @apply font-jost text-neutral-900 bg-white overflow-x-hidden antialiased;
   }
   button { font-family: inherit; }
   input, textarea, select { font-family: inherit; }

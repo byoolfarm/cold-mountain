@@ -3,6 +3,8 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { about_wallpaper, shop_dinnerware, shop_drinkware, shop_serverware } from "../../assets/img";
 import { SectionLabel, SectionTitle, DividerLine, BtnPrimary } from "../ui";
+import { IS_SHOP_ENABLED } from "../../config";
+
 
 const ITEMS = [
   { img: shop_dinnerware, name: "Dinnerware",  type: "" },
@@ -141,6 +143,8 @@ export default function ShopTeaser() {
             <div className="aspect-square overflow-hidden bg-cream mb-3">
               <img
                 src={item.img} alt={item.name}
+                width="400"
+                height="400"
                 className="w-full h-full object-cover saturate-75 group-hover:scale-[1.05] group-hover:saturate-100 transition-all duration-500 block"
                 loading="lazy"
               />
@@ -195,8 +199,13 @@ export default function ShopTeaser() {
       </div>
 
       <div className="mt-10 text-center">
-        <Link to="/shop"><BtnPrimary>Shop Now</BtnPrimary></Link>
+        <Link to="/shop">
+          <BtnPrimary>
+            {IS_SHOP_ENABLED ? "Shop Now" : "Explore Collection"}
+          </BtnPrimary>
+        </Link>
       </div>
+
     </section>
   );
 }

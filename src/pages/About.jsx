@@ -55,6 +55,8 @@ function StudioSection({ id, label, heading, accentWord, body, img, alt, reverse
           <img
             src={img}
             alt={alt}
+            width="800"
+            height="1000"
             className="w-full aspect-[4/5] object-cover saturate-75 hover:saturate-100 transition-all duration-700 block"
             loading="lazy"
           />

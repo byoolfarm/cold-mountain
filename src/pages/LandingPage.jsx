@@ -2,19 +2,20 @@
 import SEO                 from "../components/SEO";
 import Navbar              from "../components/Navbar";
 import Footer              from "../components/Footer";
+import { lazy, Suspense } from "react";
 import HeroCarousel        from "../components/sections/HeroCarousel";
-import Philosophy          from "../components/sections/Philosophy";
-import CoursesSection      from "../components/sections/CoursesSection";
-import StudioSplit         from "../components/sections/StudioSplit";
-import FarmstayStrip       from "../components/sections/FarmstayStrip";
-import ShopTeaser          from "../components/sections/ShopTeaser";
-import RetreatBanner       from "../components/sections/RetreatBanner";
-import BlogPreview         from "../components/sections/BlogPreview";
-import TestimonialsSection from "../components/sections/TestimonialsSection";
-import FaqSection          from "../components/sections/FaqSection";
-import ContactSection      from "../components/sections/ContactSection";
 import DualIdentitySection from "../components/sections/DualIdenity";
 import ByoolStrip from "../components/sections/ByoolStrip";
+
+// Lazy load sections below the fold
+const CoursesSection      = lazy(() => import("../components/sections/CoursesSection"));
+const ShopTeaser          = lazy(() => import("../components/sections/ShopTeaser"));
+const StudioSplit         = lazy(() => import("../components/sections/StudioSplit"));
+const FarmstayStrip       = lazy(() => import("../components/sections/FarmstayStrip"));
+const BlogPreview         = lazy(() => import("../components/sections/BlogPreview"));
+const TestimonialsSection = lazy(() => import("../components/sections/TestimonialsSection"));
+const FaqSection          = lazy(() => import("../components/sections/FaqSection"));
+const ContactSection      = lazy(() => import("../components/sections/ContactSection"));
 
 // ── WhatsApp FAB — fixed bottom-RIGHT (Fix 3) ─────────────────────────────
 function WhatsAppFAB() {
@@ -51,16 +52,18 @@ export default function LandingPage() {
         {/* <Philosophy /> */}
         <DualIdentitySection />
         <ByoolStrip />
-        <CoursesSection />
-        <ShopTeaser />
+        <Suspense fallback={<div className="h-40" />}>
+          <CoursesSection />
+          <ShopTeaser />
 
-        <StudioSplit />
-        <FarmstayStrip />
-        {/* <RetreatBanner /> */}
-        <BlogPreview />
-        <TestimonialsSection />
-        <FaqSection />
-        <ContactSection />
+          <StudioSplit />
+          <FarmstayStrip />
+          {/* <RetreatBanner /> */}
+          <BlogPreview />
+          <TestimonialsSection />
+          <FaqSection />
+          <ContactSection />
+        </Suspense>
       </main>
       <Footer />
       <WhatsAppFAB />

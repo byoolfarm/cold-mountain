@@ -11,11 +11,13 @@ import { SectionLabel, SectionTitle } from "../components/ui";
 const ALL_CATEGORIES = ["All", ...new Set(POSTS.map(p => p.category))];
 
 function PostCard({ post }) {
-  const img = IMGS[post.imgKey];
+  const img = IMGS[post.imgKey] || post.imgKey;
   return (
     <Link to={`/blog/${post.slug}`} className="group no-underline flex flex-col bg-white shadow-sm hover:shadow-md transition-shadow duration-300">
       <div className="aspect-[16/10] overflow-hidden">
         <img src={img} alt={post.title}
+          width="800"
+          height="500"
           className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
         />
       </div>

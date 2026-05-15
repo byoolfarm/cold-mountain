@@ -122,6 +122,8 @@ export default function StudioSplit() {
             <img
               src="https://img.youtube.com/vi/u_mf57XsXrU/maxresdefault.jpg"
               alt="Studio video"
+              width="1280"
+              height="720"
               className="w-full h-full object-cover"
             />
 

@@ -100,6 +100,8 @@ function FarmSection({ id, label, heading, accentWord, body, listItems = [], img
           <img
             src={img}
             alt={alt}
+            width="800"
+            height="1000"
             className="w-full aspect-[4/5] object-cover saturate-75 hover:saturate-100 transition-all duration-700 block rounded-sm shadow-sm"
             loading="lazy"
           />
@@ -251,8 +253,9 @@ export default function DayAtFarmPage() {
 
             <div className="flex flex-col items-center">
               <a
-                href="https://wa.me/918626823139?text=Hi!%20I%20would%20like%20to%20book%20A%20Day%20at%20Byool%20Farm."
+                href="https://wa.me/919805259227?text=Hi!%20I%20would%20like%20to%20book%20A%20Day%20at%20Byool%20Farm."
                 target="_blank"
+
                 rel="noreferrer"
                 className="group flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#1ebd5a] shadow-lg hover:shadow-xl text-white text-[0.8rem] tracking-[0.15em] uppercase no-underline transition-all duration-300 font-jost rounded-full"
               >

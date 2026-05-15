@@ -114,7 +114,7 @@ function SideArrow({ direction, onClick, visible }) {
 
 // ─── BLOG CARD ───────────────────────────────────────────────────────────────
 function BlogCard({ post }) {
-  const img = IMGS[post.imgKey];
+  const img = IMGS[post.imgKey] || post.imgKey;
   return (
     <Link
       to={`/blog/${post.slug}`}
@@ -123,6 +123,8 @@ function BlogCard({ post }) {
       <div className="aspect-[16/10] overflow-hidden">
         <img
           src={img} alt={post.title}
+          width="800"
+          height="500"
           className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
           loading="lazy"
         />

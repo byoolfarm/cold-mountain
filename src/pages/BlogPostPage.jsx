@@ -18,7 +18,7 @@ export default function BlogPostPage() {
     document.title = `${post.title} — The Cold Mountain Studio`;
   }
 
-  const img         = IMGS[post.imgKey];
+  const img         = IMGS[post.imgKey] || post.imgKey;
   const otherPosts  = POSTS.filter(p => p.slug !== slug).slice(0, 3);
 
   // Render body — paragraphs separated by double newlines, **bold** inline
@@ -48,6 +48,8 @@ export default function BlogPostPage() {
           <img 
             src={img} 
             alt={post.title} 
+            width="1920"
+            height="600"
             className="w-full h-full object-cover brightness-[0.9]"
             style={{ objectPosition: post.imgPos || "center" }}
           />
@@ -102,7 +104,7 @@ export default function BlogPostPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {otherPosts.map(p => {
-                const pImg = IMGS[p.imgKey];
+                const pImg = IMGS[p.imgKey] || p.imgKey;
                 return (
                   <Link key={p.slug} to={`/blog/${p.slug}`} className="group no-underline flex flex-col bg-white shadow-sm hover:shadow-md transition-shadow">
                     <div className="aspect-[16/10] overflow-hidden">

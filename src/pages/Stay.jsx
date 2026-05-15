@@ -142,6 +142,8 @@ export default function RetreatPage() {
           {[IMGS.cmr_view1, IMGS.cmr_view2].map((src, i) => (
             <div key={i} className={`overflow-hidden ${i === 1 ? "md:col-span-1 row-span-1" : ""}`}>
               <img src={src} alt="View from Cold Mountain Retreat"
+                width="800"
+                height="600"
                 className="w-full h-52 md:h-64 object-cover saturate-90 hover:saturate-100 hover:scale-[1.03] transition-all duration-500 block" loading="lazy" />
             </div>
           ))}
@@ -168,6 +170,8 @@ export default function RetreatPage() {
             {/* Twin Room — spans 2 cols */}
             <div className="group overflow-hidden relative">
               <img src={IMGS.cmr_single1} alt="Twin room"
+                width="400"
+                height="300"
                 className="w-full h-72 md:h-80 object-cover saturate-75 group-hover:saturate-100 group-hover:scale-[1.03] transition-all duration-500 block" loading="lazy" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-5">
                 {/* <p className="font-light text-white text-lg" style={{ fontFamily: "Cormorant Garamond, serif" }}>Twin Room</p> */}
@@ -177,6 +181,8 @@ export default function RetreatPage() {
             {/* Single Room */}
             <div className="group overflow-hidden relative">
               <img src={IMGS.cmr_single2} alt="Single room"
+                width="400"
+                height="300"
                 className="w-full h-72 md:h-80 object-cover saturate-75 group-hover:saturate-100 group-hover:scale-[1.03] transition-all duration-500 block" loading="lazy" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-5">
                 {/* <p className="font-light text-white text-lg" style={{ fontFamily: "Cormorant Garamond, serif" }}>Single Room</p> */}
@@ -185,6 +191,8 @@ export default function RetreatPage() {
             </div>
             <div className="group overflow-hidden relative">
               <img src={IMGS.cmr_single3} alt="Single room"
+                width="400"
+                height="300"
                 className="w-full h-72 md:h-80 object-cover saturate-75 group-hover:saturate-100 group-hover:scale-[1.03] transition-all duration-500 block" loading="lazy" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-5">
                 {/* <p className="font-light text-white text-lg" style={{ fontFamily: "Cormorant Garamond, serif" }}>Single Room</p> */}

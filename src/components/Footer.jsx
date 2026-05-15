@@ -1,6 +1,7 @@
 // src/components/Footer.jsx
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { logo, footer_bg } from "../assets/img";
+import { IS_SHOP_ENABLED } from "../config";
 
 export default function Footer() {
   const navigate  = useNavigate();
@@ -22,19 +23,20 @@ export default function Footer() {
     <footer className="relative overflow-hidden text-cream px-16 py-14 flex flex-col md:flex-row justify-between items-end md:items-center gap-6 min-h-[180px]">
       {/* BG image */}
       <div className="absolute inset-0 -z-0">
-        <img src={footer_bg} alt="" className="w-full h-full object-cover brightness-[0.15] saturate-[0.4] block" loading="lazy" />
+        <img src={footer_bg} alt="" width="1920" height="400" className="w-full h-full object-cover brightness-[0.15] saturate-[0.4] block" loading="lazy" />
       </div>
 
       {/* Logo + tagline */}
       <div className="relative">
-        <img src={logo} alt="The Cold Mountain Studio" className="h-9 w-auto brightness-0 invert opacity-80" />
+        <img src={logo} alt="The Cold Mountain Studio" width="160" height="36" className="h-9 w-auto brightness-0 invert opacity-80" />
         <p className="text-[0.77rem] text-white/50 tracking-[0.08em] mt-1 italic">We make mud into pots</p>
       </div>
 
       {/* Links */}
       <ul className="relative flex flex-wrap gap-7 list-none">
         <li><span onClick={() => goToSection("courses")} className={linkCls}>Courses</span></li>
-        <li><Link to="/shop" className={linkCls}>Shop</Link></li>
+        <li><Link to="/shop" className={linkCls}>{IS_SHOP_ENABLED ? "Shop" : "Collection"}</Link></li>
+
         <li><Link to="/work" className={linkCls}>Our Work</Link></li>
         <li><Link to="/blog" className={linkCls}>Blog</Link></li>
         <li><a href="https://byoolfarmstay.com/" target="_blank" rel="noreferrer" className={linkCls}>Stay</a></li>

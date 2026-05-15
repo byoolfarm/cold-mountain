@@ -290,6 +290,8 @@ export default function ResidencyPage() {
                   <img
                     src="/images/cmr_view1.webp"
                     alt="The Cold Mountain Retreat"
+                    width="800"
+                    height="450"
                     className="w-full aspect-[16/9] object-cover saturate-75"
                     loading="lazy"
                   />
@@ -329,6 +331,8 @@ export default function ResidencyPage() {
                   <img
                     src="/images/byool_stay1.webp"
                     alt="Byool Farm Stay"
+                    width="800"
+                    height="450"
                     className="w-full aspect-[16/9] object-cover saturate-75"
                     loading="lazy"
                   />
@@ -486,8 +490,9 @@ export default function ResidencyPage() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="https://wa.me/918626823139?text=Hi!%20I%20would%20like%20to%20apply%20for%20the%20Cold%20Mountain%20Residency%202026."
+                  href="https://wa.me/919805259227?text=Hi!%20I%20would%20like%20to%20apply%20for%20the%20Cold%20Mountain%20Residency%202026."
                   target="_blank"
+
                   rel="noreferrer"
                   className="group flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#1ebd5a] shadow-lg hover:shadow-xl text-white text-[0.75rem] tracking-[0.15em] uppercase no-underline transition-all duration-300 font-jost rounded-full"
                 >

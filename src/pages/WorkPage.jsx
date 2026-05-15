@@ -37,7 +37,7 @@ function FilterBar({ active, onChange }) {
 // ── Single work item card ─────────────────────────────────────────────────────
 function WorkCard({ item, onClick }) {
   const [hovered, setHovered] = useState(false);
-  const img = IMGS[item.imgKey];
+  const img = IMGS[item.imgKey] || item.imgKey;
 
   return (
     <div
@@ -50,6 +50,8 @@ function WorkCard({ item, onClick }) {
         <img
           src={img}
           alt={item.title}
+          width="400"
+          height="400"
           className={`w-full h-full object-cover transition-all duration-700 ${hovered ? "scale-105 saturate-100" : "scale-100 saturate-75"}`}
           loading="lazy"
         />

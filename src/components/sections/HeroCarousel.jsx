@@ -94,6 +94,10 @@ export default function HeroCarousel() {
               <img
                 src={s.img}
                 alt={`slide-${i}`}
+                width="1920"
+                height="1080"
+                loading={i === 0 ? "eager" : "lazy"}
+                {...(i === 0 ? { fetchpriority: "high" } : {})}
                 className="w-full h-full object-cover brightness-[0.65] saturate-80"
               />
             </picture>
