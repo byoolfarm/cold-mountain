@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { swapna_portrait } from "../../assets/img";
 import ImageViewer from "../../components/ImageViewer";
+import BackButton from "../../components/BackButton";
 
 // Work images — string paths to public/images/ (WebP)
 const work1  = "/images/swapna_1.webp";
@@ -139,7 +140,13 @@ export default function SwapnaPage() {
         }
       `}</style>
 
-      <main className="min-h-screen bg-warm-white">
+      <main className="min-h-screen bg-warm-white relative">
+        <div className="absolute top-[5.5rem] left-4 md:left-12 z-10 hidden md:block">
+           <BackButton light={false} /> 
+        </div>
+        <div className="absolute top-[5.5rem] w-full flex justify-center z-10 md:hidden">
+           <BackButton light={false} /> 
+        </div>
 
         {/* ── Text-only page header — no images ── */}
         <FadeIn>

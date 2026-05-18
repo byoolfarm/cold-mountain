@@ -13,6 +13,7 @@ import { WORK_ITEMS, WORK_CATEGORIES } from "../data/work";
 import * as IMGS           from "../assets/img";
 import { SectionLabel }    from "../components/ui";
 import ImageViewer         from "../components/ImageViewer";
+import BackButton          from "../components/BackButton";
 
 // ── Filter tab bar ────────────────────────────────────────────────────────────
 function FilterBar({ active, onChange }) {
@@ -80,7 +81,14 @@ export default function WorkPage() {
 
       <main className="min-h-screen bg-warm-white">
         {/* Page header */}
-        <div className="pt-20 pb-8 px-4 md:px-16 bg-charcoal text-center">
+        <div className="relative pt-24 pb-8 px-4 md:px-16 bg-charcoal text-center">
+          <div className="absolute top-24 left-4 md:left-16 z-10 hidden md:block">
+            <BackButton light={true} />
+          </div>
+          {/* Mobile back button */}
+          <div className="mb-8 flex justify-center md:hidden">
+            <BackButton light={true} />
+          </div>
           <h1 className="font-cormorant text-[clamp(2.2rem,4vw,3.4rem)] font-light text-cream leading-tight">
             Our <em className="italic text-clay-light">Work</em>
           </h1>

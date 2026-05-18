@@ -14,6 +14,7 @@ import {
   slide_wheel, 
 } from "../assets/img";
 import * as IMGS from "../assets/img"
+import BackButton from "../components/BackButton";
 
 // ── Thin ornamental rule ──────────────────────────────────────────────────────
 const Rule = ({ light = false }) => (
@@ -86,6 +87,14 @@ export default function AboutStudioPage() {
             style={{ backgroundImage: `url(${IMGS.about_wallpaper})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent" />
+          
+          <div className="absolute top-24 left-4 md:left-16 z-10 hidden md:block">
+            <BackButton light={true} />
+          </div>
+          <div className="absolute top-24 w-full flex justify-center z-10 md:hidden">
+            <BackButton light={true} />
+          </div>
+
           <div className="relative px-6 md:px-16 pb-16 max-w-[700px]">
             <p className="text-[0.68rem] tracking-[0.35em] uppercase text-clay-light mb-4 font-jost">
               The Cold Mountain Studio · Dharamshala

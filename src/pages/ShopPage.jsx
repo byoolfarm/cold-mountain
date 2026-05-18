@@ -10,6 +10,7 @@ import SEO from "../components/SEO";
 import * as IMGS from "../assets/img";
 import toast from "react-hot-toast";
 import { Search, Plus, ShoppingBag, X, RotateCcw, ArrowDown, Loader2, ChevronDown, Filter } from "lucide-react";
+import BackButton from "../components/BackButton";
 
 export default function ShopPage() {
   const dispatch = useDispatch();
@@ -111,8 +112,13 @@ export default function ShopPage() {
       <SEO title="Shop — The Collection" description="Earthy pottery collection." path="/shop" />
       <ShopNavbar />
 
-      <main className="pt-16">
-        
+      <main className="pt-16 relative">
+        <div className="absolute top-6 left-4 z-50 hidden md:block">
+          <BackButton light={false} />
+        </div>
+        <div className="absolute top-6 w-full flex justify-center z-50 md:hidden">
+          <BackButton light={false} />
+        </div>
         {/* Search Area */}
         <div className="px-6 md:px-12 py-6 bg-[#f3f1ee]">
            <div className="max-w-screen-xl mx-auto">

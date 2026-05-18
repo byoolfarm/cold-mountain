@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import * as IMGS from "../assets/img";
 import { optimizeSupabaseImage } from "../lib/supabase";
+import BackButton from "../components/BackButton";
 
 export default function CheckoutPage() {
   const dispatch = useDispatch();
@@ -59,7 +60,7 @@ export default function CheckoutPage() {
 
       <main className="pt-32 pb-20 px-6 md:px-12 lg:px-24">
         <div className="flex items-center gap-4 mb-12">
-           <button onClick={() => navigate(-1)} className="hover:opacity-50 transition-opacity"><ArrowLeft size={20} /></button>
+           <BackButton to="/shop" label="" />
            <h1 className="text-3xl font-bold uppercase tracking-tighter">Checkout</h1>
         </div>
 

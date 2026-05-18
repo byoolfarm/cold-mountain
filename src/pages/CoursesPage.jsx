@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import { SectionLabel, SectionTitle, DividerLine } from "../components/ui";
 import { COURSES } from "../data/courses";
 import * as IMGS from "../assets/img";
+import BackButton from "../components/BackButton";
 
 const F = {
   jost: { fontFamily: "'Jost', sans-serif" },
@@ -92,9 +93,15 @@ export default function CoursesPage() {
       />
       <Navbar />
 
-      <main className="min-h-screen bg-warm-white pt-32 pb-20">
+      <main className="min-h-screen bg-warm-white pt-32 pb-20 relative">
+        <div className="absolute top-24 left-4 md:left-12 z-10 hidden md:block">
+           <BackButton light={false} /> 
+        </div>
+        <div className="absolute top-24 w-full flex justify-center z-10 md:hidden">
+           <BackButton light={false} /> 
+        </div>
         {/* Header Section */}
-        <section className="px-6 md:px-12 lg:px-24 mb-16">
+        <section className="px-6 md:px-12 lg:px-24 mb-16 pt-8 md:pt-0">
           <div className="max-w-[1200px] mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

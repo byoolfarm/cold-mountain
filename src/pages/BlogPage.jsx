@@ -7,6 +7,7 @@ import Footer  from "../components/Footer";
 import { POSTS } from "../data/blog";
 import * as IMGS from "../assets/img";
 import { SectionLabel, SectionTitle } from "../components/ui";
+import BackButton from "../components/BackButton";
 
 const ALL_CATEGORIES = ["All", ...new Set(POSTS.map(p => p.category))];
 
@@ -57,7 +58,14 @@ export default function BlogPage() {
     // backgroundImage: `url(${IMGS.blog_background})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-  }} className="py-6 px-4 md:px-16 bg-charcoal text-center">
+  }} className="relative py-12 px-4 md:px-16 bg-charcoal text-center">
+          <div className="absolute top-8 left-4 md:left-16 z-10 hidden md:block">
+            <BackButton light={true} />
+          </div>
+          {/* Mobile back button */}
+          <div className="mb-6 flex justify-center md:hidden">
+            <BackButton light={true} />
+          </div>
           <SectionLabel light className="justify-center">From the Studio</SectionLabel>
           <h1 className="font-cormorant text-[clamp(2rem,4vw,3.2rem)] font-light text-cream leading-tight mb-3">
             The <em className="italic text-clay-light">Journal</em>

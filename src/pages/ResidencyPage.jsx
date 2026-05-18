@@ -4,6 +4,7 @@ import SEO    from "../components/SEO";
 import Navbar from "../components/Navbar";
 import { SectionLabel } from "../components/ui";
 import { Link } from "react-router-dom";
+import BackButton from "../components/BackButton";
 
 const heroImg = "/images/residency_hero.webp";
 
@@ -119,7 +120,13 @@ export default function ResidencyPage() {
         }
       `}</style>
 
-      <main className="min-h-screen bg-warm-white">
+      <main className="min-h-screen bg-warm-white relative">
+        <div className="absolute top-[5.5rem] left-4 md:left-12 z-10 hidden md:block">
+           <BackButton light={false} /> 
+        </div>
+        <div className="absolute top-[5.5rem] w-full flex justify-center z-10 md:hidden">
+           <BackButton light={false} /> 
+        </div>
 
         {/* ── Hero Header ──────────────────────────────────────────────────── */}
         <FadeIn>

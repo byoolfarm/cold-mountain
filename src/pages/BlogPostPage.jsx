@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { POSTS } from "../data/blog";
 import * as IMGS from "../assets/img";
 import { SectionLabel } from "../components/ui";
+import BackButton from "../components/BackButton";
 
 export default function BlogPostPage() {
   const { slug }  = useParams();
@@ -43,7 +44,13 @@ export default function BlogPostPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-warm-white pb-20 pt-[4.5rem]">
+      <main className="min-h-screen bg-warm-white pb-20 pt-[4.5rem] relative">
+        <div className="absolute top-[5.5rem] left-4 md:left-12 z-10 hidden md:block">
+           <BackButton light={true} /> 
+        </div>
+        <div className="absolute top-[5.5rem] w-full flex justify-center z-10 md:hidden">
+           <BackButton light={true} /> 
+        </div>
         <div className="w-full h-[30vh] md:h-[40vh] overflow-hidden">
           <img 
             src={img} 

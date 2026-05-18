@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ImageViewer from "../components/ImageViewer";
 import { SectionLabel } from "../components/ui";
+import BackButton from "../components/BackButton";
 
 const img1 = "/images/day_at_farm_1.webp"; // cow
 const img2 = "/images/day_at_farm_8.webp"; // clay table (children) - reused in body
@@ -154,7 +155,13 @@ export default function DayAtFarmPage() {
       <main className="min-h-screen bg-warm-white">
 
         <FadeIn>
-          <header className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24 pt-28 pb-4">
+          <header className="max-w-[1180px] mx-auto px-6 md:px-10 lg:px-24 pt-28 pb-4 relative">
+             <div className="absolute top-8 left-4 md:left-12 z-10 hidden md:block">
+               <BackButton light={false} />
+             </div>
+             <div className="absolute top-8 w-full flex justify-center z-10 md:hidden">
+               <BackButton light={false} />
+             </div>
              <div className="border-b border-black/8 pb-6 pt-0 text-center">
               <span className="block text-[0.7rem] tracking-[0.3em] uppercase text-clay mb-3 font-jost">
                 Rediscover a slower pace of life

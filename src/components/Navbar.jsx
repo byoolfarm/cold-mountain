@@ -91,7 +91,9 @@ export default function Navbar() {
       <nav className={[
         "fixed top-0 left-0 right-0 z-50 flex justify-between items-center w-[100vw] px-4 sm:px-6 md:px-12 py-4",
         "transition-all duration-300",
-        isLight ? "bg-warm-white/97 backdrop-blur-md shadow-[0_1px_0_rgba(90,70,55,0.15)]" : "",
+        isLight 
+          ? "bg-[#f5f2ee]/80 backdrop-blur-md shadow-sm border-b border-black/10" 
+          : "bg-transparent border-b border-transparent",
       ].join(" ")}>
 
         {/* Logo */}

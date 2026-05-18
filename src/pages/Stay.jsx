@@ -12,6 +12,7 @@ import Navbar from "../components/Navbar";
 // ── Replace these with your actual imported image paths ──────────────────────
 
 import * as IMGS         from "../assets/img";
+import BackButton from "../components/BackButton";
 
 // ────────────────────────────────────────────────────────────────────────────
 
@@ -81,6 +82,12 @@ export default function RetreatPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="relative h-[100vh] min-h-[560px] flex flex-col justify-end overflow-hidden">
+        <div className="absolute top-24 left-4 md:left-12 z-20 hidden md:block">
+           <BackButton light={true} />
+        </div>
+        <div className="absolute top-24 w-full flex justify-center z-20 md:hidden">
+           <BackButton light={true} />
+        </div>
         <div className="absolute inset-0 bg-cover h-full w-full bg-center "
           style={{ backgroundImage: `url(${IMGS.cmr_view2})` }} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />

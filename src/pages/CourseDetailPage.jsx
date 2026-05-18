@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import { SectionLabel, SectionTitle, DividerLine, BtnPrimary } from "../components/ui";
 import { COURSES } from "../data/courses";
 import * as IMGS from "../assets/img";
+import BackButton from "../components/BackButton";
 
 const F = {
   jost: { fontFamily: "'Jost', sans-serif" },
@@ -69,6 +70,12 @@ export default function CourseDetailPage() {
       <main className="min-h-screen bg-warm-white">
         {/* Hero Section */}
         <header className="relative h-[60vh] md:h-[75vh] w-full overflow-hidden">
+          <div className="absolute top-24 left-4 md:left-12 z-20 hidden md:block">
+            <BackButton light={true} />
+          </div>
+          <div className="absolute top-24 w-full flex justify-center z-20 md:hidden">
+            <BackButton light={true} />
+          </div>
           <img
             src={IMGS[course.imgKey]}
             alt={course.name}

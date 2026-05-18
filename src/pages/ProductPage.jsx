@@ -9,6 +9,7 @@ import SEO from "../components/SEO";
 import * as IMGS from "../assets/img";
 import { ArrowLeft, ShoppingBag, Minus, Plus, Share2 } from "lucide-react";
 import { useState } from "react";
+import BackButton from "../components/BackButton";
 import toast from "react-hot-toast";
 
 export default function ProductPage() {
@@ -67,9 +68,7 @@ export default function ProductPage() {
         <div className="lg:w-1/2 h-full flex flex-col p-8 lg:p-16 lg:pt-24 justify-between overflow-y-auto">
            <div>
               <div className="flex justify-between items-center mb-8">
-                 <Link to="/shop" className="flex items-center gap-2 text-[0.6rem] uppercase tracking-[0.2em] font-bold text-neutral-400 hover:text-neutral-900 transition-colors">
-                    <ArrowLeft size={14} /> Back
-                 </Link>
+                 <BackButton to="/shop" label="Back to Shop" />
                  <span className={`text-[0.6rem] uppercase tracking-[0.3em] font-bold ${isOutOfStock ? 'text-neutral-300' : 'text-[#b87b5a]'}`}>
                     {isOutOfStock ? 'Sold Out' : 'In Stock'}
                  </span>
