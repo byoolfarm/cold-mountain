@@ -70,6 +70,26 @@ export default function WorkPage() {
     ? WORK_ITEMS
     : WORK_ITEMS.filter(item => item.category === activeCategory);
 
+  const handlePrev = () => {
+    if (!selectedImg) return;
+    const currentIndex = filtered.findIndex(item => (IMGS[item.imgKey] || item.imgKey) === selectedImg.src);
+    if (currentIndex !== -1) {
+      const prevIndex = currentIndex > 0 ? currentIndex - 1 : filtered.length - 1;
+      const prevItem = filtered[prevIndex];
+      setSelectedImg({ src: IMGS[prevItem.imgKey] || prevItem.imgKey, title: prevItem.title });
+    }
+  };
+
+  const handleNext = () => {
+    if (!selectedImg) return;
+    const currentIndex = filtered.findIndex(item => (IMGS[item.imgKey] || item.imgKey) === selectedImg.src);
+    if (currentIndex !== -1) {
+      const nextIndex = currentIndex < filtered.length - 1 ? currentIndex + 1 : 0;
+      const nextItem = filtered[nextIndex];
+      setSelectedImg({ src: IMGS[nextItem.imgKey] || nextItem.imgKey, title: nextItem.title });
+    }
+  };
+
   return (
     <>
       <SEO
@@ -81,7 +101,7 @@ export default function WorkPage() {
 
       <main className="min-h-screen bg-warm-white">
         {/* Page header */}
-        <div className="relative pt-24 pb-8 px-4 md:px-16 bg-charcoal text-center">
+        <div className="relative mt-[4rem] pt-24 pb-8 px-4 md:px-16 bg-charcoal text-center">
           <div className="absolute top-24 left-4 md:left-16 z-10 hidden md:block">
             <BackButton light={true} />
           </div>
@@ -153,6 +173,8 @@ export default function WorkPage() {
           src={selectedImg.src} 
           alt={selectedImg.title} 
           onClose={() => setSelectedImg(null)} 
+          onPrev={handlePrev}
+          onNext={handleNext}
         />
       )}
 

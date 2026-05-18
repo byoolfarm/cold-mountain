@@ -114,6 +114,24 @@ function FarmSection({ id, label, heading, accentWord, body, listItems = [], img
 
 export default function DayAtFarmPage() {
   const [selectedImg, setSelectedImg] = useState(null);
+
+  const handlePrev = () => {
+    if (!selectedImg) return;
+    const currentIndex = WORKS.findIndex(item => item.src === selectedImg.src);
+    if (currentIndex !== -1) {
+      const prevIndex = currentIndex > 0 ? currentIndex - 1 : WORKS.length - 1;
+      setSelectedImg(WORKS[prevIndex]);
+    }
+  };
+
+  const handleNext = () => {
+    if (!selectedImg) return;
+    const currentIndex = WORKS.findIndex(item => item.src === selectedImg.src);
+    if (currentIndex !== -1) {
+      const nextIndex = currentIndex < WORKS.length - 1 ? currentIndex + 1 : 0;
+      setSelectedImg(WORKS[nextIndex]);
+    }
+  };
   
   return (
     <>
@@ -310,6 +328,8 @@ export default function DayAtFarmPage() {
           src={selectedImg.src} 
           alt={selectedImg.label} 
           onClose={() => setSelectedImg(null)} 
+          onPrev={handlePrev}
+          onNext={handleNext}
         />
       )}
 

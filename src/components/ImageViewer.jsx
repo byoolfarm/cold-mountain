@@ -1,28 +1,32 @@
 import { useEffect } from "react";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 /**
  * ImageViewer - A minimalist lightbox for viewing images in detail.
  * @param {string} src - The image source URL.
  * @param {string} alt - Alternative text for the image.
  * @param {function} onClose - Callback to close the viewer.
+ * @param {function} onPrev - Callback to go to previous image.
+ * @param {function} onNext - Callback to go to next image.
  */
-export default function ImageViewer({ src, alt, onClose }) {
+export default function ImageViewer({ src, alt, onClose, onPrev, onNext }) {
   // Prevent body scroll when open
   useEffect(() => {
     document.body.style.overflow = "hidden";
     
-    // Close on Escape key
-    const handleEsc = (e) => {
+    // Close on Escape key, Navigate on Left/Right
+    const handleKey = (e) => {
       if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft" && onPrev) onPrev();
+      if (e.key === "ArrowRight" && onNext) onNext();
     };
-    window.addEventListener("keydown", handleEsc);
+    window.addEventListener("keydown", handleKey);
     
     return () => {
       document.body.style.overflow = "unset";
-      window.removeEventListener("keydown", handleEsc);
+      window.removeEventListener("keydown", handleKey);
     };
-  }, [onClose]);
+  }, [onClose, onPrev, onNext]);
 
   if (!src) return null;
 
@@ -40,9 +44,31 @@ export default function ImageViewer({ src, alt, onClose }) {
         <X size={36} strokeWidth={1} />
       </button>
 
+      {/* Prev Button */}
+      {onPrev && (
+        <button 
+          onClick={(e) => { e.stopPropagation(); onPrev(); }}
+          className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center text-cream opacity-40 hover:opacity-100 transition-all duration-300 z-[110]"
+          aria-label="Previous image"
+        >
+          <ChevronLeft size={48} strokeWidth={1} />
+        </button>
+      )}
+
+      {/* Next Button */}
+      {onNext && (
+        <button 
+          onClick={(e) => { e.stopPropagation(); onNext(); }}
+          className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center text-cream opacity-40 hover:opacity-100 transition-all duration-300 z-[110]"
+          aria-label="Next image"
+        >
+          <ChevronRight size={48} strokeWidth={1} />
+        </button>
+      )}
+
       {/* Image Container with Framing */}
       <div 
-        className="relative max-w-[95vw] md:max-w-[85vw] max-h-[90vh] flex flex-col items-center justify-center p-6 md:p-12 animate-in zoom-in-95 duration-500"
+        className="relative max-w-[85vw] md:max-w-[75vw] max-h-[90vh] flex flex-col items-center justify-center p-6 md:p-12 animate-in zoom-in-95 duration-500"
         onClick={(e) => e.stopPropagation()} 
       >
         <div className="relative group p-2 bg-warm-white/5 shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10">
@@ -51,21 +77,12 @@ export default function ImageViewer({ src, alt, onClose }) {
             alt={alt || "Studio Piece"} 
             className="max-w-full max-h-[75vh] md:max-h-[80vh] object-contain block transition-transform duration-700"
           />
-          
-          {/* Subtle Label Overlay */}
-          {/* {alt && (
-            <div className="mt-6 text-center">
-              <span className="text-[0.65rem] tracking-[0.3em] uppercase text-cream/70 font-jost">
-                {alt}
-              </span>
-            </div>
-          )} */}
         </div>
       </div>
 
       {/* Helper text */}
       <div className="absolute bottom-10 text-[0.6rem] tracking-[0.3em] uppercase text-cream/30 font-jost hidden md:block">
-        Press ESC or Click anywhere to close
+        Press ESC to close, Arrows to navigate
       </div>
     </div>
   );
