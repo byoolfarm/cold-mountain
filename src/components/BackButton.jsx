@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 export default function BackButton({ to = "/", label = "Back to Home", className = "", light = false }) {
   const navigate = useNavigate();
 
-  const textColors = light 
-    ? "text-white/70 hover:text-white" 
+  const textColors = light
+    ? "text-white/70 hover:text-white"
     : "text-stone hover:text-clay";
 
   return (
     <motion.button
       onClick={() => navigate(to)}
-      className={`group flex items-center gap-2 text-[0.75rem] tracking-[0.2em] uppercase font-jost transition-colors duration-300 z-40 bg-transparent border-none cursor-pointer ${textColors} ${className}`}
+      className={`group flex items-center gap-2 text-[0.75rem] tracking-[0.2em] uppercase font-jost transition-colors duration-300 z-40 mt-12 fixed top-4 left-[18%] md:left-[8%] -translate-x-1/2 bg-transparent border-none cursor-pointer dark:text-white/70 ${textColors} ${className}`}
       whileHover="hover"
       initial="initial"
     >

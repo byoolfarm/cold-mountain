@@ -5,11 +5,11 @@
 
 export const COURSES = [
   {
-    num: "01", 
+    num: "01",
     slug: "pottery-retreat",
     imgKey: "course_retreat",
-    name: "The Pottery Retreat: A Prayer of Appreciation", 
-    tag: "Residential", 
+    name: "The Pottery Retreat: A Prayer of Appreciation",
+    tag: "Residential",
     tagStyle: "clay",
     duration: "3 – 13 Days · Food & Stay Included",
     desc: "A quiet interval between the mountains and the clay, where time slows down to the speed of your own hands.",
@@ -32,28 +32,28 @@ export const COURSES = [
       },
       inclusions: ["All professional instruction", "All clay, materials, tools", "Homemade fresh meals", "High-speed Wi-Fi", "On-site or near-site stay"],
       pricing: [
-        { 
-          name: "Option 1: The Cold Mountain Retreat", 
+        {
+          name: "Option 1: The Cold Mountain Retreat",
           desc: "A short walk from the studio, offering a cosy, communal atmosphere.",
-          options: [{ label: "Single Occupancy", val: "₹6,500" }, { label: "Sharing Basis", val: "₹4,500" }], 
-          note: "per person per day (+18% GST)" 
+          options: [{ label: "Single Occupancy", val: "₹6,500" }, { label: "Sharing Basis", val: "₹4,500" }],
+          note: "per person per day (+18% GST)"
         },
-        { 
-          name: "Option 2: Byool Farm Stay (On-Site)", 
+        {
+          name: "Option 2: Byool Farm Stay (On-Site)",
           desc: "A premium cottage directly on the farm heartbeat.",
-          options: [{ label: "Single Occupancy", val: "₹8,100" }, { label: "Sharing Basis", val: "₹6,600" }], 
-          note: "per person per day (+18% GST)" 
+          options: [{ label: "Single Occupancy", val: "₹8,100" }, { label: "Sharing Basis", val: "₹6,600" }],
+          note: "per person per day (+18% GST)"
         },
       ]
     },
     hasAccom: true,
   },
   {
-    num: "02", 
+    num: "02",
     slug: "fortnight-course",
     imgKey: "course_fortnight",
-    name: "A Fortnight with Clay: Beginner’s Course", 
-    tag: "Residential", 
+    name: "A Fortnight with Clay: Beginner’s Course",
+    tag: "Residential",
     tagStyle: "clay",
     duration: "14 Days · Food & Stay Included",
     desc: "Two weeks of rhythm and mud—a transition from curiosity to creation in the heart of the mountains.",
@@ -75,13 +75,13 @@ export const COURSES = [
       },
       inclusions: ["Professional instruction", "All clay & materials", "Three homemade meals daily", "High-speed Wi-Fi & Laundry", "On-site accommodation"],
       pricing: [
-        { 
-          name: "Option 1: The Cold Mountain Retreat", 
+        {
+          name: "Option 1: The Cold Mountain Retreat",
           options: [{ label: "Single", val: "₹72,800" }, { label: "Sharing", val: "₹63,000" }],
           note: "+18% GST"
         },
-        { 
-          name: "Option 2: Byool Farm Stay (On-Site)", 
+        {
+          name: "Option 2: Byool Farm Stay (On-Site)",
           options: [{ label: "Single", val: "₹96,600" }, { label: "Sharing", val: "₹70,000" }],
           note: "+18% GST"
         },
@@ -90,11 +90,11 @@ export const COURSES = [
     hasAccom: true,
   },
   {
-    num: "03", 
+    num: "03",
     slug: "monthly-course",
     imgKey: "course_monthly",
-    name: "Monthly Course: Deepen Your Practice", 
-    tag: "Residential", 
+    name: "Monthly Course: Deepen Your Practice",
+    tag: "Residential",
     tagStyle: "clay",
     duration: "30 Days · Food & Stay Included",
     desc: "A thirty-day immersion designed to transform your relationship with clay through dedicated research and technical mastery.",
@@ -116,13 +116,13 @@ export const COURSES = [
       },
       inclusions: ["Full studio access", "Mentorship guidance", "All meals included", "High-speed Wi-Fi", "Accommodation"],
       pricing: [
-        { 
-          name: "Option 1: The Cold Mountain Retreat", 
+        {
+          name: "Option 1: The Cold Mountain Retreat",
           options: [{ label: "Single", val: "₹1,36,500" }, { label: "Sharing", val: "₹96,000" }],
           note: "+18% GST"
         },
-        { 
-          name: "Option 2: Byool Farm Stay (On-Site)", 
+        {
+          name: "Option 2: Byool Farm Stay (On-Site)",
           options: [{ label: "Single", val: "₹1,80,000" }, { label: "Sharing", val: "₹1,35,000" }],
           note: "+18% GST"
         },
@@ -131,11 +131,11 @@ export const COURSES = [
     hasAccom: true,
   },
   {
-    num: "04", 
+    num: "04",
     slug: "three-month-course",
     imgKey: "course_3months",
-    name: "Three-Month Course: The Potter’s Journey", 
-    tag: "Residential", 
+    name: "Three-Month Course: The Potter’s Journey",
+    tag: "Residential",
     tagStyle: "clay",
     duration: "90 Days · Full Immersion",
     desc: "A ninety-day seasonal immersion designed to bridge the gap between student and practitioner through technical discipline.",
@@ -157,13 +157,13 @@ export const COURSES = [
       },
       inclusions: ["Professional instruction", "All clay, materials, tools", "Fresh homemade meals", "Laundry & Wi-Fi", "Premium accommodation"],
       pricing: [
-        { 
-          name: "Option 1: The Cold Mountain Retreat", 
+        {
+          name: "Option 1: The Cold Mountain Retreat",
           options: [{ label: "Single", val: "₹3,75,500" }, { label: "Sharing", val: "₹2,25,000" }],
           note: "+18% GST"
         },
-        { 
-          name: "Option 2: Byool Farm Stay (On-Site)", 
+        {
+          name: "Option 2: Byool Farm Stay (On-Site)",
           options: [{ label: "Enquire", val: "Contact for Pricing" }],
           note: "Premium cottage stay"
         },
@@ -172,11 +172,11 @@ export const COURSES = [
     hasAccom: true,
   },
   {
-    num: "05", 
+    num: "05",
     slug: "advanced-intensive",
     imgKey: "course_advanced",
-    name: "Advanced Pottery Intensive", 
-    tag: "Specialised", 
+    name: "Advanced Pottery Intensive",
+    tag: "Specialised",
     tagStyle: "dark",
     duration: "14 Days · Customisable",
     desc: "A technical deep dive designed for the seasoned potter to challenge boundaries and master elemental forces.",
@@ -198,8 +198,8 @@ export const COURSES = [
       },
       inclusions: ["Tailored instruction", "Full studio access", "Specialised raw materials", "Three meals daily", "Accommodation included"],
       pricing: [
-        { 
-          name: "Base Fee", 
+        {
+          name: "Base Fee",
           options: [{ label: "Enquiry", val: "Available upon request" }],
           note: "+18% GST. Firing & Shipping charged separately."
         },
@@ -208,11 +208,11 @@ export const COURSES = [
     hasAccom: true,
   },
   {
-    num: "06", 
+    num: "06",
     slug: "glaze-course",
     imgKey: "course_glaze",
-    name: "Glaze Course: The Science of Surface", 
-    tag: "Specialised", 
+    name: "Glaze Course: The Science of Surface",
+    tag: "Specialised",
     tagStyle: "dark",
     duration: "10 Days · Specialised",
     desc: "Take full control of your ceramic practice by mastering the alchemy of the kiln and glaze chemistry.",
@@ -234,8 +234,8 @@ export const COURSES = [
       },
       inclusions: ["8 Hours Daily Instruction", "All glaze materials", "Stoneware test tiles", "Meals & Accommodation", "Professional analysis"],
       pricing: [
-        { 
-          name: "Investment", 
+        {
+          name: "Investment",
           options: [{ label: "Shared Room", val: "₹90,000" }, { label: "Single Occupancy", val: "₹1,10,000" }],
           note: "+18% GST"
         },
@@ -244,11 +244,11 @@ export const COURSES = [
     hasAccom: true,
   },
   {
-    num: "07", 
+    num: "07",
     slug: "fire-festival",
     imgKey: "course_fire",
-    name: "Fire Festival: A Celebration of Clay & Flame", 
-    tag: "Event", 
+    name: "Fire Festival: A Celebration of Clay & Flame",
+    tag: "Event",
     tagStyle: "dark",
     duration: "4 Days · Residential Event",
     desc: "A collective gathering of artists exploring the raw magic of alternative low-firing techniques.",
@@ -270,8 +270,8 @@ export const COURSES = [
       },
       inclusions: ["Seasonal meals site-prepared", "Alternative firing glazes", "Equipment access", "Community energy"],
       pricing: [
-        { 
-          name: "Participation", 
+        {
+          name: "Participation",
           options: [{ label: "Enquire", val: "DM or Email for slots" }],
           note: "Stay options at Byool Farm or CMR"
         },
@@ -280,11 +280,11 @@ export const COURSES = [
     hasAccom: true,
   },
   {
-    num: "08", 
+    num: "08",
     slug: "day-sessions",
     imgKey: "course_nrd",
-    name: "Hands in Clay: Day Pottery Sessions", 
-    tag: "Non-Residential", 
+    name: "Hands in Clay: Day Pottery Sessions",
+    tag: "Non-Residential",
     tagStyle: "earth",
     duration: "Full Day or Half Day",
     desc: "From the meditative rhythm of the wheel to the structural art of hand-building, spend your day shaping clay.",
@@ -306,13 +306,13 @@ export const COURSES = [
       },
       inclusions: ["All clay & tools", "Apron provided", "Relaxed farm-to-table lunch", "Technical advice"],
       pricing: [
-        { 
-          name: "Full Day (11 AM – 5 PM)", 
+        {
+          name: "Full Day (11 AM – 5 PM)",
           options: [{ label: "Investment", val: "₹3,000" }],
           note: "Includes lunch (+18% GST)"
         },
-        { 
-          name: "Half Day (2 PM – 5 PM)", 
+        {
+          name: "Half Day (2 PM – 5 PM)",
           options: [{ label: "Investment", val: "₹1,800" }],
           note: "Afternoon reset (+18% GST)"
         },
@@ -321,11 +321,11 @@ export const COURSES = [
     hasAccom: false,
   },
   {
-    num: "09", 
+    num: "09",
     slug: "monthly-membership",
     imgKey: "course_nrm",
-    name: "The Potter’s Immersion: Monthly Studio Membership", 
-    tag: "Non-Residential", 
+    name: "The Potter’s Immersion: Monthly Studio Membership",
+    tag: "Non-Residential",
     tagStyle: "earth",
     duration: "Mon – Fri · 11 AM – 5 PM",
     desc: "Transform your passion into a daily practice with consistent access to our professional space and mentorship.",
@@ -340,15 +340,15 @@ export const COURSES = [
       experience: {
         title: "Membership Details",
         details: [
-          { title: "Access", text: "Full daily studio access (11 AM – 5 PM) throughout the month." },
+          { title: "Access", text: "Daily studio access Mon - Fri (11 AM – 5 PM) for a month." },
           { title: "Instruction", text: "Unlimited access with a balanced blend of guided instruction and open practice time." },
           { title: "Self-Management", text: "Members are responsible for recycling and managing their clay to foster a professional environment." }
         ]
       },
       inclusions: ["Daily wheel access", "25 kg clay included", "Glazing guidance", "Storage shelf", "Studio mentorship"],
       pricing: [
-        { 
-          name: "Membership Fee", 
+        {
+          name: "Membership Fee",
           options: [{ label: "Per Person", val: "₹40,000" }],
           note: "+18% GST. Firing charges apply separately at ₹800/kg."
         },
