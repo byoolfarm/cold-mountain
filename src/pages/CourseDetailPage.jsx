@@ -1,7 +1,7 @@
 // src/pages/CourseDetailPage.jsx
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -32,6 +32,68 @@ const ACCOM_PANELS = [
   },
 ];
 
+
+
+/* ── FAQ accordion component ──────────────────────────────────────────────── */
+function FaqItem({ question, answer }) {
+  const [open, setOpen] = useState(false);
+  const toggle = useCallback(() => setOpen((prev) => !prev), []);
+
+  return (
+    <div className="border-b border-black/5">
+      <button
+        onClick={toggle}
+        className="w-full flex justify-between items-start gap-4 py-6 text-left group"
+      >
+        <span
+          className="font-cormorant text-xl text-charcoal font-light group-hover:text-clay transition-colors"
+        >
+          {question}
+        </span>
+        <span className="text-clay text-xl flex-shrink-0 mt-1 transition-transform duration-300"
+          style={{ transform: open ? "rotate(45deg)" : "rotate(0deg)" }}
+        >
+          +
+        </span>
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="faq-answer"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <p className="text-[15px] leading-relaxed text-earth-light font-light pb-6 pr-8" style={F.jost}>
+              {answer}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+function FaqSection({ faq }) {
+  return (
+    <section className="py-16 px-6 md:px-12 lg:px-24">
+      <div className="max-w-[900px] mx-auto">
+        <div className="text-center mb-12">
+          <SectionLabel className="justify-center text-center">FAQ</SectionLabel>
+          <SectionTitle className="text-4xl">Frequently Asked Questions</SectionTitle>
+          <div className="w-12 h-px bg-clay mx-auto mt-6" />
+        </div>
+        <div>
+          {faq.map((item, i) => (
+            <FaqItem key={i} question={item.q} answer={item.a} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 
 export default function CourseDetailPage() {
@@ -80,6 +142,7 @@ export default function CourseDetailPage() {
             src={IMGS[course.imgKey]}
             alt={course.name}
             className="w-full h-full object-cover saturate-[0.8]"
+            style={course.imgPosition ? { objectPosition: course.imgPosition } : undefined}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
           
@@ -169,6 +232,29 @@ export default function CourseDetailPage() {
           </div>
         </section>
 
+        {/* What's New in the Curriculum — only for courses with curriculum data */}
+        {content.curriculum && content.curriculum.length > 0 && (
+          <section className="py-12 md:py-16 px-6 md:px-12 lg:px-24">
+            <div className="max-w-[1200px] mx-auto">
+              <h3 className="font-cormorant text-3xl text-charcoal font-light border-b border-black/5 pb-4 mb-10">
+                What's New in the Curriculum
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {content.curriculum.map((item, i) => (
+                  <div key={i} className="space-y-3">
+                    <h4 className="text-clay text-[12px] tracking-[0.2em] uppercase font-bold">
+                      {item.title}
+                    </h4>
+                    <p className="text-[15px] leading-relaxed text-earth-light font-light">
+                      {item.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Pricing/Investment Section */}
         <section id="pricing-section" className="py-8 md:pt-8 md:pb-16 px-6 md:px-12 lg:px-24 bg-cream/30">
           <div className="max-w-[1200px] mx-auto">
@@ -244,6 +330,11 @@ export default function CourseDetailPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section — only for courses with FAQ data */}
+        {content.faq && content.faq.length > 0 && (
+          <FaqSection faq={content.faq} />
+        )}
 
         {/* Explore More Section */}
         <section className="py-20 px-6 md:px-12 lg:px-24">

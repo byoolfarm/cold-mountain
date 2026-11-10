@@ -211,10 +211,11 @@ export const COURSES = [
     num: "06",
     slug: "glaze-course",
     imgKey: "course_glaze",
+    imgPosition: "center 30%",
     name: "Glaze Course: The Science of Surface",
     tag: "Specialised",
     tagStyle: "dark",
-    duration: "10 Days · Specialised",
+    duration: "15 Days · Specialised",
     desc: "Take full control of your ceramic practice by mastering the alchemy of the kiln and glaze chemistry.",
     landingPointers: [
       "Master glaze alchemy from scratch",
@@ -223,7 +224,7 @@ export const COURSES = [
       "Oxidation & Reduction atmospheres"
     ],
     fullContent: {
-      overview: "This intensive 10-day residency is designed to demystify glaze chemistry, moving you away from commercial \"bottled\" solutions and toward a deep, technical understanding of your own surfaces. In collaboration with guest instructor Tinni Arora.",
+      overview: "This intensive 15-day residency is designed to demystify glaze chemistry, moving you away from commercial \"bottled\" solutions and toward a deep, technical understanding of your own surfaces. In collaboration with guest instructor Tinni Arora.",
       experience: {
         title: "The Experience",
         details: [
@@ -233,12 +234,55 @@ export const COURSES = [
         ]
       },
       inclusions: ["8 Hours Daily Instruction", "All glaze materials", "Stoneware test tiles", "Meals & Accommodation", "Professional analysis"],
+      curriculum: [
+        { title: "Crater Glazes", text: "Master the science and art behind volcanic and lava texture effects." },
+        { title: "Decorative Slips & Engobes", text: "Expand your surface decoration repertoire alongside underglazes." },
+        { title: "Special Guest Lecture", text: "An exclusive session with a guest artist (details revealed during the course)." },
+        { title: "Studio Day Out", text: "A surprise excursion giving you a refreshing break away from the studio." }
+      ],
       pricing: [
         {
-          name: "Investment",
-          options: [{ label: "Shared Room", val: "₹90,000" }, { label: "Single Occupancy", val: "₹1,10,000" }],
-          note: "+18% GST"
+          name: "Fee Structure",
+          desc: "Exclusive of 18% GST",
+          options: [
+            { label: "Residential (Sharing Basis)", val: "₹1,00,500" },
+            { label: "Residential (Single Occupancy)", val: "₹1,33,000" },
+            { label: "Day Scholars", val: "₹60,000" }
+          ],
+          note: "+18% GST · Day Scholars includes lunch, course fees, materials & firings"
         },
+        {
+          name: "Previous Students — 5 Days",
+          desc: "Subject to availability",
+          options: [
+            { label: "With Stay (Sharing)", val: "₹30,500" },
+            { label: "With Stay (Single)", val: "₹40,500" },
+            { label: "Without Stay", val: "₹17,720" }
+          ],
+          note: "+18% GST · Without Stay includes food & course fees"
+        },
+      ],
+      faq: [
+        {
+          q: "What are the exact dates and timings for check-in and check-out?",
+          a: "The 15-day course runs from January 3rd to January 17th, 2027. Check-in is on the evening of January 2nd, and check-out is by 7:00 PM on January 17th (or the following morning if you are attending the evening gathering)."
+        },
+        {
+          q: "What options are available for previous students (alumni)?",
+          a: "Alum can opt for a 5-day refresher module. Options include 5 days with stay (on a sharing or single occupancy basis, subject to availability) or 5 days without stay. Both options include daily food and full access to the course during those days."
+        },
+        {
+          q: "What is the difference between Residential, and Day Scholar pricing?",
+          a: "Residential Students: Includes accommodation (sharing or single occupancy), 3 daily meals plus a mid-day beverage, instruction, materials, and firings. Day Scholars: Includes daily instruction, studio materials, firings, lunch plus a mid-day beverage, but excludes overnight stay, breakfast & dinner."
+        },
+        {
+          q: "Is accommodation guaranteed for the 5-day alumni option?",
+          a: "5-day residential slots for previous students are subject to room availability at the time of booking. If stay is full, previous students are welcome to register for the 5-day option without stay."
+        },
+        {
+          q: "What is the cancellation and rebooking policy?",
+          a: "Bookings are non-refundable. However, you can transfer your booking to a future date: Indian Nationals — valid for rebooking within 6 months of the original start date. Foreign Nationals — valid for rebooking within 1 year of the original start date. Rebookings are subject to seat availability, and any price revisions will require paying the difference at the time of rebooking. Alternatively, they may opt for any other available course during the valid rebooking period. All bookings must be utilised within the applicable rebooking timeframe."
+        }
       ]
     },
     hasAccom: true,
