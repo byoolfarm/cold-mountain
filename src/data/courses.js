@@ -261,7 +261,7 @@ export const COURSES = [
             { label: "With Stay (Single)", val: "₹40,500" },
             { label: "Without Stay", val: "₹17,720" }
           ],
-          note: "+18% GST · Without Stay includes food & course fees"
+          note: "+18% GST · Without Stay includes lunch & course fees"
         },
       ],
       faq: [
