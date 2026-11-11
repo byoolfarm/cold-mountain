@@ -181,7 +181,7 @@ export default function CourseDetailPage() {
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-clay"></span>
                         </span>
                         <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-clay-light font-medium">
-                          Next Cohort
+                          Next Batch
                         </span>
                         <span className="h-3 w-px bg-white/20" />
                         <span className="text-white font-medium text-[14px] sm:text-[15px] tracking-wide" style={F.jost}>
@@ -250,7 +250,7 @@ export default function CourseDetailPage() {
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-clay"></span>
                         </span>
                         <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-clay-light font-medium">
-                          Next Cohort
+                          Next Batch
                         </span>
                         <span className="h-3 w-px bg-white/20" />
                         <span className="text-white font-medium text-[14px] sm:text-[15px] tracking-wide" style={F.jost}>
