@@ -131,41 +131,139 @@ export default function CourseDetailPage() {
 
       <main className="min-h-screen bg-warm-white">
         {/* Hero Section */}
-        <header className="relative h-[60vh] md:h-[75vh] w-full overflow-hidden">
-          <div className="absolute top-24 left-4 md:left-12 z-20 hidden md:block">
-            <BackButton light={true} />
-          </div>
-          <div className="absolute top-24 w-full flex justify-center z-20 md:hidden">
-            <BackButton light={true} />
-          </div>
-          <img
-            src={IMGS[course.imgKey]}
-            alt={course.name}
-            className="w-full h-full object-cover saturate-[0.8]"
-            style={course.imgPosition ? { objectPosition: course.imgPosition } : undefined}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
-          
-          <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 lg:p-24">
-            <div className="max-w-[1200px] mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <span className="inline-block px-3 py-1 bg-clay text-white text-[10px] tracking-[0.2em] uppercase mb-4">
-                  {course.tag}
-                </span>
-                <h1 className="font-cormorant text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-white font-light mb-4">
-                  {course.name}
-                </h1>
-                <p className="text-white/90 text-lg md:text-xl font-light max-w-[800px]" style={F.jost}>
-                  {course.desc}
-                </p>
-              </motion.div>
+        {course.heroStyle === "ambient" ? (
+          <header className="relative min-h-[70vh] md:h-[80vh] w-full overflow-hidden bg-charcoal flex items-center pt-28 pb-12 md:py-0">
+            {/* Back Button */}
+            <div className="absolute top-24 left-4 md:left-12 z-20 hidden md:block">
+              <BackButton light={true} />
             </div>
-          </div>
-        </header>
+            <div className="absolute top-24 w-full flex justify-center z-20 md:hidden">
+              <BackButton light={true} />
+            </div>
+
+            {/* Ambient Blurred Backdrop (Strategy 1) */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+              <img
+                src={IMGS[course.imgKey]}
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-cover blur-3xl scale-125 opacity-40 saturate-150"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/40" />
+            </div>
+
+            {/* Foreground Content: Text on Left, Sharp Uncropped Photo on Right */}
+            <div className="relative z-10 w-full max-w-[1240px] mx-auto px-6 md:px-12 lg:px-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                {/* Left Column: Text Info */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="lg:col-span-7 space-y-5"
+                >
+                  <span className="inline-block px-3 py-1 bg-clay text-white text-[10px] tracking-[0.2em] uppercase font-medium">
+                    {course.tag}
+                  </span>
+                  <h1 className="font-cormorant text-[clamp(2.4rem,5vw,4.5rem)] leading-[1.08] text-white font-light">
+                    {course.name}
+                  </h1>
+                  <p className="text-white/85 text-lg md:text-xl font-light leading-relaxed max-w-[640px]" style={F.jost}>
+                    {course.desc}
+                  </p>
+
+                  {/* Curated Cohort Date Pill */}
+                  {course.dates && (
+                    <div className="pt-2">
+                      <div className="inline-flex items-center gap-3 px-4 py-2 bg-charcoal/70 backdrop-blur-md border border-clay/40 rounded-full shadow-lg">
+                        <span className="flex h-2 w-2 relative">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-clay opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-clay"></span>
+                        </span>
+                        <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-clay-light font-medium">
+                          Next Cohort
+                        </span>
+                        <span className="h-3 w-px bg-white/20" />
+                        <span className="text-white font-medium text-[14px] sm:text-[15px] tracking-wide" style={F.jost}>
+                          {course.dates}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+
+                {/* Right Column: Uncropped Crisp Foreground Photo */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="lg:col-span-5 flex justify-center lg:justify-end"
+                >
+                  <div className="relative max-h-[50vh] lg:max-h-[62vh] rounded-md overflow-hidden shadow-2xl ring-1 ring-white/15 bg-black/40">
+                    <img
+                      src={IMGS[course.imgKey]}
+                      alt={course.name}
+                      className="w-auto h-full max-h-[50vh] lg:max-h-[62vh] object-contain rounded-md"
+                    />
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </header>
+        ) : (
+          <header className="relative h-[60vh] md:h-[75vh] w-full overflow-hidden">
+            <div className="absolute top-24 left-4 md:left-12 z-20 hidden md:block">
+              <BackButton light={true} />
+            </div>
+            <div className="absolute top-24 w-full flex justify-center z-20 md:hidden">
+              <BackButton light={true} />
+            </div>
+            <img
+              src={IMGS[course.imgKey]}
+              alt={course.name}
+              className="w-full h-full object-cover saturate-[0.8]"
+              style={course.imgPosition ? { objectPosition: course.imgPosition } : undefined}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
+            
+            <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 lg:p-24">
+              <div className="max-w-[1200px] mx-auto">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <span className="inline-block px-3 py-1 bg-clay text-white text-[10px] tracking-[0.2em] uppercase mb-4">
+                    {course.tag}
+                  </span>
+                  <h1 className="font-cormorant text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-white font-light mb-4">
+                    {course.name}
+                  </h1>
+                  <p className="text-white/90 text-lg md:text-xl font-light max-w-[800px]" style={F.jost}>
+                    {course.desc}
+                  </p>
+                  {course.dates && (
+                    <div className="mt-5">
+                      <div className="inline-flex items-center gap-3 px-4 py-2 bg-charcoal/70 backdrop-blur-md border border-clay/40 rounded-full shadow-lg">
+                        <span className="flex h-2 w-2 relative">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-clay opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-clay"></span>
+                        </span>
+                        <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-clay-light font-medium">
+                          Next Cohort
+                        </span>
+                        <span className="h-3 w-px bg-white/20" />
+                        <span className="text-white font-medium text-[14px] sm:text-[15px] tracking-wide" style={F.jost}>
+                          {course.dates}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              </div>
+            </div>
+          </header>
+        )}
 
         {/* Overview Section */}
         <section className="py-16 md:pb-12 md:pt-24 px-6 md:px-12 lg:px-24">

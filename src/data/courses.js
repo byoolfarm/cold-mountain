@@ -211,11 +211,13 @@ export const COURSES = [
     num: "06",
     slug: "glaze-course",
     imgKey: "course_glaze",
+    heroStyle: "ambient",
     imgPosition: "center 30%",
     name: "Glaze Course: The Science of Surface",
     tag: "Specialised",
     tagStyle: "dark",
     duration: "15 Days · Specialised",
+    dates: "3/07/2027 - 17/07/2027",
     desc: "Take full control of your ceramic practice by mastering the alchemy of the kiln and glaze chemistry.",
     landingPointers: [
       "Master glaze alchemy from scratch",
